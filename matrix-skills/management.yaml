@@ -37,8 +37,8 @@ skills:
     category: expert
     priority_score: 7
     relevance_mapping:
-      agents: [project-manager]
-      profiles: ["management:orchestration"]
+      agents: [business-analyst, project-manager]
+      profiles: ["planning:business", "management:orchestration"]
     description: "Product strategy and roadmapping"
 
   - skill_id: developer-growth-analysis

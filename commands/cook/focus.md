@@ -1,13 +1,16 @@
 ---
-description: ⚡⚡⚡ Full Feature — Complete feature development lifecycle
+description: 🔒 Focused Feature — Complete development with enforced context optimization
 version: "1.0"
 category: engineering
 execution-mode: execute
 ---
 
-# /cook:hard — Complete Feature Development
+# /cook:focus — Focus Feature Development
 
-> **MISSION**: Full feature development with research, design, planning, implementation, validation.
+> **MISSION**: Full feature development with **enforced context optimization**.
+>
+> This variant automatically clears context before implementation—no user prompt required.
+> Use when you want guaranteed clean implementation without context rot risk.
 
 <feature>$ARGUMENTS</feature>
 
@@ -62,6 +65,7 @@ All files in `./reports/` → English only.
 | P3.5: DB Design    | Data requirements      | Conditional |
 | P4: Design         | Scout findings         | Conditional |
 | P5: Planning       | RESEARCH + SCOUT files | **YES**     |
+| P5.5: Context Gate | **PLAN file**          | **AUTO**    |
 | P6: Implementation | **PLAN file**          | **YES**     |
 | P7: Testing        | PLAN + Code            | **YES**     |
 | P8: Review         | PLAN + Code + Tests    | **YES**     |
@@ -72,7 +76,7 @@ All files in `./reports/` → English only.
 
 ## ⛔ INCREMENTAL EXECUTION (MANDATORY)
 
-One phase at a time, each phase independent: Phase 1 → then Phase 2 → … in one reply. No batching (load only what each phase needs). **Within each phase:** when doing a part, output it in format so user sees what’s happening (announce before doing). Format: rules/EXECUTION-PROTOCOL.md § Phase output structure.
+One phase at a time, each phase independent: Phase 1 → then Phase 2 → … in one reply. No batching (load only what each phase needs). **Within each phase:** when doing a part, output it in format so user sees what's happening (announce before doing). Format: rules/EXECUTION-PROTOCOL.md § Phase output structure.
 
 ---
 
@@ -134,61 +138,58 @@ One phase at a time, each phase independent: Phase 1 → then Phase 2 → … in
 
 ---
 
-## 🛡️ VERIFICATION CHECKPOINT — Context Optimization
+## 🛡️ STRICT CONTEXT GATE — Automatic Context Optimization
 
-> **PURPOSE**: Prevent "context rot" by clearing noisy planning history before implementation.
+> **⚡ FOCUS MODE**: This checkpoint executes automatically. NO user input required.
 >
-> Long-running planning sessions fill context with noise that degrades code generation quality.
-> This checkpoint acts as a "firewall" between Planning and Implementation phases.
+> **PURPOSE**: Prevent "context rot" by forcibly clearing noisy planning history.
+> This acts as a mandatory "firewall" between Planning and Implementation phases.
 
-### ⚡ OPTIONS (Present to User)
-
-```markdown
-## 🛡️ Context Optimization Checkpoint
-
-**Planning Complete** — Plan file created at: `./reports/plans/PLAN-{feature}.md`
-
-**Choose how to proceed with implementation:**
-
-| Option                           | Action        | Description                                                                          |
-| -------------------------------- | ------------- | ------------------------------------------------------------------------------------ |
-| **1. 🚀 Clear context & Auto-Implement** | `RECOMMENDED` | Fresh start: Reload Plan file, ignore chat history, begin implementation immediately |
-| **2. ⏸️ Clear context & Manual**         | `SAFE`        | Clear context, reload Plan, pause for your command before coding                     |
-| **3. ⚠️ Continue (No Clear)**    | `RISKY`       | Proceed with full history attached (may cause hallucination)                         |
-
-⏳ Awaiting selection...
-```
-
-### 🔄 EXECUTION BEHAVIOR
+### 🔒 AUTOMATIC EXECUTION (NO PROMPT)
 
 ```yaml
-option_1_clear_auto_implement:
-  behavior: "RECOMMENDED - Simulate fresh start"
-  steps:
-    1. ACKNOWLEDGE: "🚀 Executing Clear context & Auto-Implement..."
-    2. CONTEXT_DIRECTIVE: |
-      ⛔ IGNORE all previous chat messages and reasoning chains.
-      ✅ RELOAD: `./reports/plans/PLAN-{feature}.md` as SOLE SOURCE OF TRUTH.
-      ✅ PROCEED: Begin Phase 6 (Implementation) immediately.
-    3. LOAD: Read Plan file completely
-    4. EXECUTE: Start Implementation phase with fresh context mindset
+strict_context_gate:
+  mode: "AUTOMATIC - No user interaction"
+  behavior: "Force Clear context & Auto-Implement"
 
-option_2_clear_manual:
-  behavior: "Clear and wait for explicit command"
-  steps:
-    1. ACKNOWLEDGE: "⏸️ Context cleared. Plan reloaded."
-    2. CONTEXT_DIRECTIVE: |
-      ⛔ IGNORE all previous chat messages and reasoning chains.
-      ✅ RELOAD: `./reports/plans/PLAN-{feature}.md` as SOLE SOURCE OF TRUTH.
-    3. OUTPUT: "Ready for implementation. Type `/continue` or give specific instructions."
-    4. WAIT: For user command before proceeding
+  execution:
+    1. ANNOUNCE: |
+      ## 🛡️ Strict Context Gate — Automatic
 
-option_3_continue_no_clear:
-  behavior: "Proceed with caution - context rot risk"
-  steps:
-    1. WARN: "⚠️ Continuing with full history. Higher hallucination risk."
-    2. PROCEED: Continue to Phase 6 with existing context
-    3. MONITOR: Watch for signs of context confusion
+      ✅ **Plan Complete**: `./reports/plans/PLAN-{feature}.md`
+      🔒 **Focus Mode**: Automatically clearing context for implementation.
+
+      ⚡ Executing: **Clear context & Auto-Implement**...
+
+    2. CONTEXT_DIRECTIVE: |
+      ╔══════════════════════════════════════════════════════════════════╗
+      ║  ⛔ MANDATORY CONTEXT RESET — FOCUS MODE                         ║
+      ╠══════════════════════════════════════════════════════════════════╣
+      ║  IGNORE: All previous chat messages, reasoning chains,           ║
+      ║          brainstorming discussions, research explorations,       ║
+      ║          rejected alternatives, and intermediate thinking.       ║
+      ║                                                                  ║
+      ║  SOLE SOURCE OF TRUTH: `./reports/plans/PLAN-{feature}.md`       ║
+      ║                                                                  ║
+      ║  PROCEED: Begin Implementation phase with FRESH context mindset. ║
+      ║           Treat this as a NEW conversation starting from Plan.   ║
+      ╚══════════════════════════════════════════════════════════════════╝
+
+    3. LOAD: Read Plan file completely as if seeing it for the first time
+
+    4. PROCEED: Start Phase 6 (Implementation) immediately
+```
+
+### 📋 Post-Gate Status
+
+```markdown
+🔒 **Context Gate Passed**
+
+- Previous context: DISCARDED
+- Active context: Plan file only
+- Mode: Fresh implementation start
+
+Proceeding to Implementation...
 ```
 
 ---
@@ -200,7 +201,7 @@ option_3_continue_no_clear:
 | Prerequisite | **READ and FOLLOW** `./reports/plans/PLAN-{feature}.md` |
 | Goal         | Execute implementation plan                             |
 
-**STRICT ADHERENCE:**
+**FOCUS ADHERENCE:**
 
 ```
 1. READ plan FIRST
@@ -256,6 +257,6 @@ FOR EACH checkpoint in PLAN:
 
 Present feature report with:
 
-1. ✅ **Done** — Feature complete
+1. ✅ **Done** — Feature complete (Focus Mode)
 2. 🚀 **Deploy** → `/deploy:preview`
 3. 📝 **Docs** → `/docs:core`

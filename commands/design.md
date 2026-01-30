@@ -16,9 +16,10 @@ execution-mode: router
 ## 🛑 PRE-FLIGHT (DO FIRST — BLOCKS EXECUTION)
 
 **LOAD now** (in order; path `./rules/` or `~/.{TOOL}/skills/agent-assistant/rules/`):
-1. ORCHESTRATION-LAWS.md  
-2. ADAPTIVE-EXECUTION.md  
-3. EXECUTION-PROTOCOL.md  
+
+1. ORCHESTRATION-LAWS.md
+2. ADAPTIVE-EXECUTION.md
+3. EXECUTION-PROTOCOL.md
 
 **⛔ Do not run any workflow phase until all are loaded.** Follow **all** rules in those files. Then run this file's ROUTING LOGIC, LOAD the chosen variant workflow, and execute it.
 
@@ -33,6 +34,9 @@ IF design is simple (component, quick mockup):
 IF design is complex (full feature, system):
   → Route to /design:hard
 
+IF design is complex AND clean implementation handoff is critical:
+  → Route to /design:focus
+
 IF unsure:
   → Default to /design:fast
 ```
@@ -41,10 +45,11 @@ IF unsure:
 
 ## AVAILABLE ROUTES
 
-| Route          | When to Use                        |
-| -------------- | ---------------------------------- |
-| `/design:fast` | Quick component design, simple UI  |
-| `/design:hard` | Full feature design, system design |
+| Route           | When to Use                                        |
+| --------------- | -------------------------------------------------- |
+| `/design:fast`  | Quick component design, simple UI                  |
+| `/design:hard`  | Full feature design, system design                 |
+| `/design:focus` | Full design with **enforced context optimization** |
 
 ---
 
@@ -59,6 +64,7 @@ IF unsure:
 
 1. ⚡ **Fast** → `/design:fast` — Quick design
 2. ⚡⚡⚡ **Hard** → `/design:hard` — Full design process
+3. 🎯 **Focus** → `/design:focus` — Full design with **automatic context clearing** (clean implementation handoff)
 
 ⏳ Awaiting selection...
 ```

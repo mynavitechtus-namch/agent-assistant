@@ -1,13 +1,16 @@
 ---
-description: ⚡⚡⚡ Full Development Cycle — Plan → Implement → Test → Review
+description: 🔒 Focused Development — Full development cycle with enforced context optimization
 version: "1.0"
 category: engineering
 execution-mode: execute
 ---
 
-# /code:hard — Full Development Cycle
+# /code:focus — Focus Development Cycle
 
-> **MISSION**: Execute complete development workflow with planning, implementation, testing, and review.
+> **MISSION**: Execute complete development workflow with **enforced context optimization**.
+>
+> This variant automatically clears context before implementation—no user prompt required.
+> Use when you want guaranteed clean implementation without context rot risk.
 
 <task>$ARGUMENTS</task>
 
@@ -67,67 +70,11 @@ phase_continuity:
 
 All files in `./reports/` → English only.
 
-## 🔗 INPUT REQUIREMENTS & VERIFICATION MATRIX
-
-```yaml
-phase_dependencies:
-  phase_1_requirements:
-    input_required: "User Request"
-    blocking: false
-
-  phase_2_scout:
-    input_required: "User Request"
-    blocking: false
-    output: "./reports/scouts/SCOUT-{task}.md"
-
-  phase_3_planning:
-    input_required:
-      - "./reports/scouts/SCOUT-{task}.md"
-    blocking: true
-    verification: "Plan MUST cite Scout findings"
-    output: "./reports/plans/PLAN-{task}.md"
-
-  phase_4_implementation:
-    input_required:
-      - "./reports/plans/PLAN-{task}.md" # MANDATORY
-    blocking: true
-    verification: "Implementation MUST follow plan step-by-step"
-    deviation_protocol: "STOP → Document → Request Re-Planning"
-
-  phase_5_testing:
-    input_required:
-      - "./reports/plans/PLAN-{task}.md"
-      - "Code changes from Phase 4"
-    blocking: true
-    verification: "Tests MUST cover all plan checkpoints"
-
-  phase_6_review:
-    input_required:
-      - "./reports/plans/PLAN-{task}.md"
-      - "Code + Tests"
-    blocking: true
-    verification: "Code MUST match plan intent"
-```
-
-## 🛑 BLOCKING ENFORCEMENT
-
-```
-BEFORE entering any BLOCKING phase:
-  1. CHECK: Does required input file exist?
-  2. IF missing:
-     a. OUTPUT: "⛔ BLOCKED: Missing [{file}]"
-     b. ROUTE to creating agent
-     c. WAIT for creation
-  3. IF exists:
-     a. READ and LOCK as constraint
-     b. PROCEED
-```
-
 ---
 
 ## ⛔ INCREMENTAL EXECUTION (MANDATORY)
 
-One phase at a time, each phase independent: Phase 1 → then Phase 2 → … in one reply. No batching (load only what each phase needs). **Within each phase:** when doing a part, output it in format so user sees what’s happening (announce before doing).
+One phase at a time, each phase independent: Phase 1 → then Phase 2 → … in one reply. No batching (load only what each phase needs). **Within each phase:** when doing a part, output it in format so user sees what's happening (announce before doing).
 
 ---
 
@@ -155,7 +102,7 @@ One phase at a time, each phase independent: Phase 1 → then Phase 2 → … in
 - [ ] Requirements clear
 - [ ] Scope defined
 - [ ] Acceptance criteria established
-- [ ] **METHODOLOGY CHECK**: Output aligns with `brainstormer` Thinking Protocol (Socratic questioning, assumption surfacing)
+- [ ] **METHODOLOGY CHECK**: Output aligns with `brainstormer` Thinking Protocol
 
 ---
 
@@ -182,7 +129,7 @@ One phase at a time, each phase independent: Phase 1 → then Phase 2 → … in
 - [ ] Architecture understood
 - [ ] Patterns documented
 - [ ] Integration points identified
-- [ ] **METHODOLOGY CHECK**: Output aligns with `scouter` Thinking Protocol (file locations, patterns as constraints)
+- [ ] **METHODOLOGY CHECK**: Output aligns with `scouter` Thinking Protocol
 
 ---
 
@@ -209,65 +156,62 @@ One phase at a time, each phase independent: Phase 1 → then Phase 2 → … in
 - [ ] Plan created
 - [ ] Steps defined
 - [ ] Risks identified
-- [ ] **METHODOLOGY CHECK**: Output aligns with `planner` Thinking Protocol (constraint consumption, complexity scoring)
+- [ ] **METHODOLOGY CHECK**: Output aligns with `planner` Thinking Protocol
 
 ---
 
-## 🛡️ VERIFICATION CHECKPOINT — Context Optimization
+## 🛡️ STRICT CONTEXT GATE — Automatic Context Optimization
 
-> **PURPOSE**: Prevent "context rot" by clearing noisy planning history before implementation.
-> 
-> Long-running planning sessions fill context with noise that degrades code generation quality.
-> This checkpoint acts as a "firewall" between Planning and Implementation phases.
+> **⚡ FOCUS MODE**: This checkpoint executes automatically. NO user input required.
+>
+> **PURPOSE**: Prevent "context rot" by forcibly clearing noisy planning history.
+> This acts as a mandatory "firewall" between Planning and Implementation phases.
 
-### ⚡ OPTIONS (Present to User)
-
-```markdown
-## 🛡️ Context Optimization Checkpoint
-
-**Planning Complete** — Plan file created at: `./reports/plans/PLAN-{task}.md`
-
-**Choose how to proceed with implementation:**
-
-| Option | Action | Description |
-|--------|--------|-------------|
-| **1. 🚀 Clear context & Auto-Implement** | `RECOMMENDED` | Fresh start: Reload Plan file, ignore chat history, begin implementation immediately |
-| **2. ⏸️ Clear context & Manual** | `SAFE` | Clear context, reload Plan, pause for your command before coding |
-| **3. ⚠️ Continue (No Clear)** | `RISKY` | Proceed with full history attached (may cause hallucination) |
-
-⏳ Awaiting selection...
-```
-
-### 🔄 EXECUTION BEHAVIOR
+### 🔒 AUTOMATIC EXECUTION (NO PROMPT)
 
 ```yaml
-option_1_clear_auto_implement:
-  behavior: "RECOMMENDED - Simulate fresh start"
-  steps:
-    1. ACKNOWLEDGE: "🚀 Executing Clear context & Auto-Implement..."
-    2. CONTEXT_DIRECTIVE: |
-       ⛔ IGNORE all previous chat messages and reasoning chains.
-       ✅ RELOAD: `./reports/plans/PLAN-{task}.md` as SOLE SOURCE OF TRUTH.
-       ✅ PROCEED: Begin Phase 4 (Implementation) immediately.
-    3. LOAD: Read Plan file completely
-    4. EXECUTE: Start Implementation phase with fresh context mindset
+strict_context_gate:
+  mode: "AUTOMATIC - No user interaction"
+  behavior: "Force Clear context & Auto-Implement"
 
-option_2_clear_manual:
-  behavior: "Clear and wait for explicit command"
-  steps:
-    1. ACKNOWLEDGE: "⏸️ Context cleared. Plan reloaded."
-    2. CONTEXT_DIRECTIVE: |
-       ⛔ IGNORE all previous chat messages and reasoning chains.
-       ✅ RELOAD: `./reports/plans/PLAN-{task}.md` as SOLE SOURCE OF TRUTH.
-    3. OUTPUT: "Ready for implementation. Type `/continue` or give specific instructions."
-    4. WAIT: For user command before proceeding
+  execution:
+    1. ANNOUNCE: |
+      ## 🛡️ Strict Context Gate — Automatic
 
-option_3_continue_no_clear:
-  behavior: "Proceed with caution - context rot risk"
-  steps:
-    1. WARN: "⚠️ Continuing with full history. Higher hallucination risk."
-    2. PROCEED: Continue to Phase 4 with existing context
-    3. MONITOR: Watch for signs of context confusion
+      ✅ **Plan Complete**: `./reports/plans/PLAN-{task}.md`
+      🔒 **Focus Mode**: Automatically clearing context for implementation.
+
+      ⚡ Executing: **Clear context & Auto-Implement**...
+
+    2. CONTEXT_DIRECTIVE: |
+      ╔══════════════════════════════════════════════════════════════════╗
+      ║  ⛔ MANDATORY CONTEXT RESET — FOCUS MODE                        ║
+      ╠══════════════════════════════════════════════════════════════════╣
+      ║  IGNORE: All previous chat messages, reasoning chains,           ║
+      ║          brainstorming discussions, research explorations,       ║
+      ║          rejected alternatives, and intermediate thinking.       ║
+      ║                                                                  ║
+      ║  SOLE SOURCE OF TRUTH: `./reports/plans/PLAN-{task}.md`          ║
+      ║                                                                  ║
+      ║  PROCEED: Begin Implementation phase with FRESH context mindset. ║
+      ║           Treat this as a NEW conversation starting from Plan.   ║
+      ╚══════════════════════════════════════════════════════════════════╝
+
+    3. LOAD: Read Plan file completely as if seeing it for the first time
+
+    4. PROCEED: Start Phase 4 (Implementation) immediately
+```
+
+### 📋 Post-Gate Status
+
+```markdown
+🔒 **Context Gate Passed**
+
+- Previous context: DISCARDED
+- Active context: Plan file only
+- Mode: Fresh implementation start
+
+Proceeding to Implementation...
 ```
 
 ---
@@ -292,17 +236,7 @@ option_3_continue_no_clear:
 > EMBODY [tech-lead] — Requires logged system error justification.
 > Then recursively EMBODY specialists as needed.
 
-### 🔗 INPUT REQUIREMENTS (BLOCKING)
-
-```yaml
-required_inputs:
-  mandatory:
-    - file: "./reports/plans/PLAN-{task}.md"
-      action: "READ first, FOLLOW exactly"
-      if_missing: "STOP → Route to planner"
-```
-
-### ⚡ STRICT ADHERENCE DIRECTIVE
+### ⚡ FOCUS ADHERENCE DIRECTIVE
 
 ```
 1. READ plan completely BEFORE any implementation
@@ -322,7 +256,7 @@ required_inputs:
 - [ ] Documentation updated
 - [ ] **Each plan step has corresponding implementation**
 - [ ] **No unauthorized deviations**
-- [ ] **METHODOLOGY CHECK**: Output aligns with `tech-lead` Thinking Protocol (proper delegation, drift detection)
+- [ ] **METHODOLOGY CHECK**: Output aligns with `tech-lead` Thinking Protocol
 
 ---
 
@@ -349,7 +283,7 @@ required_inputs:
 - [ ] Tests written
 - [ ] All tests pass
 - [ ] Coverage adequate
-- [ ] **METHODOLOGY CHECK**: Output aligns with `tester` Thinking Protocol (test pyramid, determinism verification)
+- [ ] **METHODOLOGY CHECK**: Output aligns with `tester` Thinking Protocol
 
 ---
 
@@ -376,7 +310,7 @@ required_inputs:
 - [ ] Code reviewed
 - [ ] Standards met
 - [ ] No blocking issues
-- [ ] **METHODOLOGY CHECK**: Output aligns with `reviewer` Thinking Protocol (plan compliance check, priority matrix)
+- [ ] **METHODOLOGY CHECK**: Output aligns with `reviewer` Thinking Protocol
 
 ---
 
@@ -384,6 +318,6 @@ required_inputs:
 
 Present implementation report with:
 
-1. ✅ **Done** — Feature complete
+1. ✅ **Done** — Feature complete (Focus Mode)
 2. 🚀 **Deploy** → `/deploy:preview`
 3. 📝 **Docs** → `/docs:core`

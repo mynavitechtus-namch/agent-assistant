@@ -79,6 +79,63 @@ One phase at a time, each phase independent: Phase 1 → then Phase 2 → … in
 
 ---
 
+## 🛡️ VERIFICATION CHECKPOINT — Context Optimization
+
+> **PURPOSE**: Prevent "context rot" by clearing noisy debugging/planning history before implementation.
+> 
+> Long-running analysis sessions fill context with noise that degrades code generation quality.
+> This checkpoint acts as a "firewall" between Planning and Implementation phases.
+
+### ⚡ OPTIONS (Present to User)
+
+```markdown
+## 🛡️ Context Optimization Checkpoint
+
+**Planning Complete** — Fix plan created with rollback strategy.
+
+**Choose how to proceed with implementation:**
+
+| Option | Action | Description |
+|--------|--------|-------------|
+| **1. 🚀 Clear context & Auto-Implement** | `RECOMMENDED` | Fresh start: Reload Plan, ignore chat history, begin fix immediately |
+| **2. ⏸️ Clear context & Manual** | `SAFE` | Clear context, reload Plan, pause for your command before coding |
+| **3. ⚠️ Continue (No Clear)** | `RISKY` | Proceed with full history attached (may cause hallucination) |
+
+⏳ Awaiting selection...
+```
+
+### 🔄 EXECUTION BEHAVIOR
+
+```yaml
+option_1_clear_auto_implement:
+  behavior: "RECOMMENDED - Simulate fresh start"
+  steps:
+    1. ACKNOWLEDGE: "🚀 Executing Clear context & Auto-Implement..."
+    2. CONTEXT_DIRECTIVE: |
+       ⛔ IGNORE all previous chat messages and reasoning chains.
+       ✅ RELOAD: Fix plan as SOLE SOURCE OF TRUTH.
+       ✅ PROCEED: Begin Phase 4 (Implementation) immediately.
+    3. EXECUTE: Start Implementation phase with fresh context mindset
+
+option_2_clear_manual:
+  behavior: "Clear and wait for explicit command"
+  steps:
+    1. ACKNOWLEDGE: "⏸️ Context cleared. Plan reloaded."
+    2. CONTEXT_DIRECTIVE: |
+       ⛔ IGNORE all previous chat messages and reasoning chains.
+       ✅ RELOAD: Fix plan as SOLE SOURCE OF TRUTH.
+    3. OUTPUT: "Ready for fix implementation. Type `/continue` or give specific instructions."
+    4. WAIT: For user command before proceeding
+
+option_3_continue_no_clear:
+  behavior: "Proceed with caution - context rot risk"
+  steps:
+    1. WARN: "⚠️ Continuing with full history. Higher hallucination risk."
+    2. PROCEED: Continue to Phase 4 with existing context
+```
+
+---
+
 ## 🎭 Phase 4: IMPLEMENTATION
 
 | Agent | `tech-lead` → specialists |

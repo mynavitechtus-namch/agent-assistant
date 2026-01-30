@@ -53,9 +53,11 @@ REPORTS_PATH  = {HOME}/.gemini/antigravity/skills/agent-assistant/reports/
 | `/docs ...` | Docs | `commands/docs.md` → then `docs/:variant` |
 | `/design ...` | Design | `commands/design.md` → then `design/:variant` |
 | `/deploy ...` | Deploy | `commands/deploy.md` → then `deploy/:variant` |
+| `/report ...` | Report | `commands/report.md` → then `report/:variant` |
 | "implement X" | → `/cook` | Auto-detect |
 | "fix X" | → `/fix` | Auto-detect |
 | "plan X" | → `/plan` | Auto-detect |
+| "report X" / "status report" | → `/report` | Auto-detect |
 
 > **Variant in input**: Both `/docs/core` (slash) and `/docs:core` (colon) mean command=docs, variant=core. Same for any command: `/plan/fast` = `/plan:fast`. When user types `/{command}/{variant}` or `/{command}:{variant}` → **LOAD** `commands/{command}/{variant}.md` directly; do NOT load `commands/{command}.md` first.
 > **No variant**: If user types `/docs` or `/plan` with no variant, load the router file, apply its ROUTING LOGIC, then **LOAD** the chosen `commands/{command}/{variant}.md` and **EXECUTE** per EXECUTION-PROTOCOL.

@@ -54,7 +54,7 @@ export default function Commands() {
             className="mb-6"
           />
 
-          <div className="grid gap-4 sm:grid-cols-2">
+          <div className="grid gap-4 sm:grid-cols-3">
             <Card>
               <CardContent>
                 <Badge variant="green" size="sm" className="mb-2">:fast</Badge>
@@ -64,10 +64,28 @@ export default function Commands() {
             <Card>
               <CardContent>
                 <Badge variant="red" size="sm" className="mb-2">:hard</Badge>
-                <p className="text-sm text-text-secondary">Comprehensive, all phases</p>
+                <p className="text-sm text-text-secondary">Comprehensive, all phases. Structured workflow keeps execution aligned to your request.</p>
+              </CardContent>
+            </Card>
+            <Card>
+              <CardContent>
+                <Badge variant="purple" size="sm" className="mb-2">:focus</Badge>
+                <p className="text-sm text-text-secondary">Clear context + auto-run phases. Use when you want zero drift from chat history.</p>
               </CardContent>
             </Card>
           </div>
+
+          <Card className="mt-6 border-border-accent/50 bg-bg-secondary/50">
+            <CardContent className="pt-6">
+              <h3 className="text-sm font-semibold text-text-primary mb-2">Clear context & anti-hallucination</h3>
+              <p className="text-sm text-text-secondary">
+                Long chat history can make the model &quot;hallucinate&quot; from old context instead of your current request. 
+                <strong> :hard</strong> uses structured phases and deliverables so each step is grounded in the task. 
+                <strong> :focus</strong> goes further by clearing context before running—execution starts fresh and stays locked on what you asked for. 
+                Use <code className="text-text-accent">:focus</code> for complex or critical tasks when you want the best fidelity to your intent.
+              </p>
+            </CardContent>
+          </Card>
         </div>
       </Section>
 

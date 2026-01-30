@@ -1,6 +1,6 @@
 import { Helmet } from 'react-helmet-async'
 
-const SITE_URL = 'https://agent-assistant.dev'
+const SITE_URL = 'https://agent-assistant-ten.vercel.app'
 
 interface SoftwareApplicationData {
   name: string
@@ -24,7 +24,7 @@ interface OrganizationData {
 // Software Application Schema
 export function SoftwareApplicationSchema({
   name = 'Agent Assistant',
-  description = 'Multi-agent orchestration framework for AI coding assistants. 20 specialist agents, 310+ skills, and 40+ workflows.',
+  description = 'Multi-agent orchestration framework for AI coding assistants. 21 specialist agents, 310+ skills, and 50+ workflows.',
   applicationCategory = 'DeveloperApplication',
   operatingSystem = 'Any',
   offers = { price: '0', priceCurrency: 'USD' },

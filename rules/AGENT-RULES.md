@@ -27,7 +27,7 @@ philosophy:
 
 ```
 agent-assistant/
-├── agents/           # 21 Specialized Agents (~150-200 lines each)
+├── agents/           # 21 Specialized Agents (~150-200 lines each, including reporter)
 ├── commands/         # Command Workflows (router + variants)
 ├── rules/            # Orchestration Protocols
 │   ├── BOOTSTRAP.md  # ⚡ ENTRY POINT - Load this first
@@ -194,6 +194,7 @@ execution-mode: execute
 | designer     | `./reports/designs/DESIGN-{feature}.md`         |
 | planner      | `./reports/plans/PLAN-{feature}.md`             |
 | debugger     | `./reports/debugs/DEBUG-{issue}.md`             |
+| reporter     | `./reports/` (create/update per task)           |
 
 ---
 

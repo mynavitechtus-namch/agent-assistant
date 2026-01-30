@@ -3,7 +3,7 @@
  * Separated from component for fast-refresh compatibility
  */
 
-export const SITE_URL = 'https://agent-assistant.dev'
+export const SITE_URL = 'https://agent-assistant-ten.vercel.app'
 export const DEFAULT_IMAGE = '/assets/logo.png'
 export const SITE_NAME = 'Agent Assistant'
 
@@ -11,7 +11,7 @@ export const SITE_NAME = 'Agent Assistant'
 export const pageSEO = {
   home: {
     title: 'Agent Assistant',
-    description: 'Multi-agent orchestration for AI coding assistants with 20 specialist agents, 310+ skills, and 40+ workflows. Multi-agent orchestration for AI coding assistants.',
+    description: 'Multi-agent orchestration for AI coding assistants with 21 specialist agents, 310+ skills, and 50+ workflows. Multi-agent orchestration for AI coding assistants.',
     pathname: '/',
   },
   installation: {
@@ -26,7 +26,7 @@ export const pageSEO = {
   },
   specialistAgents: {
     title: 'Specialist Agents',
-    description: '20 pre-built specialist agents including backend engineers, frontend developers, testers, debuggers, and more. Each with unique expertise and thinking protocols.',
+    description: '21 pre-built specialist agents including backend engineers, frontend developers, testers, debuggers, reporter, and more. Each with unique expertise and thinking protocols.',
     pathname: '/features/specialist-agents',
   },
   commands: {

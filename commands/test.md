@@ -33,6 +33,9 @@ IF scope is limited (unit tests, quick check):
 IF scope is comprehensive (full suite, E2E):
   → Route to /test:hard
 
+IF scope is comprehensive AND clean execution focus is critical:
+  → Route to /test:focus
+
 IF unsure:
   → Default to /test:fast
 ```
@@ -41,10 +44,11 @@ IF unsure:
 
 ## AVAILABLE ROUTES
 
-| Route        | When to Use             |
-| ------------ | ----------------------- |
-| `/test:fast` | Quick tests, unit tests |
-| `/test:hard` | Full test suite, E2E    |
+| Route          | When to Use                                        |
+| -------------- | -------------------------------------------------- |
+| `/test:fast`   | Quick tests, unit tests                            |
+| `/test:hard`   | Full test suite, E2E                               |
+| `/test:focus` | Full testing with **enforced context optimization** |
 
 ---
 
@@ -59,6 +63,7 @@ IF unsure:
 
 1. ⚡ **Fast** → `/test:fast` — Quick tests
 2. ⚡⚡⚡ **Hard** → `/test:hard` — Comprehensive testing
+3. 🔒 **Focus** → `/test:focus` — Comprehensive testing with **automatic context clearing** (focused execution)
 
 ⏳ Awaiting selection...
 ```

@@ -1,13 +1,14 @@
 <div align="center">
-  <img src="assets/logo.svg" alt="Agent Assistant Logo" width="120" height="auto" />
+  <img src="https://agent-assistant-ten.vercel.app/assets/logo.svg" alt="Agent Assistant Logo" width="120" height="auto" />
 </div>
 
 # Agent Assistant
 
 **Multi-agent orchestration for AI coding assistants**
 
-Transform one AI into a coordinated team of 20 specialist agents with structured workflows and 310+ domain skills.
+Transform one AI into a coordinated team of 21 specialist agents with structured workflows and 310+ domain skills.
 
+[![npm (scoped)](https://img.shields.io/npm/v/@namch/agent-assistant?label=npm%20global)](https://www.npmjs.com/package/@namch/agent-assistant)
 [![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
 [![Node.js 18+](https://img.shields.io/badge/Node.js-18%2B-green.svg)](https://nodejs.org/)
 [![PRs Welcome](https://img.shields.io/badge/PRs-welcome-brightgreen.svg)](http://makeapullrequest.com)
@@ -21,7 +22,7 @@ Transform one AI into a coordinated team of 20 specialist agents with structured
 | **One-Time Setup, Forever Use** | Configure once at global level (`~/.cursor/`, `~/.claude/`, etc.) and it auto-applies to ALL your projects. No more repetitive config for every new repo.                                      |
 | **Sub-Agent Orchestration**     | When supported (Claude Code, Cursor Max mode), the main agent spawns specialized sub-agents to handle tasks **in parallel** — backend, frontend, testing, security all working simultaneously. |
 | **Multi-Platform Support**      | Works seamlessly across **Cursor**, **GitHub Copilot**, **Claude Code**, and **Antigravity/Gemini**. Same workflows, any tool.                                                                 |
-| **Matrix Skill Discovery**      | Automatically injects the right skills into each agent based on their profile and your request. 310+ skills, zero manual config.                                                               |
+| **Matrix Skill Discovery**      | Automatically injects the right skills into each agent based on their profile and your request. 310+ skills, zero manual config.                                                              |
 
 ### The Goal
 
@@ -126,6 +127,7 @@ Creates `./documents/` files that agents reference. Without docs, agents work ge
 /plan "build notification system"           # Implementation plan
 /test:hard "user registration flow"         # Generate tests
 /review "audit auth module"                 # Code review
+/report "status report for sprint"          # Reporting (create/update reports)
 ```
 
 ### Variants
@@ -134,6 +136,18 @@ Creates `./documents/` files that agents reference. Without docs, agents work ge
 | ------- | ---------------- | -------------------------- |
 | `:fast` | Simple tasks     | 2-3 agents                 |
 | `:hard` | Complex features | 5-8 agents + quality gates |
+| `:focus` | Clean execution | **Clear context** + auto-run phases (cook, code, fix, debug, design, plan, test, report) |
+
+### Clear context — stay on your request, avoid history hallucination
+
+**`:hard`** and **`:focus`** are designed to reduce **context rot** (the model drifting or "hallucinating" from long chat history):
+
+- **Problem**: Long conversations can make the model latch onto old context and drift from your current request.
+- **How we handle it**:
+  - **`:hard`**: Structured workflow (phases + deliverables) so each step is grounded in **your input + prior phase output**, not arbitrary chat history.
+  - **`:focus`**: **Clear context** before running—execution starts "clean" for your request; phases run in order without pulling in old conversation.
+
+Use **`:focus`** when you want execution to **stick strictly to the current request** (e.g. large refactors, tricky bugs, or after a long chat). More stable results, less "history hallucination".
 
 ---
 
@@ -145,11 +159,12 @@ Creates `./documents/` files that agents reference. Without docs, agents work ge
 | **Quality** | `/test`, `/review`, `/debug`                             |
 | **Plan**    | `/plan`, `/brainstorm`, `/design`                        |
 | **Docs**    | `/docs:core`, `/docs:business`, `/docs:audit`            |
+| **Report**  | `/report:fast`, `/report:hard`, `/report:focus`           |
 | **Deploy**  | `/deploy:check`, `/deploy:preview`, `/deploy:production` |
 
 ---
 
-## 20 Specialist Agents
+## 21 Specialist Agents
 
 | Domain             | Agents                                                                                              |
 | ------------------ | --------------------------------------------------------------------------------------------------- |
@@ -157,7 +172,7 @@ Creates `./documents/` files that agents reference. Without docs, agents work ge
 | **Architecture**   | tech-lead, database-architect                                                                       |
 | **Quality**        | tester, reviewer, debugger, security-engineer                                                       |
 | **Planning**       | planner, brainstormer, business-analyst                                                             |
-| **Support**        | designer, devops-engineer, docs-manager, performance-engineer, researcher, scouter, project-manager |
+| **Support**        | designer, devops-engineer, docs-manager, performance-engineer, researcher, scouter, project-manager, **reporter** |
 
 ---
 
@@ -180,8 +195,8 @@ profile: "backend:execution"
 
 ```
 agent-assistant/
-├── agents/          # 20 specialist agents
-├── commands/        # 40+ workflow commands
+├── agents/          # 21 specialist agents
+├── commands/        # 50+ workflow commands (routers + variants: fast, hard, focus)
 ├── rules/           # 8 orchestration rules
 ├── matrix-skills/   # 19 domain skill registries
 ├── skills/          # 310+ domain skills
@@ -217,9 +232,9 @@ If this helps you ship faster, consider buying me a coffee!
 </a>
 
 <br/>
-<img src="assets/buymeacoffee-qr.png" alt="Buy Me A Coffee QR Code" width="150" />
+<img src="https://agent-assistant-ten.vercel.app/assets/buymeacoffee-qr.png" alt="Buy Me A Coffee QR Code" width="150" />
 <br/>
-<img src="assets/IMG_20260126_202557.png" alt="QR Code" width="150" />
+<img src="https://agent-assistant-ten.vercel.app/assets/IMG_20260126_202557.png" alt="QR Code" width="150" />
 
 ---
 

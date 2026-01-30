@@ -34,8 +34,8 @@ skills:
     category: core
     priority_score: 8
     relevance_mapping:
-      agents: [designer]
-      profiles: ["design:*"]
+      agents: [designer, frontend-engineer]
+      profiles: ["design:*", "frontend:execution"]
     description: "shadcn/ui, Tailwind CSS, accessible components"
 
   - skill_id: mobile-design

@@ -1,6 +1,6 @@
 {
   "name": "@namch/agent-assistant",
-  "version": "1.0.2",
+  "version": "1.0.4",
   "description": "Multi-agent orchestration framework for AI coding assistants (Cursor, Copilot, Antigravity, Claude Code).",
   "main": "cli/install.js",
   "bin": {
@@ -44,7 +44,9 @@
     "skills/",
     "documents/",
     "code-assistants/",
-    "LICENSE"
+    "LICENSE",
+    "README.md",
+    "CHANGELOG.md"
   ],
   "devDependencies": {
     "@semantic-release/changelog": "^6.0.3",

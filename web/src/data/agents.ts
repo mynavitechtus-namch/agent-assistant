@@ -20,6 +20,7 @@ import {
   Search,
   Map,
   TrendingUp,
+  FileBarChart2,
 } from 'lucide-react'
 
 export interface Agent {
@@ -41,7 +42,7 @@ export interface AgentCategoryGroup {
   agents: Agent[]
 }
 
-// All 20 agents
+// All 21 agents
 export const agents: Agent[] = [
   // Implementation (4)
   { 
@@ -231,6 +232,15 @@ export const agents: Agent[] = [
     capabilities: ['Timeline', 'Resources', 'Communication', 'Tracking'],
     description: 'Timeline, resources, stakeholder communication',
     icon: TrendingUp,
+  },
+  { 
+    id: 'reporter', 
+    name: 'Reporter', 
+    role: 'Documentation & Reporting Specialist',
+    category: 'Support', 
+    capabilities: ['Reports', 'Summaries', 'Documentation', 'Templates'],
+    description: 'Create/update reports, status summaries, template-based output',
+    icon: FileBarChart2,
   },
 ]
 

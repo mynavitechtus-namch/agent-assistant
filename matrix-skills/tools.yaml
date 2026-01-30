@@ -29,24 +29,24 @@ skills:
     category: utility
     priority_score: 6
     relevance_mapping:
-      agents: [docs-manager]
-      profiles: ["research:documentation"]
+      agents: [docs-manager, reporter]
+      profiles: ["research:documentation", "reporting:*"]
     description: "Document processing skills"
 
   - skill_id: changelog-generator
     category: utility
     priority_score: 6
     relevance_mapping:
-      agents: [docs-manager, devops-engineer]
-      profiles: ["research:documentation", "devops:*"]
+      agents: [docs-manager, devops-engineer, reporter]
+      profiles: ["research:documentation", "devops:*", "reporting:*"]
     description: "Automated changelog generation"
 
   - skill_id: doc-coauthoring
     category: utility
     priority_score: 6
     relevance_mapping:
-      agents: [docs-manager]
-      profiles: ["research:documentation"]
+      agents: [docs-manager, reporter]
+      profiles: ["research:documentation", "reporting:*"]
     description: "Collaborative document authoring"
 
   - skill_id: media-processing
@@ -61,39 +61,39 @@ skills:
     category: utility
     priority_score: 5
     relevance_mapping:
-      agents: [docs-manager]
-      profiles: ["research:documentation"]
+      agents: [docs-manager, reporter]
+      profiles: ["research:documentation", "reporting:*"]
     description: "Word document manipulation"
 
   - skill_id: pdf
     category: utility
     priority_score: 5
     relevance_mapping:
-      agents: [docs-manager]
-      profiles: ["research:documentation"]
+      agents: [docs-manager, reporter]
+      profiles: ["research:documentation", "reporting:*"]
     description: "PDF document manipulation"
 
   - skill_id: pptx
     category: utility
     priority_score: 5
     relevance_mapping:
-      agents: [docs-manager]
-      profiles: ["research:documentation"]
+      agents: [docs-manager, reporter]
+      profiles: ["research:documentation", "reporting:*"]
     description: "PowerPoint manipulation"
 
   - skill_id: xlsx
     category: utility
     priority_score: 5
     relevance_mapping:
-      agents: [docs-manager]
-      profiles: ["research:documentation"]
+      agents: [docs-manager, reporter]
+      profiles: ["research:documentation", "reporting:*"]
     description: "Excel spreadsheet manipulation"
 
   - skill_id: podcast-generation
     category: utility
     priority_score: 5
     relevance_mapping:
-      agents: [docs-manager]
+      agents: [docs-manager, reporter]
       profiles: ["research:documentation"]
     description: "Podcast content generation"
 
@@ -136,8 +136,8 @@ skills:
     category: utility
     priority_score: 5
     relevance_mapping:
-      agents: [project-manager]
-      profiles: ["management:*"]
+      agents: [project-manager, reporter]
+      profiles: ["management:*", "reporting:*"]
     description: "Meeting insights and analysis"
 
   # --------------------------------------------------------------------------
@@ -193,7 +193,7 @@ skills:
     category: utility
     priority_score: 6
     relevance_mapping:
-      profiles: ["*"]
+      profiles: ["*", "reporting:*"]
     description: "Build artifacts generation"
 
   - skill_id: domain-name-brainstormer
@@ -347,6 +347,6 @@ skills:
     category: utility
     priority_score: 6
     relevance_mapping:
-      agents: [docs-manager, backend-engineer]
-      profiles: ["research:documentation", "backend:execution"]
+      agents: [docs-manager, backend-engineer, reporter]
+      profiles: ["research:documentation", "backend:execution", "reporting:*"]
     description: "Generate API documentation from code, endpoints, parameters, OpenAPI/Swagger"

@@ -1,13 +1,16 @@
 ---
-description: ⚡⚡⚡ Full Plan — Research-backed comprehensive planning
+description: 🔒 Focused Plan — Research-backed planning with enforced context optimization
 version: "1.0"
 category: planning
 execution-mode: execute
 ---
 
-# /plan:hard — Comprehensive Planning
+# /plan:focus — Focus Comprehensive Planning
 
-> **MISSION**: Create thorough implementation plan with research and architecture analysis.
+> **MISSION**: Create thorough implementation plan with **enforced context optimization**.
+>
+> This variant automatically clears context before handoff—no user prompt required.
+> Use when you want guaranteed clean plan handoff without context rot risk.
 
 <task>$ARGUMENTS</task>
 
@@ -59,14 +62,14 @@ When the logical plan would have **> 3 phases** or **estimated effort > 3 days**
 
 - Naming: `PLAN-{task}-phase1.md`, `PLAN-{task}-phase2.md`, …
 - Order: Execute in numeric order; phase N starts only after phase N−1 is complete.
-- Each file: scope **only** that phase; Prerequisites state “Phase N−1 complete” (or prior deliverables); clear handoff to next file.
+- Each file: scope **only** that phase; Prerequisites state "Phase N−1 complete" (or prior deliverables); clear handoff to next file.
 - Index (optional): planner may add `PLAN-{task}-INDEX.md` listing phases and file names for navigation.
 
 ---
 
 ## ⛔ INCREMENTAL EXECUTION (MANDATORY)
 
-One phase at a time, each phase independent: Phase 1 → then Phase 2 → … in one reply. No batching (load only what each phase needs). **Within each phase:** when doing a part, output it in format so user sees what’s happening (announce before doing). Format: rules/EXECUTION-PROTOCOL.md § Phase output structure.
+One phase at a time, each phase independent: Phase 1 → then Phase 2 → … in one reply. No batching (load only what each phase needs). **Within each phase:** when doing a part, output it in format so user sees what's happening (announce before doing). Format: rules/EXECUTION-PROTOCOL.md § Phase output structure.
 
 ---
 
@@ -123,58 +126,57 @@ Plan(s) MUST reference prior phases:
 
 ---
 
-## 🛡️ VERIFICATION CHECKPOINT — Context Optimization
+## 🛡️ STRICT CONTEXT GATE — Automatic Context Optimization
 
-> **PURPOSE**: Prevent "context rot" by clearing noisy research/planning history before implementation.
-> 
-> Long-running planning sessions fill context with noise that degrades implementation quality.
-> This checkpoint acts as a "firewall" before handing off to implementation workflows.
+> **⚡ FOCUS MODE**: This checkpoint executes automatically. NO user input required.
+>
+> **PURPOSE**: Prevent "context rot" by forcibly clearing noisy research/planning history.
+> This acts as a mandatory "firewall" before handoff to implementation workflows.
 
-### ⚡ OPTIONS (Present to User)
-
-```markdown
-## 🛡️ Context Optimization Checkpoint
-
-**Planning Complete** — Plan file(s) created.
-
-**Choose how to proceed:**
-
-| Option | Action | Description |
-|--------|--------|-------------|
-| **1. 🚀 Clear context & Ready** | `RECOMMENDED` | Fresh start for implementation: Reload Plan, ignore planning history |
-| **2. ⏸️ Review First** | `SAFE` | Clear context, show plan summary, wait for approval |
-| **3. ⚠️ Continue (No Clear)** | `RISKY` | Keep full history (may affect `/cook:hard` quality) |
-
-⏳ Awaiting selection...
-```
-
-### 🔄 EXECUTION BEHAVIOR
+### 🔒 AUTOMATIC EXECUTION (NO PROMPT)
 
 ```yaml
-option_1_clear_ready:
-  behavior: "RECOMMENDED - Prepare clean handoff"
-  steps:
-    1. ACKNOWLEDGE: "🚀 Context optimized. Plan ready for implementation."
-    2. CONTEXT_DIRECTIVE: |
-       ⛔ IGNORE all previous research/planning reasoning chains.
-       ✅ PLAN FILE is SOLE SOURCE OF TRUTH for implementation.
-    3. OUTPUT: "Run `/code:focus` to implement with clean context."
+strict_context_gate:
+  mode: "AUTOMATIC - No user interaction"
+  behavior: "Force Clear context & Ready"
 
-option_2_review_first:
-  behavior: "Clear and show summary"
-  steps:
-    1. ACKNOWLEDGE: "⏸️ Context cleared."
-    2. CONTEXT_DIRECTIVE: |
-       ⛔ IGNORE all previous research/planning reasoning chains.
-       ✅ PLAN FILE is SOLE SOURCE OF TRUTH.
-    3. OUTPUT: Display plan summary for user review
-    4. WAIT: For user approval before proceeding
+  execution:
+    1. ANNOUNCE: |
+      ## 🛡️ Strict Context Gate — Automatic
 
-option_3_continue_no_clear:
-  behavior: "Proceed with caution - context rot risk"
-  steps:
-    1. WARN: "⚠️ Continuing with full history. May affect implementation quality."
-    2. PROCEED: Complete workflow with existing context
+      ✅ **Plan Complete**: Plan file(s) created.
+      🔒 **Focus Mode**: Automatically clearing context for implementation handoff.
+
+      ⚡ Executing: **Clear context & Ready**...
+
+    2. CONTEXT_DIRECTIVE: |
+      ╔══════════════════════════════════════════════════════════════════╗
+      ║  ⛔ MANDATORY CONTEXT RESET — FOCUS MODE                         ║
+      ╠══════════════════════════════════════════════════════════════════╣
+      ║  IGNORE: All previous research discussions, exploration paths,   ║
+      ║          rejected alternatives, and intermediate reasoning.      ║
+      ║                                                                  ║
+      ║  SOLE SOURCE OF TRUTH: Plan file(s) in ./reports/plans/          ║
+      ║                                                                  ║
+      ║  HANDOFF: Plan is ready for `/code:focus` implementation.        ║
+      ║           Implementation should treat Plan as fresh context.     ║
+      ╚══════════════════════════════════════════════════════════════════╝
+
+    3. OUTPUT: Plan summary for user
+
+    4. PROCEED: To COMPLETION
+```
+
+### 📋 Post-Gate Status
+
+```markdown
+🔒 **Context Gate Passed**
+
+- Previous context: DISCARDED
+- Active context: Plan file(s) only
+- Mode: Clean handoff ready
+
+Plan ready for implementation...
 ```
 
 ---
@@ -184,4 +186,5 @@ option_3_continue_no_clear:
 Present plan with:
 
 1. ✅ **Plan Ready** — `./reports/plans/PLAN-{task}.md` (single) **or** `PLAN-{task}-phase1.md`, `PLAN-{task}-phase2.md`, … (multi-phase, execute in order)
-2. 🍳 **Implement** → `/cook:hard` (run phase-by-phase when multiple plan files exist)
+2. 🔒 **Context Optimized** — Ready for focus implementation
+3. 🍳 **Implement** → `/code:focus` (run phase-by-phase when multiple plan files exist)

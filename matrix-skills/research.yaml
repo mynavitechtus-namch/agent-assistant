@@ -18,16 +18,16 @@ skills:
     category: core
     priority_score: 8
     relevance_mapping:
-      agents: [researcher]
-      profiles: ["research:analysis"]
+      agents: [researcher, brainstormer, reporter]
+      profiles: ["research:analysis", "planning:discovery", "reporting:synthesis"]
     description: "Technical research, analysis, scalable solutions"
 
   - skill_id: documentation-templates
     category: core
     priority_score: 8
     relevance_mapping:
-      agents: [docs-manager]
-      profiles: ["research:documentation"]
+      agents: [researcher, docs-manager, reporter]
+      profiles: ["research:analysis", "research:documentation", "reporting:*"]
     description: "README, API docs, code comments, AI-friendly docs"
 
   # --------------------------------------------------------------------------
@@ -37,7 +37,7 @@ skills:
     category: utility
     priority_score: 7
     relevance_mapping:
-      agents: [researcher]
+      agents: [researcher, scouter]
       profiles: ["research:*"]
     description: "Documentation discovery, llms.txt, GitHub analysis"
 
@@ -53,16 +53,16 @@ skills:
     category: core
     priority_score: 7
     relevance_mapping:
-      agents: [docs-manager]
-      profiles: ["research:documentation"]
+      agents: [docs-manager, reporter]
+      profiles: ["research:documentation", "reporting:*"]
     description: "Code documentation practices"
 
   - skill_id: code-documenter
     category: utility
     priority_score: 7
     relevance_mapping:
-      agents: [docs-manager]
-      profiles: ["research:documentation"]
+      agents: [docs-manager, reporter]
+      profiles: ["research:documentation", "reporting:*"]
     description: "Automated code documentation generation"
 
   - skill_id: geo-fundamentals
@@ -93,14 +93,14 @@ skills:
     category: utility
     priority_score: 6
     relevance_mapping:
-      agents: [researcher, docs-manager]
-      profiles: ["research:*"]
+      agents: [researcher, docs-manager, reporter]
+      profiles: ["research:*", "reporting:*"]
     description: "Content research and writing"
 
   - skill_id: writing-skills
     category: utility
     priority_score: 6
     relevance_mapping:
-      agents: [docs-manager]
-      profiles: ["research:documentation"]
+      agents: [researcher, docs-manager, reporter]
+      profiles: ["research:analysis", "research:documentation", "reporting:*"]
     description: "Technical writing skills"

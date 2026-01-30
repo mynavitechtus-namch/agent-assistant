@@ -11,7 +11,7 @@
 
 ### 1.1 Product Overview
 
-**Agent Assistant** is an open-source multi-agent orchestration framework that transforms a single AI coding assistant into a coordinated team of 20 specialist agents. It provides structured workflows, quality gates, and 310+ domain skills for production-grade AI-assisted software development.
+**Agent Assistant** is an open-source multi-agent orchestration framework that transforms a single AI coding assistant into a coordinated team of 21 specialist agents. It provides structured workflows, quality gates, and 310+ domain skills for production-grade AI-assisted software development.
 
 ### 1.2 Vision Statement
 
@@ -19,7 +19,7 @@
 
 ### 1.3 Mission Statement
 
-> **"To democratize software engineering excellence by orchestrating AI coding assistants into a cohesive team of 20 specialist agents, enabling developers to ship faster, safer, and more consistently through repeatable workflows and automated quality verification."**
+> **"To democratize software engineering excellence by orchestrating AI coding assistants into a cohesive team of 21 specialist agents, enabling developers to ship faster, safer, and more consistently through repeatable workflows and automated quality verification."**
 
 ### 1.4 Key Metrics
 
@@ -135,7 +135,7 @@ AI coding assistants are powerful but unstructured. Developers use AI tools in a
 
 | ID | Requirement | Priority | Status |
 |----|-------------|----------|--------|
-| FR-001.1 | System SHALL support 20 specialist agents | Must-Have | ✅ Complete |
+| FR-001.1 | System SHALL support 21 specialist agents | Must-Have | ✅ Complete |
 | FR-001.2 | System SHALL route tasks to appropriate agents | Must-Have | ✅ Complete |
 | FR-001.3 | System SHALL support tiered execution (sub-agent + embody) | Must-Have | ✅ Complete |
 | FR-001.4 | System SHALL enforce orchestration laws | Must-Have | ✅ Complete |
@@ -145,7 +145,7 @@ AI coding assistants are powerful but unstructured. Developers use AI tools in a
 
 | ID | Requirement | Priority | Status |
 |----|-------------|----------|--------|
-| FR-002.1 | System SHALL support 40+ command workflows | Must-Have | ✅ Complete |
+| FR-002.1 | System SHALL support 50+ command workflows | Must-Have | ✅ Complete |
 | FR-002.2 | System SHALL support workflow variants (:fast, :hard) | Must-Have | ✅ Complete |
 | FR-002.3 | System SHALL execute phases sequentially | Must-Have | ✅ Complete |
 | FR-002.4 | System SHALL verify exit criteria before phase transition | Must-Have | ✅ Complete |
@@ -284,8 +284,8 @@ AI coding assistants are powerful but unstructured. Developers use AI tools in a
 
 | Feature | Description | Status |
 |---------|-------------|--------|
-| 20 Specialist Agents | Domain experts | ✅ Complete |
-| Core Command Workflows | /cook, /fix, /plan, etc. | ✅ Complete |
+| 21 Specialist Agents | Domain experts | ✅ Complete |
+| Core Command Workflows | /cook, /fix, /plan, /report, etc. | ✅ Complete |
 | Quality Gates | 5 automated gates | ✅ Complete |
 | Matrix Skill Discovery | 310+ skills | ✅ Complete |
 | Multi-Tool Support | 4 AI tools | ✅ Complete |
@@ -324,8 +324,8 @@ AI coding assistants are powerful but unstructured. Developers use AI tools in a
 
 | Feature | Status |
 |---------|--------|
-| 20 Specialist Agents | ✅ |
-| 40+ Command Workflows | ✅ |
+| 21 Specialist Agents | ✅ |
+| 50+ Command Workflows | ✅ |
 | 310+ Domain Skills | ✅ |
 | Matrix Skill Discovery | ✅ |
 | Multi-Tool Support | ✅ |

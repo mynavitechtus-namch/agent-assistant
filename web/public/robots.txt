@@ -1,11 +1,11 @@
 # Agent Assistant Robots.txt
-# https://agent-assistant.dev
+# https://agent-assistant-ten.vercel.app
 
 User-agent: *
 Allow: /
 
 # Sitemap
-Sitemap: https://agent-assistant.dev/sitemap.xml
+Sitemap: https://agent-assistant-ten.vercel.app/sitemap.xml
 
 # Disallow admin or private paths (if any)
 Disallow: /api/

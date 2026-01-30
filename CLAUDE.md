@@ -59,9 +59,11 @@ REPORTS_PATH  = ./reports/
 | `/docs ...`   | Documentation          | `~/.{TOOL}/skills/agent-assistant/commands/docs.md`   |
 | `/design ...` | Design                 | `~/.{TOOL}/skills/agent-assistant/commands/design.md` |
 | `/deploy ...` | Deployment             | `~/.{TOOL}/skills/agent-assistant/commands/deploy.md` |
+| `/report ...` | Reporting              | `~/.{TOOL}/skills/agent-assistant/commands/report.md` |
 | "implement X" | Auto-detect → `/cook`  | commands/cook.md     |
 | "fix X"       | Auto-detect → `/fix`   | commands/fix.md      |
 | "plan X"      | Auto-detect → `/plan`  | commands/plan.md     |
+| "report X" / "status report" | Auto-detect → `/report` | commands/report.md |
 
 ---
 

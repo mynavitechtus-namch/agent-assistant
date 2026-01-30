@@ -16,7 +16,7 @@
 # ============================================================================
 
 version: "1.0"
-last_updated: "2026-01-26"
+last_updated: "2026-01-30"
 total_skills: 310
 
 # ============================================================================
@@ -234,7 +234,12 @@ agent_profiles:
 
   docs-manager:
     profile: "research:documentation"
-    inherit_from: ["research"]
+    inherit_from: ["research", "planning", "tools", "quality"]
+    primary_domain: "research"
+
+  reporter:
+    profile: "reporting:synthesis"
+    inherit_from: ["research", "planning", "tools", "quality"]
     primary_domain: "research"
 
   project-manager:

@@ -14,7 +14,7 @@ Agent Assistant provides a comprehensive feature set organized into six categori
 | Category | Feature Count | Description |
 |----------|---------------|-------------|
 | Specialist Agents | 20 | Domain expert personas |
-| Command Workflows | 40+ | Development workflow automations |
+| Command Workflows | 50+ | Development workflow automations (incl. /report, focus variant) |
 | Domain Skills | 310+ | On-demand knowledge modules |
 | Quality Gates | 5 | Automated verification checkpoints |
 | Orchestration Rules | 8 | Governance and coordination protocols |

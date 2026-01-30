@@ -8,11 +8,11 @@
 
 ```
 agent-assistant/                     # Project root
-├── agents/                          # 🤖 20 specialist agent definitions
+├── agents/                          # 🤖 21 specialist agent definitions
 ├── assets/                          # 🎨 Static assets (logo, images)
 ├── cli/                             # 🔧 CLI installer system
 ├── code-assistants/                 # 🔌 IDE-specific configurations
-├── commands/                        # 📋 40+ command workflow definitions
+├── commands/                        # 📋 50+ command workflow definitions
 ├── documents/                       # 📚 Generated documentation
 ├── matrix-skills/                   # 🎯 Skill discovery matrix (19 domains)
 ├── rules/                           # ⚖️ Orchestration rules and protocols
@@ -35,7 +35,7 @@ agent-assistant/                     # Project root
 
 ### 2.1 `agents/` — Specialist Agent Definitions
 
-Contains 20 specialist agent definition files.
+Contains 21 specialist agent definition files.
 
 ```
 agents/
@@ -73,7 +73,7 @@ agents/
 
 ### 2.2 `commands/` — Command Workflow Definitions
 
-Contains 40+ command workflow files organized by command and variant.
+Contains 50+ command workflow files organized by command and variant (fast, hard, focus).
 
 ```
 commands/
@@ -158,11 +158,11 @@ rules/
 
 ### 2.4 `matrix-skills/` — Skill Discovery Matrix
 
-Contains 20 YAML files that define skill-to-agent mappings.
+Contains 19 YAML domain files that define skill-to-agent mappings (plus _index.yaml).
 
 ```
 matrix-skills/
-├── _index.yaml                      # Central registry (310 skills, 20 agents)
+├── _index.yaml                      # Central registry (310 skills, 21 agents)
 ├── ai-ml.yaml                       # 40 AI/ML skills (+27: agent development, LLM patterns, RAG, voice AI)
 ├── architecture.yaml                # 9 architecture skills
 ├── backend.yaml                     # 32 backend skills (+12: job queues, payments, communications)
@@ -401,7 +401,7 @@ domains:                         # 19 domain registrations
   frontend: { file: "frontend.yaml", ... }
   # ...
 
-agent_profiles:                  # 20 agent-to-domain mappings
+agent_profiles:                  # 21 agent-to-domain mappings
   backend-engineer:
     profile: "backend:execution"
     inherit_from: [backend, architecture, quality, data, languages]
@@ -544,8 +544,8 @@ REPORTS_PATH  = ./reports/
 
 | Category | Count | Description |
 |----------|-------|-------------|
-| Agent Files | 20 | Specialist agent definitions |
-| Command Files | 40+ | Workflow definitions |
+| Agent Files | 21 | Specialist agent definitions |
+| Command Files | 50+ | Workflow definitions (routers + variants: fast, hard, focus) |
 | Rule Files | 8 | Orchestration protocols |
 | Matrix Files | 20 | Skill discovery config |
 | Skill Folders | 310+ | Domain skill definitions |

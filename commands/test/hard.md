@@ -61,6 +61,59 @@ One phase at a time, each phase independent: Phase 1 → then Phase 2 → … in
 
 ---
 
+## 🛡️ VERIFICATION CHECKPOINT — Context Optimization
+
+> **PURPOSE**: Prevent "context rot" by clearing strategy discussion before test execution.
+> 
+> Test strategy discussions may include rejected approaches that can confuse execution.
+> This checkpoint ensures clean handoff to test execution phases.
+
+### ⚡ OPTIONS (Present to User)
+
+```markdown
+## 🛡️ Context Optimization Checkpoint
+
+**Test Strategy Complete** — Strategy defined, ready for execution.
+
+**Choose how to proceed:**
+
+| Option | Action | Description |
+|--------|--------|-------------|
+| **1. 🚀 Clear context & Execute** | `RECOMMENDED` | Fresh start: Focus on strategy, ignore discussion history |
+| **2. ⏸️ Review Strategy** | `SAFE` | Clear context, show strategy summary, wait for approval |
+| **3. ⚠️ Continue (No Clear)** | `RISKY` | Keep full history (may affect test focus) |
+
+⏳ Awaiting selection...
+```
+
+### 🔄 EXECUTION BEHAVIOR
+
+```yaml
+option_1_clear_execute:
+  behavior: "RECOMMENDED - Clean execution"
+  steps:
+    1. ACKNOWLEDGE: "🚀 Context optimized. Executing test strategy."
+    2. CONTEXT_DIRECTIVE: |
+       ⛔ IGNORE strategy discussion and rejected approaches.
+       ✅ FINALIZED STRATEGY is SOLE SOURCE OF TRUTH.
+    3. PROCEED: Continue to test execution phases
+
+option_2_review_strategy:
+  behavior: "Clear and show summary"
+  steps:
+    1. ACKNOWLEDGE: "⏸️ Context cleared."
+    2. OUTPUT: Display strategy summary
+    3. WAIT: For user approval
+
+option_3_continue_no_clear:
+  behavior: "Proceed with caution"
+  steps:
+    1. WARN: "⚠️ Discussion history retained."
+    2. PROCEED: Continue with existing context
+```
+
+---
+
 ## 🎭 Phase 2: DEPENDENCY MAPPING
 
 | Agent | `scouter`                              |

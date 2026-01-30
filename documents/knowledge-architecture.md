@@ -41,7 +41,7 @@ Agent Assistant is a **multi-agent orchestration framework** that transforms a s
                     └─────────────────┬─────────────────┘
                                       ▼
 ┌─────────────────────────────────────────────────────────────────────────────┐
-│                         SPECIALIST AGENTS (20)                               │
+│                         SPECIALIST AGENTS (21)                               │
 │  ┌─────────────┐ ┌─────────────┐ ┌─────────────┐ ┌─────────────┐           │
 │  │ tech-lead   │ │ backend-    │ │ frontend-   │ │ security-   │ ...       │
 │  │             │ │ engineer    │ │ engineer    │ │ engineer    │           │

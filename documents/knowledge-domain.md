@@ -11,7 +11,7 @@ Agent Assistant operates in the domain of **AI-assisted software development orc
 ```
 ┌─────────────────┐     ┌─────────────────┐     ┌─────────────────┐
 │     AGENTS      │────▶│    COMMANDS     │────▶│     SKILLS      │
-│  (20 entities)  │     │  (40+ entities) │     │ (310+ entities)  │
+│  (21 entities)  │     │  (50+ entities) │     │ (310+ entities)  │
 └─────────────────┘     └─────────────────┘     └─────────────────┘
          │                      │                       │
          ▼                      ▼                       ▼
@@ -123,13 +123,14 @@ execution-mode: string          # "execute" | "router"
 
 | Command | Description | Variants | Category |
 |---------|-------------|----------|----------|
-| `/cook` | Implement features | `:fast`, `:hard` | development |
+| `/cook` | Implement features | `:fast`, `:hard`, `:focus` | development |
 | `/code` | Write code snippets | `:fast`, `:hard` | development |
-| `/fix` | Fix bugs and refactor | `:fast`, `:hard` | development |
+| `/fix` | Fix bugs and refactor | `:fast`, `:hard`, `:focus` | development |
 | `/test` | Generate tests | `:fast`, `:hard` | quality |
 | `/review` | Code review | `:fast`, `:hard` | quality |
 | `/debug` | Systematic debugging | `:fast`, `:hard` | quality |
-| `/plan` | Implementation planning | `:fast`, `:hard` | planning |
+| `/plan` | Implementation planning | `:fast`, `:hard`, `:focus` | planning |
+| `/report` | Create/update reports, summaries | `:fast`, `:hard`, `:focus` | documentation |
 | `/brainstorm` | Requirements discovery | `:fast`, `:hard` | planning |
 | `/design` | UI/UX design | `:fast`, `:hard` | planning |
 | `/docs` | Documentation | `:core`, `:business`, `:audit` | documentation |

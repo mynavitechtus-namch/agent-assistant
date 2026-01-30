@@ -55,6 +55,8 @@ REPORTS_PATH  = ./reports/
 | `/docs ...`   | Docs     | `~/.{TOOL}/skills/agent-assistant/commands/docs.md`   |
 | `/design ...` | Design   | `~/.{TOOL}/skills/agent-assistant/commands/design.md` |
 | `/deploy ...` | Deploy   | `~/.{TOOL}/skills/agent-assistant/commands/deploy.md` |
+| `/report ...` | Reporting | `~/.{TOOL}/skills/agent-assistant/commands/report.md` |
+| "report X" / "status report" | Auto-detect → `/report` | commands/report.md |
 
 ---
 

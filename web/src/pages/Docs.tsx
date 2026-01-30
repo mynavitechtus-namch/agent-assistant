@@ -133,7 +133,7 @@ export default function Docs() {
       <Section background="secondary" spacing="lg">
         <SectionHeader 
           title="Agent Summary" 
-          description="20 specialist agents organized by function."
+          description="21 specialist agents organized by function."
         />
 
         <div className="max-w-4xl mx-auto grid gap-4 md:grid-cols-2 lg:grid-cols-3">

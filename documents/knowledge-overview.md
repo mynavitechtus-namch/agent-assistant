@@ -19,7 +19,7 @@
 
 ## 2. Purpose and Mission
 
-Agent Assistant transforms a single AI coding assistant into a **coordinated team of 20 specialist agents** with structured workflows, quality gates, and 310+ domain skills.
+Agent Assistant transforms a single AI coding assistant into a **coordinated team of 21 specialist agents** with structured workflows, quality gates, and 310+ domain skills.
 
 ### Core Value Proposition
 
@@ -35,7 +35,7 @@ With Agent Assistant:
 
 | Benefit            | Description                                           |
 | ------------------ | ----------------------------------------------------- |
-| **Specialization** | 20 domain expert agents instead of one generalist     |
+| **Specialization** | 21 domain expert agents instead of one generalist     |
 | **Consistency**    | Shared rules, skills, and conventions across all work |
 | **Quality**        | Built-in test, review, and security workflows         |
 | **Efficiency**     | 85% token cost reduction through targeted expertise   |
@@ -47,8 +47,8 @@ With Agent Assistant:
 
 | Metric            | Count | Description                                                |
 | ----------------- | ----- | ---------------------------------------------------------- |
-| Specialist Agents | 20    | Domain experts (backend, frontend, security, tester, etc.) |
-| Command Workflows | 40+   | Development workflows (/cook, /fix, /plan, /deploy, etc.)  |
+| Specialist Agents | 21    | Domain experts (backend, frontend, security, tester, reporter, etc.) |
+| Command Workflows | 50+   | Development workflows (/cook, /fix, /plan, /report, /deploy, etc.; variants: fast, hard, focus) |
 | Domain Skills     | 310   | On-demand knowledge (React, APIs, databases, DevOps, AI/ML, Security, etc.) |
 | Matrix Domains    | 19    | Skill categories (backend, frontend, security, ai-ml, etc.)       |
 | Quality Gates     | 5     | Compile, lint, test, security, review                      |
@@ -200,7 +200,7 @@ Then try development commands:
 
 ## 7. Key Features
 
-### 7.1 20 Specialist Agents
+### 7.1 21 Specialist Agents
 
 | Category           | Agents                                                              |
 | ------------------ | ------------------------------------------------------------------- |
@@ -214,7 +214,7 @@ Then try development commands:
 | **Design**         | designer                                                            |
 | **Management**     | project-manager                                                     |
 
-### 7.2 40+ Command Workflows
+### 7.2 50+ Command Workflows
 
 | Category          | Commands                                                                     |
 | ----------------- | ---------------------------------------------------------------------------- |
@@ -222,6 +222,7 @@ Then try development commands:
 | **Quality**       | `/test`, `/review`, `/debug`                                                 |
 | **Planning**      | `/plan`, `/brainstorm`, `/design`                                            |
 | **Documentation** | `/docs:core`, `/docs:business`, `/docs:audit`                                |
+| **Report**        | `/report:fast`, `/report:hard`, `/report:focus`                               |
 | **Deployment**    | `/deploy:check`, `/deploy:preview`, `/deploy:production`, `/deploy:rollback` |
 | **Utility**       | `/ask`, `/auto`                                                              |
 

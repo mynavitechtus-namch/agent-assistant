@@ -16,9 +16,10 @@ execution-mode: router
 ## 🛑 PRE-FLIGHT (DO FIRST — BLOCKS EXECUTION)
 
 **LOAD now** (in order; path `./rules/` or `~/.{TOOL}/skills/agent-assistant/rules/`):
-1. ORCHESTRATION-LAWS.md  
-2. ADAPTIVE-EXECUTION.md  
-3. EXECUTION-PROTOCOL.md  
+
+1. ORCHESTRATION-LAWS.md
+2. ADAPTIVE-EXECUTION.md
+3. EXECUTION-PROTOCOL.md
 
 **⛔ Do not run any workflow phase until all are loaded.** Follow **all** rules in those files. Then run this file's ROUTING LOGIC, LOAD the chosen variant (e.g. plan/hard.md), and execute it.
 
@@ -33,6 +34,9 @@ IF task is clear (known approach, codebase-only):
 IF task is complex (research needed, architectural):
   → Route to /plan:hard
 
+IF task is complex AND clean implementation handoff is critical:
+  → Route to /plan:focus
+
 IF unsure:
   → Default to /plan:fast
 ```
@@ -41,10 +45,11 @@ IF unsure:
 
 ## AVAILABLE ROUTES
 
-| Route        | When to Use                     |
-| ------------ | ------------------------------- |
-| `/plan:fast` | Quick planning without research |
-| `/plan:hard` | Full planning with research     |
+| Route         | When to Use                                          |
+| ------------- | ---------------------------------------------------- |
+| `/plan:fast`  | Quick planning without research                      |
+| `/plan:hard`  | Full planning with research                          |
+| `/plan:focus` | Full planning with **enforced context optimization** |
 
 ---
 
@@ -59,6 +64,7 @@ IF unsure:
 
 1. ⚡ **Fast** → `/plan:fast` — Quick plan
 2. ⚡⚡⚡ **Hard** → `/plan:hard` — Full research-backed plan
+3. 🎯 **Focus** → `/plan:focus` — Full plan with **automatic context clearing** (clean implementation handoff)
 
 ⏳ Awaiting selection...
 ```

@@ -72,6 +72,7 @@ echo $HOME  # Capture result, e.g., /Users/jdoe
 | `/brainstorm ...`               | Brainstorming          | `~/.{TOOL}/skills/agent-assistant/commands/brainstorm.md`                     |
 | `/ask ...`                      | Q&A                    | `~/.{TOOL}/skills/agent-assistant/commands/ask.md`                            |
 | `/code ...`                     | Direct Coding          | `~/.{TOOL}/skills/agent-assistant/commands/code.md`                           |
+| `/report ...`                   | Reporting              | `~/.{TOOL}/skills/agent-assistant/commands/report.md` → `report/:variant`      |
 
 **Variant form**: Both `/{command}/{variant}` and `/{command}:{variant}` are valid (e.g. `/docs/core` = `/docs:core`). When a variant is present, **LOAD** `~/.{TOOL}/skills/agent-assistant/commands/{command}/{variant}.md` directly; do not load `~/.{TOOL}/skills/agent-assistant/commands/{command}.md` first.
 
@@ -88,6 +89,7 @@ echo $HOME  # Capture result, e.g., /Users/jdoe
 | "document", "readme", "api docs"                            | Documentation | `/docs`   |
 | "design", "UI", "UX", "mockup"                              | Design        | `/design` |
 | "deploy", "release", "production"                           | Deployment    | `/deploy` |
+| "report", "status report", "summary", "documentation update" | Reporting     | `/report` |
 
 **If unclear → Ask: "Should I treat this as /cook (implement) or /fix (bug fix)?"**
 
@@ -176,6 +178,7 @@ for_each_phase:
 | scouter      | `./reports/scouts/SCOUT-{feature}.md`           |
 | designer     | `./reports/designs/DESIGN-{feature}.md`         |
 | planner      | `./reports/plans/PLAN-{feature}.md`             |
+| reporter     | `./reports/` (create/update per task)           |
 
 **Rule**: Subsequent phases MUST read prior deliverables as IMMUTABLE CONSTRAINTS.
 

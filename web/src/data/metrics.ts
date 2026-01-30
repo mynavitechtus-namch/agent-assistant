@@ -63,7 +63,7 @@ export const agentCategorySummary = [
   { category: 'Architecture', count: 2, examples: 'tech-lead, database-architect' },
   { category: 'Quality', count: 4, examples: 'tester, reviewer, debugger, security' },
   { category: 'Planning', count: 3, examples: 'planner, brainstormer, analyst' },
-  { category: 'Support', count: 7, examples: 'designer, devops, docs, researcher...' },
+  { category: 'Support', count: 8, examples: 'designer, devops, docs, reporter, researcher...' },
 ]
 
 // Documentation sections

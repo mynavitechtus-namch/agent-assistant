@@ -45,24 +45,24 @@ skills:
     category: expert
     priority_score: 8
     relevance_mapping:
-      agents: [security-engineer]
-      profiles: ["security:validation"]
+      agents: [security-engineer, devops-engineer]
+      profiles: ["security:validation", "devops:execution"]
     description: "Incident response, vulnerability management, compliance"
 
   - skill_id: secure-code-guardian
     category: expert
     priority_score: 8
     relevance_mapping:
-      agents: [security-engineer, reviewer]
-      profiles: ["security:*"]
+      agents: [security-engineer, devops-engineer, reviewer]
+      profiles: ["security:*", "devops:execution"]
     description: "Secure coding practices and enforcement"
 
   - skill_id: security-reviewer
     category: expert
     priority_score: 8
     relevance_mapping:
-      agents: [security-engineer, reviewer]
-      profiles: ["security:*", "quality:review"]
+      agents: [security-engineer, devops-engineer, reviewer]
+      profiles: ["security:*", "devops:execution", "quality:review"]
     description: "Security-focused code review"
 
   # --------------------------------------------------------------------------

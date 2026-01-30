@@ -1,13 +1,16 @@
 ---
-description: ⚡⚡⚡ Full Design — Complete design process with research
+description: 🔒 Focused Design — Complete design process with enforced context optimization
 version: "1.0"
 category: design
 execution-mode: execute
 ---
 
-# /design:hard — Full Design Process
+# /design:focus — Focus Full Design Process
 
-> **MISSION**: Execute complete design process with research, exploration, and iteration.
+> **MISSION**: Execute complete design process with **enforced context optimization**.
+> 
+> This variant automatically clears context before implementation handoff—no user prompt required.
+> Use when you want guaranteed clean implementation handoff without design exploration noise.
 
 <request>$ARGUMENTS</request>
 
@@ -61,7 +64,7 @@ All files in `./reports/` → English only.
 
 ## ⛔ INCREMENTAL EXECUTION (MANDATORY)
 
-One phase at a time, each phase independent: Phase 1 → then Phase 2 → … in one reply. No batching (load only what each phase needs). **Within each phase:** when doing a part, output it in format so user sees what’s happening (announce before doing).
+One phase at a time, each phase independent: Phase 1 → then Phase 2 → … in one reply. No batching (load only what each phase needs). **Within each phase:** when doing a part, output it in format so user sees what's happening (announce before doing).
 
 ---
 
@@ -88,7 +91,7 @@ One phase at a time, each phase independent: Phase 1 → then Phase 2 → … in
 - [ ] Requirements clear
 - [ ] User needs identified
 - [ ] Constraints documented
-- [ ] **METHODOLOGY CHECK**: Output aligns with `brainstormer` Thinking Protocol (Socratic questioning, assumption surfacing)
+- [ ] **METHODOLOGY CHECK**: Output aligns with `brainstormer` Thinking Protocol
 
 ---
 
@@ -114,7 +117,7 @@ One phase at a time, each phase independent: Phase 1 → then Phase 2 → … in
 
 - [ ] Patterns researched
 - [ ] Best practices identified
-- [ ] **METHODOLOGY CHECK**: Output aligns with `researcher` Thinking Protocol (sources cited, evidence-based)
+- [ ] **METHODOLOGY CHECK**: Output aligns with `researcher` Thinking Protocol
 
 ---
 
@@ -141,7 +144,7 @@ One phase at a time, each phase independent: Phase 1 → then Phase 2 → … in
 - [ ] Design system documented
 - [ ] Component inventory
 - [ ] Integration points
-- [ ] **METHODOLOGY CHECK**: Output aligns with `scouter` Thinking Protocol (file locations, patterns documented)
+- [ ] **METHODOLOGY CHECK**: Output aligns with `scouter` Thinking Protocol
 
 ---
 
@@ -169,59 +172,60 @@ One phase at a time, each phase independent: Phase 1 → then Phase 2 → … in
 - [ ] All states covered
 - [ ] Accessibility verified
 - [ ] Specs documented
-- [ ] **METHODOLOGY CHECK**: Output aligns with `designer` Thinking Protocol (user empathy, accessibility-first, visual hierarchy)
+- [ ] **METHODOLOGY CHECK**: Output aligns with `designer` Thinking Protocol
 
 ---
 
-## 🛡️ VERIFICATION CHECKPOINT — Context Optimization
+## 🛡️ STRICT CONTEXT GATE — Automatic Context Optimization
 
-> **PURPOSE**: Prevent "context rot" by clearing noisy design exploration history before implementation.
+> **⚡ FOCUS MODE**: This checkpoint executes automatically. NO user input required.
 > 
-> Design iterations and rejected alternatives fill context with noise.
-> This checkpoint acts as a "firewall" before handing off to implementation.
+> **PURPOSE**: Prevent "context rot" by forcibly clearing noisy design exploration history.
+> This acts as a mandatory "firewall" before review and implementation handoff.
 
-### ⚡ OPTIONS (Present to User)
-
-```markdown
-## 🛡️ Context Optimization Checkpoint
-
-**Design Complete** — Design specs created at: `./reports/designs/DESIGN-{request}.md`
-
-**Choose how to proceed:**
-
-| Option | Action | Description |
-|--------|--------|-------------|
-| **1. 🚀 Clear context & Ready** | `RECOMMENDED` | Fresh start for implementation: Reload Design, ignore exploration history |
-| **2. ⏸️ Review First** | `SAFE` | Clear context, show design summary, wait for approval |
-| **3. ⚠️ Continue (No Clear)** | `RISKY` | Keep design history (may affect review quality) |
-
-⏳ Awaiting selection...
-```
-
-### 🔄 EXECUTION BEHAVIOR
+### 🔒 AUTOMATIC EXECUTION (NO PROMPT)
 
 ```yaml
-option_1_clear_ready:
-  behavior: "RECOMMENDED - Clean handoff"
-  steps:
-    1. ACKNOWLEDGE: "🚀 Context optimized. Design ready for review/implementation."
+strict_context_gate:
+  mode: "AUTOMATIC - No user interaction"
+  behavior: "Force Clear context & Ready"
+  
+  execution:
+    1. ANNOUNCE: |
+       ## 🛡️ Strict Context Gate — Automatic
+       
+       ✅ **Design Complete**: `./reports/designs/DESIGN-{request}.md`
+       🔒 **Focus Mode**: Automatically clearing context for review/implementation.
+       
+       ⚡ Executing: **Clear context & Ready**...
+    
     2. CONTEXT_DIRECTIVE: |
-       ⛔ IGNORE all design exploration and rejected alternatives.
-       ✅ DESIGN FILE is SOLE SOURCE OF TRUTH.
-    3. PROCEED: Continue to Design Review phase
+       ╔══════════════════════════════════════════════════════════════════╗
+       ║  ⛔ MANDATORY CONTEXT RESET — FOCUS  MODE                        ║
+       ╠══════════════════════════════════════════════════════════════════╣
+       ║  IGNORE: All design exploration, rejected alternatives,          ║
+       ║          iteration history, and intermediate reasoning.          ║
+       ║                                                                  ║
+       ║  SOLE SOURCE OF TRUTH: Design file in ./reports/designs/         ║
+       ║                                                                  ║
+       ║  PROCEED: Continue to Design Review with clean context.          ║
+       ║           Then handoff to implementation.                        ║
+       ╚══════════════════════════════════════════════════════════════════╝
+    
+    3. LOAD: Read Design file as if seeing it for the first time
+    
+    4. PROCEED: Continue to Phase 5 (Design Review)
+```
 
-option_2_review_first:
-  behavior: "Clear and show summary"
-  steps:
-    1. ACKNOWLEDGE: "⏸️ Context cleared."
-    2. OUTPUT: Display design summary for user review
-    3. WAIT: For user approval
+### 📋 Post-Gate Status
 
-option_3_continue_no_clear:
-  behavior: "Proceed with caution"
-  steps:
-    1. WARN: "⚠️ Design exploration history retained."
-    2. PROCEED: Continue to review with existing context
+```markdown
+🔒 **Context Gate Passed**
+- Previous context: DISCARDED
+- Active context: Design file only
+- Mode: Clean review start
+
+Proceeding to Design Review...
 ```
 
 ---
@@ -249,7 +253,7 @@ option_3_continue_no_clear:
 - [ ] Design reviewed
 - [ ] Standards met
 - [ ] Approved
-- [ ] **METHODOLOGY CHECK**: Output aligns with `reviewer` Thinking Protocol (specific feedback, priority matrix)
+- [ ] **METHODOLOGY CHECK**: Output aligns with `reviewer` Thinking Protocol
 
 ---
 
@@ -257,6 +261,7 @@ option_3_continue_no_clear:
 
 Present design with:
 
-1. ✅ **Done** — Design approved
-2. 💻 **Implement** → `/code:hard`
-3. 🔄 **Iterate** — Further refinement
+1. ✅ **Done** — Design approved (Focus Mode)
+2. 🔒 **Context Optimized** — Ready for focus implementation
+3. 💻 **Implement** → `/code:focus`
+4. 🔄 **Iterate** — Further refinement

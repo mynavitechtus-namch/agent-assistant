@@ -112,24 +112,24 @@ skills:
     category: core
     priority_score: 9
     relevance_mapping:
-      agents: [reviewer, tech-lead]
-      profiles: ["quality:review"]
+      agents: [reviewer, tech-lead, reporter]
+      profiles: ["quality:review", "reporting:*"]
     description: "Review methodology, plan compliance, feedback format"
 
   - skill_id: code-review-checklist
     category: core
     priority_score: 8
     relevance_mapping:
-      agents: [reviewer]
-      profiles: ["quality:review"]
+      agents: [reviewer, tech-lead, reporter]
+      profiles: ["quality:review", "architecture:orchestration", "reporting:*"]
     description: "Systematic review checklist, security, best practices"
 
   - skill_id: code-reviewer
     category: expert
     priority_score: 8
     relevance_mapping:
-      agents: [reviewer]
-      profiles: ["quality:review"]
+      agents: [reviewer, tech-lead, reporter]
+      profiles: ["quality:review", "architecture:orchestration", "reporting:*"]
     description: "Comprehensive code review skills"
 
   # --------------------------------------------------------------------------
@@ -190,6 +190,6 @@ skills:
     category: core
     priority_score: 9
     relevance_mapping:
-      agents: [tester, reviewer, backend-engineer, frontend-engineer]
-      profiles: ["quality:*", "backend:*", "frontend:*"]
+      agents: [tester, reviewer, tech-lead, backend-engineer, frontend-engineer, docs-manager, reporter]
+      profiles: ["quality:*", "architecture:orchestration", "backend:*", "frontend:*", "research:*", "reporting:*"]
     description: "NO COMPLETION CLAIMS WITHOUT FRESH VERIFICATION EVIDENCE"

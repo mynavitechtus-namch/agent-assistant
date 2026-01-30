@@ -40,7 +40,7 @@ A **slash-prefixed workflow trigger** that initiates a structured development pr
 | With variant | `/cook:hard` |
 | With argument | `/cook:hard "implement OAuth"` |
 
-**Available Commands**: `/cook`, `/fix`, `/plan`, `/test`, `/review`, `/debug`, `/design`, `/docs`, `/deploy`, `/ask`, `/auto`, `/brainstorm`, `/code`
+**Available Commands**: `/cook`, `/fix`, `/plan`, `/test`, `/review`, `/debug`, `/design`, `/docs`, `/report`, `/deploy`, `/ask`, `/auto`, `/brainstorm`, `/code`
 
 ---
 
@@ -477,16 +477,17 @@ A **document specifying** what a product should do, including features, requirem
 
 | Command | Purpose | Variants |
 |---------|---------|----------|
-| `/cook` | Implement features | `:fast`, `:hard` |
-| `/code` | Generate code snippets | `:fast`, `:hard` |
-| `/fix` | Fix bugs | `:fast`, `:hard` |
-| `/test` | Generate tests | `:fast`, `:hard` |
+| `/cook` | Implement features | `:fast`, `:hard`, `:focus` |
+| `/code` | Generate code snippets | `:fast`, `:hard`, `:focus` |
+| `/fix` | Fix bugs | `:fast`, `:hard`, `:focus` |
+| `/test` | Generate tests | `:fast`, `:hard`, `:focus` |
 | `/review` | Code review | `:fast`, `:hard` |
-| `/debug` | Debug issues | `:fast`, `:hard` |
-| `/plan` | Create implementation plans | `:fast`, `:hard` |
+| `/debug` | Debug issues | `:fast`, `:hard`, `:focus` |
+| `/plan` | Create implementation plans | `:fast`, `:hard`, `:focus` |
 | `/brainstorm` | Discover requirements | `:fast`, `:hard` |
-| `/design` | UI/UX design | `:fast`, `:hard` |
+| `/design` | UI/UX design | `:fast`, `:hard`, `:focus` |
 | `/docs` | Generate documentation | `:core`, `:business`, `:audit` |
+| `/report` | Create/update reports, summaries | `:fast`, `:hard`, `:focus` |
 | `/deploy` | Deployment operations | `:check`, `:preview`, `:production`, `:rollback` |
 | `/ask` | Q&A about codebase | `:fast`, `:hard` |
 | `/auto` | Auto-detect best command | — |

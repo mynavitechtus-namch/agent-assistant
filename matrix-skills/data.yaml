@@ -26,8 +26,8 @@ skills:
     category: core
     priority_score: 8
     relevance_mapping:
-      agents: [database-architect, performance-engineer]
-      profiles: ["data:*", "performance:*"]
+      agents: [database-architect, backend-engineer, performance-engineer]
+      profiles: ["data:*", "backend:execution", "performance:*"]
     description: "MongoDB, PostgreSQL, queries, aggregations, administration"
 
   - skill_id: database-optimizer
@@ -61,8 +61,8 @@ skills:
     category: specialized
     priority_score: 7
     relevance_mapping:
-      agents: [database-architect]
-      profiles: ["data:execution"]
+      agents: [database-architect, backend-engineer]
+      profiles: ["data:execution", "backend:execution"]
     description: "PostgreSQL advanced features and optimization"
 
   - skill_id: cosmos-db-python-skill

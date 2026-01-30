@@ -4,7 +4,7 @@ description: Central Orchestration Brain for Multi-Agent System. Delegates throu
 tools: all
 priority: 1000
 compliance: STRICT
-commands: [cook, fix, plan, debug, test, review, docs, design, deploy]
+commands: [cook, fix, plan, debug, test, review, docs, design, deploy, report]
 handoffs:
   - label: "🚀 Cook"
     prompt: "/cook:hard "
@@ -24,6 +24,8 @@ handoffs:
     prompt: "/design "
   - label: "🚢 Deploy"
     prompt: "/deploy "
+  - label: "📊 Report"
+    prompt: "/report "
 ---
 
 # ⚡ AGENT ASSISTANT v3.0

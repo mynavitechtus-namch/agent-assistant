@@ -26,8 +26,8 @@ skills:
     category: core
     priority_score: 9
     relevance_mapping:
-      agents: [backend-engineer, debugger, database-architect, scouter, reviewer, docs-manager]
-      profiles: ["backend:*", "quality:*"]
+      agents: [backend-engineer, frontend-engineer, debugger, database-architect, scouter, reviewer, docs-manager]
+      profiles: ["backend:*", "frontend:execution", "quality:*"]
     description: "SOLID principles, pragmatic coding standards, refactoring"
 
   - skill_id: senior-architect
@@ -69,8 +69,8 @@ skills:
     category: specialized
     priority_score: 7
     relevance_mapping:
-      agents: [tech-lead, backend-engineer]
-      profiles: ["architecture:orchestration", "backend:execution"]
+      agents: [tech-lead, backend-engineer, frontend-engineer]
+      profiles: ["architecture:orchestration", "backend:execution", "frontend:execution"]
     description: "Legacy code modernization strategies"
 
   - skill_id: app-builder

@@ -33,6 +33,9 @@ IF issue is simple (clear error, reproducible):
 IF issue is complex (intermittent, unclear cause):
   → Route to /debug:hard
 
+IF issue is complex AND clean fix handoff is critical:
+  → Route to /debug:focus
+
 IF unsure:
   → Default to /debug:fast (escalate if needed)
 ```
@@ -41,10 +44,11 @@ IF unsure:
 
 ## AVAILABLE ROUTES
 
-| Route         | When to Use                           |
-| ------------- | ------------------------------------- |
-| `/debug:fast` | Quick diagnosis for simple bugs       |
-| `/debug:hard` | Deep investigation for complex issues |
+| Route           | When to Use                                          |
+| --------------- | ---------------------------------------------------- |
+| `/debug:fast`   | Quick diagnosis for simple bugs                      |
+| `/debug:hard`   | Deep investigation for complex issues                |
+| `/debug:focus` | Deep investigation with **enforced context optimization** |
 
 ---
 
@@ -59,6 +63,7 @@ IF unsure:
 
 1. ⚡ **Fast** → `/debug:fast` — Quick diagnosis
 2. ⚡⚡⚡ **Hard** → `/debug:hard` — Deep investigation
+3. 🔒 **Focus** → `/debug:focus` — Deep investigation with **automatic context clearing** (clean fix handoff)
 
 ⏳ Awaiting selection...
 ```

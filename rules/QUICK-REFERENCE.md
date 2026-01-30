@@ -24,6 +24,10 @@
 | `/brainstorm X`     | `/brainstorm:auto` | `~/.{TOOL}/skills/agent-assistant/commands/brainstorm.md` |
 | `/ask X`            | `/ask:auto`        | `~/.{TOOL}/skills/agent-assistant/commands/ask.md`        |
 | `/code X`           | `/code:auto`       | `~/.{TOOL}/skills/agent-assistant/commands/code.md`       |
+| `/report X`         | `/report:auto`     | `~/.{TOOL}/skills/agent-assistant/commands/report.md`     |
+| `/report:fast X`    | `/report:fast`     | `~/.{TOOL}/skills/agent-assistant/commands/report/fast.md` |
+| `/report:hard X`    | `/report:hard`     | `~/.{TOOL}/skills/agent-assistant/commands/report/hard.md`  |
+| `/report:focus X`   | `/report:focus`    | `~/.{TOOL}/skills/agent-assistant/commands/report/focus.md` |
 
 ---
 
@@ -51,6 +55,7 @@
 | DevOps        | `devops-engineer`      | `~/.{TOOL}/skills/agent-assistant/agents/devops-engineer.md`      | support     |
 | Business      | `business-analyst`     | `~/.{TOOL}/skills/agent-assistant/agents/business-analyst.md`     | support     |
 | Project       | `project-manager`      | `~/.{TOOL}/skills/agent-assistant/agents/project-manager.md`      | support     |
+| Reporting     | `reporter`             | `~/.{TOOL}/skills/agent-assistant/agents/reporter.md`             | support     |
 
 ---
 
@@ -78,6 +83,7 @@
 | AI/ML agents      | `backend-engineer`     | `tech-lead`         |
 | Penetration test  | `security-engineer`    | —                   |
 | Workflow automation | `devops-engineer`    | `backend-engineer`  |
+| Reports, status, documentation updates | `reporter` | `docs-manager` |
 
 ---
 
@@ -104,6 +110,7 @@ researcher: "./reports/researchers/RESEARCH-{feature}.md"
 scouter: "./reports/scouts/SCOUT-{feature}.md"
 designer: "./reports/designs/DESIGN-{feature}.md"
 planner: "./reports/plans/PLAN-{feature}.md"
+reporter: "./reports/ (create/update per task)"
 ```
 
 ---
@@ -194,3 +201,4 @@ anti_lazy: ❌ TIER 2 when TIER 1 available
 | "design", "UI", "UX", "mockup"                 | `/design`     |
 | "deploy", "release", "production"              | `/deploy`     |
 | "brainstorm", "ideas", "explore"               | `/brainstorm` |
+| "report", "status report", "summary", "documentation update" | `/report` |

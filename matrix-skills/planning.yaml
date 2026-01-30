@@ -18,8 +18,8 @@ skills:
     category: core
     priority_score: 9
     relevance_mapping:
-      agents: [planner]
-      profiles: ["planning:analysis"]
+      agents: [planner, tech-lead, project-manager, reporter]
+      profiles: ["planning:analysis", "architecture:orchestration", "management:*", "reporting:*"]
     description: "Structured task planning, dependencies, verification criteria"
 
   - skill_id: planning
@@ -34,16 +34,16 @@ skills:
     category: core
     priority_score: 8
     relevance_mapping:
-      agents: [planner, researcher, brainstormer]
-      profiles: ["planning:*", "research:*"]
+      agents: [planner, tech-lead, researcher, brainstormer]
+      profiles: ["planning:*", "architecture:orchestration", "research:*"]
     description: "Multi-step analysis, revision, hypothesis verification"
 
   - skill_id: problem-solving
     category: core
     priority_score: 8
     relevance_mapping:
-      agents: [planner, brainstormer]
-      profiles: ["planning:analysis", "planning:discovery"]
+      agents: [planner, researcher, brainstormer]
+      profiles: ["planning:analysis", "research:analysis", "planning:discovery"]
     description: "Complexity spirals, innovation blocks, meta-patterns"
 
   - skill_id: brainstorming
@@ -58,8 +58,8 @@ skills:
     category: core
     priority_score: 8
     relevance_mapping:
-      agents: [planner]
-      profiles: ["planning:analysis"]
+      agents: [planner, tech-lead, project-manager, reporter]
+      profiles: ["planning:analysis", "architecture:orchestration", "management:*", "reporting:*"]
     description: "Technical plan documentation"
 
   # --------------------------------------------------------------------------
@@ -69,16 +69,16 @@ skills:
     category: utility
     priority_score: 7
     relevance_mapping:
-      agents: [brainstormer, planner]
-      profiles: ["planning:*"]
+      agents: [brainstormer, planner, tech-lead]
+      profiles: ["planning:*", "architecture:orchestration"]
     description: "Clarification questions for underspecified requirements"
 
   - skill_id: spec-miner
     category: utility
     priority_score: 6
     relevance_mapping:
-      agents: [planner, business-analyst]
-      profiles: ["planning:*"]
+      agents: [planner, tech-lead, business-analyst]
+      profiles: ["planning:*", "architecture:orchestration"]
     description: "Specification mining and extraction"
 
   - skill_id: behavioral-modes

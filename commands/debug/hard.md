@@ -87,6 +87,59 @@ One phase at a time, each phase independent: Phase 1 → then Phase 2 → … in
 
 ---
 
+## 🛡️ VERIFICATION CHECKPOINT — Context Optimization
+
+> **PURPOSE**: Prevent "context rot" by clearing noisy debugging/analysis history before fix implementation.
+> 
+> Deep investigation sessions fill context with hypotheses and failed attempts that can confuse implementation.
+> This checkpoint acts as a "firewall" before handing off to fix workflows.
+
+### ⚡ OPTIONS (Present to User)
+
+```markdown
+## 🛡️ Context Optimization Checkpoint
+
+**Debug Analysis Complete** — Root cause identified, fix strategy designed.
+
+**Choose how to proceed:**
+
+| Option | Action | Description |
+|--------|--------|-------------|
+| **1. 🚀 Clear context & Fix** | `RECOMMENDED` | Fresh start: Ignore debug history, proceed with fix strategy only |
+| **2. ⏸️ Review First** | `SAFE` | Clear context, show fix summary, wait for approval |
+| **3. ⚠️ Continue (No Clear)** | `RISKY` | Keep debug history (may cause fix drift) |
+
+⏳ Awaiting selection...
+```
+
+### 🔄 EXECUTION BEHAVIOR
+
+```yaml
+option_1_clear_fix:
+  behavior: "RECOMMENDED - Clean handoff to fix"
+  steps:
+    1. ACKNOWLEDGE: "🚀 Context optimized. Fix strategy ready."
+    2. CONTEXT_DIRECTIVE: |
+       ⛔ IGNORE all debugging hypotheses and failed investigation paths.
+       ✅ FIX STRATEGY is SOLE SOURCE OF TRUTH.
+    3. OUTPUT: "Run `/fix:focus` to implement with clean context."
+
+option_2_review_first:
+  behavior: "Clear and show summary"
+  steps:
+    1. ACKNOWLEDGE: "⏸️ Context cleared."
+    2. OUTPUT: Display root cause + fix strategy summary
+    3. WAIT: For user approval
+
+option_3_continue_no_clear:
+  behavior: "Proceed with caution"
+  steps:
+    1. WARN: "⚠️ Debug history retained. Watch for hypothesis drift."
+    2. PROCEED: Complete workflow with existing context
+```
+
+---
+
 ## COMPLETION
 
 Present findings with:

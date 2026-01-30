@@ -16,9 +16,10 @@ execution-mode: router
 ## 🛑 PRE-FLIGHT (DO FIRST — BLOCKS EXECUTION)
 
 **LOAD now** (in order; path `./rules/` or `~/.{TOOL}/skills/agent-assistant/rules/`):
-1. ORCHESTRATION-LAWS.md  
-2. ADAPTIVE-EXECUTION.md  
-3. EXECUTION-PROTOCOL.md  
+
+1. ORCHESTRATION-LAWS.md
+2. ADAPTIVE-EXECUTION.md
+3. EXECUTION-PROTOCOL.md
 
 **⛔ Do not run any workflow phase until all are loaded.** Follow **all** rules in those files. Then run this file's ROUTING LOGIC, LOAD the chosen variant workflow, and execute it.
 
@@ -33,6 +34,9 @@ IF issue is simple (clear cause, quick fix):
 IF issue is complex (research needed, multi-file):
   → Route to /fix:hard
 
+IF issue is complex AND context optimization is critical:
+  → Route to /fix:focus
+
 IF unsure:
   → Default to /fix:fast (escalate if needed)
 ```
@@ -41,10 +45,11 @@ IF unsure:
 
 ## AVAILABLE ROUTES
 
-| Route       | When to Use                     |
-| ----------- | ------------------------------- |
-| `/fix:fast` | Quick fixes, clear issues       |
-| `/fix:hard` | Complex issues, research needed |
+| Route        | When to Use                                           |
+| ------------ | ----------------------------------------------------- |
+| `/fix:fast`  | Quick fixes, clear issues                             |
+| `/fix:hard`  | Complex issues, research needed                       |
+| `/fix:focus` | Complex issues with **enforced context optimization** |
 
 ---
 
@@ -59,6 +64,7 @@ IF unsure:
 
 1. ⚡ **Fast** → `/fix:fast` — Quick fix
 2. ⚡⚡⚡ **Hard** → `/fix:hard` — Full resolution
+3. 🎯 **Focus** → `/fix:focus` — Full resolution with **automatic context clearing** (prevents hallucination)
 
 ⏳ Awaiting selection...
 ```
