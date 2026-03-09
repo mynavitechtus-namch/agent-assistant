@@ -1,0 +1,4 @@
+display_name: "/test:focus"
+short_description: "🔒 Focused Test — Comprehensive QA with enforced context optimization"
+brand_color: "#10B981"
+allow_implicit_invocation: true

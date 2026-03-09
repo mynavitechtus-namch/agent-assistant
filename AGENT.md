@@ -8,7 +8,7 @@
 >
 > **⚠️ FAILURE TO LOAD CORE.md = PROTOCOL VIOLATION — All responses invalid until loaded**
 >
-> **Platform Resolution**: cursor→`.cursor`, claude→`.claude`, copilot→`.copilot`, gemini→`.gemini/antigravity`
+> **Platform Resolution**: cursor→`.cursor`, claude→`.claude`, copilot→`.copilot`, gemini→`.gemini/antigravity`, codex→`.codex`
 
 ---
 
@@ -86,6 +86,14 @@ TIER_2 (FALLBACK on system error only):
 ```
 
 **❌ FORBIDDEN**: Using TIER 2 when runSubagent available
+
+---
+
+## 👥 TEAM EXECUTION (`:team` variants)
+
+Commands support `:team` variant for parallel multi-agent collaboration (e.g., `/cook:team`, `/fix:team`).
+
+**LOAD**: `rules/TEAMS.md` when `:team` variant is selected. Teams path: `agents/teams/{team-name}/_team.md`
 
 ---
 

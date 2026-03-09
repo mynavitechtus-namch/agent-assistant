@@ -179,7 +179,8 @@ AI coding assistants are powerful but unstructured. Developers use AI tools in a
 | FR-005.2 | System SHALL support Cursor | Must-Have | ✅ Complete |
 | FR-005.3 | System SHALL support GitHub Copilot | Must-Have | ✅ Complete |
 | FR-005.4 | System SHALL support Antigravity/Gemini | Must-Have | ✅ Complete |
-| FR-005.5 | System SHALL provide CLI installer for all tools | Must-Have | ✅ Complete |
+| FR-005.5 | System SHALL support OpenAI Codex | Must-Have | ✅ Complete |
+| FR-005.6 | System SHALL provide CLI installer for all tools | Must-Have | ✅ Complete |
 
 #### FR-006: Documentation Generation
 

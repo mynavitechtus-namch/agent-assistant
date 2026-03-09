@@ -1,0 +1,4 @@
+display_name: "/report:focus"
+short_description: "🔒 Focused Report — Deep analysis with enforced context optimization"
+brand_color: "#3B82F6"
+allow_implicit_invocation: true

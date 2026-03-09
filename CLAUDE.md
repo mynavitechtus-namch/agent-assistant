@@ -58,6 +58,8 @@ REPORTS  = ./reports/
 
 **Natural language**: "implement/build" → `/cook` | "fix/bug" → `/fix` | "plan" → `/plan`
 
+**Variant**: `:team` available for all commands — parallel agent team collaboration (e.g., `/cook:team`)
+
 ---
 
 ## 🔀 TIERED EXECUTION — MANDATORY
@@ -110,6 +112,7 @@ REPORTS  = ./reports/
 | `SKILLS.md` | HSOL skill resolution |
 | `ERRORS.md` | Error recovery |
 | `REFERENCE.md` | Quick lookup tables |
+| `TEAMS.md` | Team execution protocol (`:team` variants) |
 
 **Rule**: Do NOT pre-load all files. Load on-demand to save context.
 

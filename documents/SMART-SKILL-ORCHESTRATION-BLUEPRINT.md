@@ -37,13 +37,13 @@ The solution is a **Hybrid Skill Orchestration Layer** (HSOL) that:
 
 ## Prerequisites
 
-Before HSOL can function, the **find-skills** skill must exist at `{SKILLS_PATH}/find-skills/SKILL.md`, where **{SKILLS_PATH}** is the skills path for the **tool the user is currently using** (e.g. Cursor: `~/.cursor/skills/`, Copilot: `~/.copilot/skills/`, Antigravity: `~/.gemini/antigravity/skills/`). All verify and install actions apply **only to the current tool**; do not verify or install for all tools unless the user explicitly runs `install --all`.
+Before HSOL can function, the **find-skills** skill must exist at `{SKILLS_PATH}/find-skills/SKILL.md`, where **{SKILLS_PATH}** is the skills path for the **tool the user is currently using** (e.g. Cursor: `~/.cursor/skills/`, Copilot: `~/.copilot/skills/`, Codex: `~/.codex/skills/`, Antigravity: `~/.gemini/antigravity/skills/`). All verify and install actions apply **only to the current tool**; do not verify or install for all tools unless the user explicitly runs `install --all`.
 
 **Installation (current tool only, skip confirmation when using npx):**
 
 ```bash
 # Option 1: Automatic when user installs agent-assistant for a tool
-# User runs: npm run install:cursor (or install:copilot, install:antigravity)
+# User runs: npm run install:cursor (or install:copilot, install:antigravity, install:codex)
 # The CLI copies skills/ (including find-skills) to that tool's path only.
 
 # Option 2: Manual copy to CURRENT TOOL's path only
@@ -51,6 +51,8 @@ Before HSOL can function, the **find-skills** skill must exist at `{SKILLS_PATH}
 cp -r skills/find-skills ~/.cursor/skills/
 # For Copilot:
 cp -r skills/find-skills ~/.copilot/skills/
+# For Codex:
+cp -r skills/find-skills ~/.codex/skills/
 # For Antigravity:
 cp -r skills/find-skills ~/.gemini/antigravity/skills/
 # Do not copy to all tools unless the user explicitly wants that.

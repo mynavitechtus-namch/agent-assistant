@@ -33,6 +33,9 @@ IF topic is clear (quick ideas, simple exploration):
 IF topic is complex (research needed, deep analysis):
   → Route to /brainstorm:hard
 
+IF topic is complex AND maximum quality with team collaboration needed:
+  → Route to /brainstorm:team
+
 IF unsure:
   → Default to /brainstorm:fast
 ```
@@ -45,6 +48,7 @@ IF unsure:
 | ------------------ | -------------------------------------- |
 | `/brainstorm:fast` | Quick ideation, simple exploration     |
 | `/brainstorm:hard` | Research-backed ideation with analysis |
+| `/brainstorm:team` | Maximum quality with parallel agent team collaboration |
 
 ---
 
@@ -59,6 +63,7 @@ IF unsure:
 
 1. ⚡ **Fast** → `/brainstorm:fast` — Quick ideation
 2. ⚡⚡⚡ **Hard** → `/brainstorm:hard` — Deep exploration
+3. 👥 **Team** → `/brainstorm:team` — Full team collaboration (parallel agents, maximum quality)
 
 ⏳ Awaiting selection...
 ```

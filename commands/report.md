@@ -56,6 +56,9 @@ IF task requires absolute context clarity OR "clean slate" analysis:
 IF user explicitly asks to UPDATE existing files (not create report):
   → Still use /report:hard or /report:focus; reporter OUTPUT MODE = update existing files
 
+IF task is complex AND maximum quality with team collaboration needed:
+  → Route to /report:team
+
 IF unsure:
   → Default to /report:fast (escalate if needed)
 ```
@@ -69,6 +72,7 @@ IF unsure:
 | `/report:fast`  | Quick status updates, daily summaries                                       |
 | `/report:hard`  | Detailed analysis, any topic (algorithms, docs, changes), template-based  |
 | `/report:focus` | Deep analysis with **enforced context optimization**; update or create      |
+| `/report:team`  | Maximum quality with parallel agent team collaboration |
 
 ---
 
@@ -84,6 +88,7 @@ IF unsure:
 1. ⚡ **Fast** → `/report:fast` — Quick summary
 2. ⚡⚡⚡ **Hard** → `/report:hard` — Full analysis, any topic; create report **or** update existing files / use template
 3. 🎯 **Focus** → `/report:focus` — Deep analysis with **automatic context clearing**; create or update per task
+4. 👥 **Team** → `/report:team` — Full team collaboration (parallel agents, maximum quality)
 
 ⏳ Awaiting selection...
 ```

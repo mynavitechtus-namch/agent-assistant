@@ -49,6 +49,64 @@
 
 ---
 
+## 🔺 GOLDEN TRIANGLE PHASE OUTPUT FORMAT (`:team` variant only)
+
+> **LOAD**: `TEAMS.md` for full Golden Triangle protocol.
+> When a workflow uses `:team` variant, replace the standard phase format above with this format.
+> Each phase spawns exactly **3 agents**: Tech Lead + Executor + Reviewer.
+
+### Emit progressively:
+
+```markdown
+## 🎭 Phase {N}: {name} — 🔺 GOLDEN TRIANGLE
+
+### 🔺 Triangle Assignment
+| Role | Agent | Mission |
+|------|-------|---------|
+| Tech Lead | `{agent}` | {coordination mission} |
+| Executor | `{agent}` | {implementation mission} |
+| Reviewer | `{agent}` | {review mission} |
+
+### 📋 Shared Task List
+| # | Task | Owner | Status | Round |
+|---|------|-------|--------|-------|
+| 1 | {task} | `{executor}` | ✅/🔄/⏳ | 1/3 |
+
+### 📬 Mailbox Exchanges (key entries from ./reports/MAILBOX-{date}.md)
+| # | From → To | Type | Summary |
+|---|-----------|------|---------|
+| 1 | Tech Lead → Executor | TASK_ASSIGNMENT | {summary} |
+| 2 | Executor → Reviewer | SUBMISSION | {summary} |
+| 3 | Reviewer → Executor | REVIEW (PASS/FAIL) | {summary} |
+| 4 | Executor → Reviewer | DEFENSE/RESUBMISSION | {summary} |
+| 5 | Tech Lead → ALL | DECISION | {summary} |
+
+### 🔄 Debate Summary (if any)
+- **Rounds used**: {N}/3
+- **Key disputes**: {brief}
+- **Resolution**: {PASS / Tech Lead arbitration}
+
+### ✅ CONSENSUS: {TechLead} ✓ | {Executor} ✓ | {Reviewer} ✓
+
+### Exit Criteria
+- [x] {criterion_1}
+- [x] {criterion_2}
+
+### ✅ Phase {N} complete — Golden Triangle released
+**Deliverable**: {summary}
+```
+
+**Rules**:
+- Team phases use Golden Triangle format; non-team phases use standard format
+- ALWAYS exactly 3 agents per phase (Tech Lead + Executor + Reviewer)
+- Tech Lead decomposes → Executor implements → Reviewer critiques → Debate → Consensus
+- Mailbox (`./reports/MAILBOX-{date}.md`) captures ALL inter-agent communication
+- Maximum 3 debate rounds per task — then Tech Lead arbitrates
+- Output released ONLY with explicit consensus stamp: `✅ CONSENSUS: X ✓ | Y ✓ | Z ✓`
+- NO phase can complete without all 3 agents confirming
+
+---
+
 ## PHASE EXECUTION RULES
 
 ### One Phase at a Time (No Batching)

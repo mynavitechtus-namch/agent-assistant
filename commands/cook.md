@@ -37,6 +37,9 @@ IF feature is complex (multi-component, research needed):
 IF feature is complex AND context optimization is critical:
   → Route to /cook:focus
 
+IF feature is complex AND maximum quality with team collaboration needed:
+  → Route to /cook:team
+
 IF unsure:
   → Default to /cook:fast
 ```
@@ -50,6 +53,7 @@ IF unsure:
 | `/cook:fast`  | Quick features, clear specifications                    |
 | `/cook:hard`  | Complex features, full workflow                         |
 | `/cook:focus` | Complex features with **enforced context optimization** |
+| `/cook:team`  | Maximum quality with parallel agent team collaboration |
 
 ---
 
@@ -65,6 +69,7 @@ IF unsure:
 1. ⚡ **Fast** → `/cook:fast` — Quick implementation
 2. ⚡⚡⚡ **Hard** → `/cook:hard` — Full feature development
 3. 🎯 **Focus** → `/cook:focus` — Full development with **automatic context clearing** (prevents hallucination)
+4. 👥 **Team** → `/cook:team` — Full team collaboration (parallel agents, maximum quality)
 
 ⏳ Awaiting selection...
 ```

@@ -365,11 +365,11 @@ The CLI provides a command-line interface for installation and management.
 ```bash
 # Install framework for a tool
 agent-assistant install <tool>
-agent-assistant install cursor|copilot|antigravity|claude|--all
+agent-assistant install cursor|copilot|antigravity|claude|codex|--all
 
 # Uninstall framework from a tool
 agent-assistant uninstall <tool>
-agent-assistant uninstall cursor|copilot|antigravity|claude|--all
+agent-assistant uninstall cursor|copilot|antigravity|claude|codex|--all
 
 # List installation status
 agent-assistant list

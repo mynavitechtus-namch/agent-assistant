@@ -58,6 +58,8 @@ REPORTS  = ./reports/
 
 **Natural language**: "implement/build" → `/cook` | "fix/bug" → `/fix` | "plan" → `/plan`
 
+**Variant**: `:team` available for all commands — parallel agent team collaboration (e.g., `/cook:team`)
+
 ---
 
 ## 🔀 TIERED EXECUTION — MANDATORY
@@ -107,6 +109,7 @@ REPORTS  = ./reports/
 | Skill resolution | `SKILLS.md` |
 | Error occurred | `ERRORS.md` |
 | Quick lookup | `REFERENCE.md` |
+| Team execution | `TEAMS.md` |
 
 ---
 

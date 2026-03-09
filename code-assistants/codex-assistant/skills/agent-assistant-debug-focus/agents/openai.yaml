@@ -1,0 +1,4 @@
+display_name: "/debug:focus"
+short_description: "🔒 Focused Debug — Deep investigation with enforced context optimization"
+brand_color: "#EF4444"
+allow_implicit_invocation: true

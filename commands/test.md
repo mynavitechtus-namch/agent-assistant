@@ -36,6 +36,9 @@ IF scope is comprehensive (full suite, E2E):
 IF scope is comprehensive AND clean execution focus is critical:
   → Route to /test:focus
 
+IF scope is comprehensive AND maximum quality with team collaboration needed:
+  → Route to /test:team
+
 IF unsure:
   → Default to /test:fast
 ```
@@ -49,6 +52,7 @@ IF unsure:
 | `/test:fast`   | Quick tests, unit tests                            |
 | `/test:hard`   | Full test suite, E2E                               |
 | `/test:focus` | Full testing with **enforced context optimization** |
+| `/test:team`  | Maximum quality with parallel agent team collaboration |
 
 ---
 
@@ -64,6 +68,7 @@ IF unsure:
 1. ⚡ **Fast** → `/test:fast` — Quick tests
 2. ⚡⚡⚡ **Hard** → `/test:hard` — Comprehensive testing
 3. 🔒 **Focus** → `/test:focus` — Comprehensive testing with **automatic context clearing** (focused execution)
+4. 👥 **Team** → `/test:team` — Full team collaboration (parallel agents, maximum quality)
 
 ⏳ Awaiting selection...
 ```

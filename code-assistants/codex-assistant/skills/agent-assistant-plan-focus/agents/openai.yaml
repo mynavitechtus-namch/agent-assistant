@@ -1,0 +1,4 @@
+display_name: "/plan:focus"
+short_description: "🔒 Focused Plan — Research-backed planning with enforced context optimization"
+brand_color: "#F59E0B"
+allow_implicit_invocation: true

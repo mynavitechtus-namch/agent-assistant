@@ -110,6 +110,61 @@ result:
 
 ---
 
+## 🔺 AGENT TEAMS — GOLDEN TRIANGLE (`:team` variant only)
+
+> **LOAD**: `TEAMS.md` for full Golden Triangle protocol and debate mechanism.
+> Teams spawn exactly **3 agents per phase**: Tech Lead + Executor + Reviewer.
+> Adversarial collaboration produces higher quality than parallel cooperation.
+
+### Golden Triangle Roster
+
+| Domain | Tech Lead | Executor | Reviewer | Use When |
+|--------|-----------|----------|----------|----------|
+| `backend-team` | `tech-lead` | `backend-engineer` | `reviewer` | APIs, server logic, backend features |
+| `frontend-team` | `tech-lead` | `frontend-engineer` | `reviewer` | UI components, client-side features |
+| `fullstack-team` | `tech-lead` | `backend-engineer` + `frontend-engineer` | `reviewer` | End-to-end features |
+| `database-team` | `tech-lead` | `database-architect` | `reviewer` + security lens | Schema design, migrations, queries |
+| `research-team` | `researcher` | `scouter` | `brainstormer` (Devil's Advocate) | Discovery, codebase analysis, patterns |
+| `planning-team` | `planner` | `researcher` | `tech-lead` (feasibility critic) | Architecture planning, task decomposition |
+| `qa-team` | `tester` | `tester` (self-implements) | `security-engineer` + `performance-engineer` | Test strategy, coverage, quality |
+| `design-team` | `designer` | `frontend-engineer` | `reviewer` + UX/a11y lens | UI/UX design, component specs |
+| `debug-team` | `debugger` | `backend-engineer` | `reviewer` (root-cause validator) | Root cause analysis, issue resolution |
+| `devops-team` | `devops-engineer` | `backend-engineer` | `security-engineer` | CI/CD, infrastructure, deployment |
+| `security-team` | `security-engineer` | `backend-engineer` | `reviewer` (pen-test mindset) | Security assessment, vulnerability audit |
+| `game-team` | `tech-lead` | `game-engineer` | `reviewer` (game arch + 60fps) | Game development, engines, physics, ECS |
+| `mobile-team` | `tech-lead` | `mobile-engineer` | `reviewer` (UX + platform) | iOS, Android, React Native, Flutter |
+| `performance-team` | `performance-engineer` | `backend-engineer` | `reviewer` (measurement + regression) | Profiling, optimization, load testing |
+| `docs-team` | `docs-manager` | `researcher` | `reviewer` (accuracy + completeness) | Technical writing, API docs, architecture docs |
+| `project-team` | `project-manager` | `business-analyst` | `tech-lead` (feasibility critic) | Project planning, risk, delivery |
+| `report-team` | `reporter` | `scouter` | `reviewer` (data accuracy + insight) | Status reports, metrics, analytics |
+
+### Golden Triangle vs Single Agent
+
+| When | Use |
+|------|-----|
+| Standard `:fast`, `:hard`, `:focus` variants | Single agent per phase |
+| `:team` variant | Golden Triangle per phase |
+| User explicitly requests team review/collaboration | `:team` variant |
+| Maximum quality with adversarial debate is priority | `:team` variant |
+
+### Golden Triangle Definitions Location
+
+```
+agents/teams/{team-name}/
+├── techlead.md    # Coordinator, decomposer, arbitrator
+├── executor.md    # Builder, implementer, defender
+└── reviewer.md    # Devil's advocate, quality gatekeeper
+```
+
+### Communication Protocol
+
+- **Shared Task List**: Published by Tech Lead at phase start, tracks task status
+- **Mailbox**: `./reports/MAILBOX-{date}.md` — append-only log of all exchanges
+- **Debate**: Max 3 rounds per task → Tech Lead arbitrates
+- **Consensus**: `✅ CONSENSUS: TechLead ✓ | Executor ✓ | Reviewer ✓` required to release output
+
+---
+
 ## TASK → AGENT MAPPING
 
 | Task | Agent |

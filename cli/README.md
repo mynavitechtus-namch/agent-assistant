@@ -14,6 +14,7 @@ This CLI tool installs the Agent Assistant framework for different AI coding too
 | **Copilot**     | `~/.copilot/skills/` | GitHub Copilot in VS Code   |
 | **Antigravity** | `~/.gemini/`         | Google Antigravity / Gemini |
 | **Claude**      | `~/.claude/`         | Anthropic Claude CLI        |
+| **Codex**       | `~/.codex/`          | OpenAI Codex CLI            |
 
 ## Installation
 
@@ -51,7 +52,7 @@ npm run install:all
 Usage: agent-assistant <command> [options]
 
 Commands:
-  install [tool]     Install for a specific tool (cursor, copilot, antigravity, claude)
+  install [tool]     Install for a specific tool (cursor, copilot, antigravity, claude, codex)
   install --all      Install for all supported tools
   uninstall [tool]   Uninstall from a specific tool
   list               List supported tools and installation status
@@ -83,6 +84,9 @@ agent-assistant install antigravity
 
 # Install for Claude Code
 agent-assistant install claude
+
+# Install for Codex
+agent-assistant install codex
 
 # Install for all tools
 agent-assistant install --all
@@ -120,6 +124,7 @@ Example output:
   copilot      GitHub Copilot                ✅ Installed
   antigravity  Google Antigravity / Gemini   ✅ Installed
   claude       Claude Code                   ✅ Installed
+  codex        OpenAI Codex CLI              ✅ Installed
 ```
 
 ## What Gets Installed
@@ -163,13 +168,23 @@ Example output:
 | Agents         | `~/.claude/agents/`                 |
 | Core Framework | `~/.claude/skills/agent-assistant/` |
 
+### For Codex
+
+| Content        | Location                            |
+| -------------- | ----------------------------------- |
+| Global Rules   | `~/.codex/AGENTS.md` (primary), `~/.codex/CODEX.md` (compat) |
+| Commands       | `~/.codex/commands/`               |
+| Skills         | `~/.codex/skills/`                 |
+| Agents         | `~/.codex/agents/`                 |
+| Core Framework | `~/.codex/skills/agent-assistant/` |
+
 ## Path Replacements
 
 The installer automatically replaces placeholder paths in all Markdown files:
 
 | Placeholder               | Replacement                                                          |
 | ------------------------- | -------------------------------------------------------------------- |
-| `{TOOL}`                  | Tool-specific path (e.g., `cursor`, `copilot`, `gemini/antigravity`) |
+| `{TOOL}`                  | Tool-specific path (e.g., `cursor`, `copilot`, `codex`, `gemini/antigravity`) |
 | `{TOOL}/agent-assistant/` | Full path to agent-assistant directory                               |
 
 ## Requirements
@@ -188,11 +203,13 @@ If you get permission errors, ensure you have write access to the target directo
 ls -la ~/.cursor/
 ls -la ~/.copilot/
 ls -la ~/.gemini/
+ls -la ~/.codex/
 
 # Create directories if needed
 mkdir -p ~/.cursor/skills
 mkdir -p ~/.copilot/skills
 mkdir -p ~/.gemini/antigravity/skills
+mkdir -p ~/.codex/skills
 ```
 
 ### Files Not Found

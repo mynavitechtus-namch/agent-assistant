@@ -33,6 +33,9 @@ IF scope is small (PR, few files):
 IF scope is large (codebase, architecture):
   → Route to /review:hard
 
+IF scope is large AND maximum quality with team collaboration needed:
+  → Route to /review:team
+
 IF unsure:
   → Default to /review:fast
 ```
@@ -45,6 +48,7 @@ IF unsure:
 | -------------- | ---------------------- |
 | `/review:fast` | Quick PR/file review   |
 | `/review:hard` | Deep codebase analysis |
+| `/review:team` | Maximum quality with parallel agent team collaboration |
 
 ---
 
@@ -59,6 +63,7 @@ IF unsure:
 
 1. ⚡ **Fast** → `/review:fast` — Quick review
 2. ⚡⚡⚡ **Hard** → `/review:hard` — Deep analysis
+3. 👥 **Team** → `/review:team` — Full team collaboration (parallel agents, maximum quality)
 
 ⏳ Awaiting selection...
 ```

@@ -6,7 +6,7 @@ import { PageSideDecorations, GradientBackground } from '../components/decoratio
 import { SEO, pageSEO } from '../components/seo'
 import { platforms, prerequisites, quickStartCommands } from '../data'
 
-type PlatformId = 'cursor' | 'claude' | 'copilot' | 'antigravity'
+type PlatformId = 'cursor' | 'claude' | 'copilot' | 'antigravity' | 'codex'
 
 export default function Installation() {
   const [selectedPlatform, setSelectedPlatform] = useState<PlatformId>('cursor')

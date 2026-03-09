@@ -40,6 +40,9 @@ IF task is complex (multi-file, research needed):
 IF task is complex AND context optimization is critical:
   → Route to /code:focus
 
+IF task is complex AND maximum quality with team collaboration needed:
+  → Route to /code:team
+
 IF unsure:
   → Default to /code:fast (escalate if needed)
 ```
@@ -53,6 +56,7 @@ IF unsure:
 | `/code:fast`  | Quick implementation, clear requirements                |
 | `/code:hard`  | Complex features, multi-file changes                    |
 | `/code:focus` | Complex features with **enforced context optimization** |
+| `/code:team`  | Maximum quality with parallel agent team collaboration |
 
 ---
 
@@ -68,6 +72,7 @@ IF unsure:
 1. ⚡ **Fast** → `/code:fast` — Quick implementation
 2. ⚡⚡⚡ **Hard** → `/code:hard` — Full development cycle
 3. 🎯 **Focus** → `/code:focus` — Full cycle with **automatic context clearing** (prevents hallucination)
+4. 👥 **Team** → `/code:team` — Full team collaboration (parallel agents, maximum quality)
 
 ⏳ Awaiting selection...
 ```

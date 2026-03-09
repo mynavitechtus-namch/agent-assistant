@@ -37,6 +37,9 @@ IF task is complex (research needed, architectural):
 IF task is complex AND clean implementation handoff is critical:
   → Route to /plan:focus
 
+IF task is complex AND maximum quality with team collaboration needed:
+  → Route to /plan:team
+
 IF unsure:
   → Default to /plan:fast
 ```
@@ -50,6 +53,7 @@ IF unsure:
 | `/plan:fast`  | Quick planning without research                      |
 | `/plan:hard`  | Full planning with research                          |
 | `/plan:focus` | Full planning with **enforced context optimization** |
+| `/plan:team`  | Maximum quality with parallel agent team collaboration |
 
 ---
 
@@ -65,6 +69,7 @@ IF unsure:
 1. ⚡ **Fast** → `/plan:fast` — Quick plan
 2. ⚡⚡⚡ **Hard** → `/plan:hard` — Full research-backed plan
 3. 🎯 **Focus** → `/plan:focus` — Full plan with **automatic context clearing** (clean implementation handoff)
+4. 👥 **Team** → `/plan:team` — Full team collaboration (parallel agents, maximum quality)
 
 ⏳ Awaiting selection...
 ```

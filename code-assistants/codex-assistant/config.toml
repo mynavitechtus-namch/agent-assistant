@@ -1,0 +1,109 @@
+# =============================================================================
+# Agent Assistant — Codex Multi-Agent Configuration
+# =============================================================================
+# This file is MERGED into ~/.codex/config.toml during install.
+# It registers all 21 specialist agents and enables multi-agent orchestration.
+# =============================================================================
+
+project_doc_fallback_filenames = ["AGENT.md", "CODEX.md", "AGENTS.md", ".agents.md"]
+
+# -----------------------------------------------------------------------------
+# Features
+# -----------------------------------------------------------------------------
+[features]
+multi_agent = true
+
+# -----------------------------------------------------------------------------
+# Agent System Settings
+# -----------------------------------------------------------------------------
+[agents]
+max_threads = 6
+max_depth = 2
+
+# -----------------------------------------------------------------------------
+# Agent Role Declarations (21 specialists)
+# -----------------------------------------------------------------------------
+
+[agents.backend-engineer]
+description = "Principal Backend Architect — server-side logic, API design, scalable systems"
+config_file = "agents/backend-engineer.toml"
+
+[agents.brainstormer]
+description = "Principal Requirements Architect — requirements discovery, Socratic clarification, ideation"
+config_file = "agents/brainstormer.toml"
+
+[agents.business-analyst]
+description = "Principal Business Analyst — requirements, stakeholder management, domain modeling"
+config_file = "agents/business-analyst.toml"
+
+[agents.database-architect]
+description = "Principal Database Architect — schema design, query optimization, data integrity"
+config_file = "agents/database-architect.toml"
+
+[agents.debugger]
+description = "Principal Debug Specialist — root cause analysis and systematic investigation"
+config_file = "agents/debugger.toml"
+
+[agents.designer]
+description = "Principal Design Architect — UI/UX design, design systems, user experience"
+config_file = "agents/designer.toml"
+
+[agents.devops-engineer]
+description = "Principal DevOps Architect — CI/CD, infrastructure as code, deployment automation"
+config_file = "agents/devops-engineer.toml"
+
+[agents.docs-manager]
+description = "Principal Documentation Architect — technical writing, API docs, architecture docs"
+config_file = "agents/docs-manager.toml"
+
+[agents.frontend-engineer]
+description = "Principal Frontend Architect — UI/UX excellence, web performance, accessibility"
+config_file = "agents/frontend-engineer.toml"
+
+[agents.game-engineer]
+description = "Principal Game Architect — game development, Three.js, game engines"
+config_file = "agents/game-engineer.toml"
+
+[agents.mobile-engineer]
+description = "Principal Mobile Architect — iOS, Android, React Native, Flutter"
+config_file = "agents/mobile-engineer.toml"
+
+[agents.performance-engineer]
+description = "Principal Performance Architect — profiling, optimization, load testing"
+config_file = "agents/performance-engineer.toml"
+
+[agents.planner]
+description = "Principal Technical Planner — implementation blueprints and task decomposition"
+config_file = "agents/planner.toml"
+
+[agents.project-manager]
+description = "Principal Delivery Manager — project coordination, risk management, delivery"
+config_file = "agents/project-manager.toml"
+
+[agents.reporter]
+description = "Documentation & Reporting Specialist — transforms data into structured insights"
+config_file = "agents/reporter.toml"
+
+[agents.researcher]
+description = "Principal Research Analyst — technical research, documentation discovery, best practices"
+config_file = "agents/researcher.toml"
+
+[agents.reviewer]
+description = "Principal Code Reviewer — quality assurance and plan compliance verification"
+config_file = "agents/reviewer.toml"
+
+[agents.scouter]
+description = "Principal Codebase Analyst — code exploration and pattern discovery"
+config_file = "agents/scouter.toml"
+
+[agents.security-engineer]
+description = "Principal Security Architect — threat modeling, secure coding, vulnerability assessment"
+config_file = "agents/security-engineer.toml"
+
+[agents.tech-lead]
+description = "Technical Lead — orchestrates implementation, routes to specialists, ensures quality"
+config_file = "agents/tech-lead.toml"
+
+[agents.tester]
+description = "Principal QA Architect — test strategy, automation, quality assurance"
+config_file = "agents/tester.toml"

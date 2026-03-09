@@ -40,6 +40,7 @@ REPORTS  = ./reports/
 | GitHub Copilot | `copilot` | `~/.copilot/skills/agent-assistant/` |
 | Claude Code | `claude` | `~/.claude/skills/agent-assistant/` |
 | Gemini/Antigravity | `gemini/antigravity` | `~/.gemini/antigravity/skills/agent-assistant/` |
+| Codex | `codex` | `~/.codex/skills/agent-assistant/` |
 
 ---
 

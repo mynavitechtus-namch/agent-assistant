@@ -53,7 +53,7 @@ With Agent Assistant:
 | Matrix Domains    | 19    | Skill categories (backend, frontend, security, ai-ml, etc.)       |
 | Quality Gates     | 5     | Compile, lint, test, security, review                      |
 | Rule Files        | 8     | Orchestration protocols                                    |
-| Supported Tools   | 4     | Claude Code, Cursor, Copilot, Antigravity/Gemini           |
+| Supported Tools   | 5     | Claude Code, Cursor, Copilot, Codex, Antigravity/Gemini    |
 
 ### Measured Results
 
@@ -165,7 +165,7 @@ Load rules   Delegate   Delegate      Delegate    Summary
 ### Prerequisites
 
 - **Node.js 18+** installed
-- At least one supported AI tool (Claude Code, Cursor, Copilot, or Antigravity)
+- At least one supported AI tool (Claude Code, Cursor, Copilot, Codex, or Antigravity)
 
 ### Installation Options
 

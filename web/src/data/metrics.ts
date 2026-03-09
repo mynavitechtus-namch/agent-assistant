@@ -37,7 +37,7 @@ export const featureCards = [
   {
     emoji: '🔌',
     title: 'Multi-Platform',
-    description: 'Works seamlessly with Cursor, Claude Code, GitHub Copilot, and Antigravity.',
+    description: 'Works seamlessly with Cursor, Claude Code, GitHub Copilot, Codex, and Antigravity.',
     href: '/features/multi-platform-support',
     badge: 'Flexible',
   },

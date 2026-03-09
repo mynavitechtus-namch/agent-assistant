@@ -59,6 +59,8 @@ REPORTS  = ./reports/
 
 **Variant syntax**: `/docs/core` = `/docs:core` → Load `commands/docs/core.md`
 
+**Team variant**: `:team` available for all commands — parallel agent team collaboration (e.g., `/cook:team`)
+
 ---
 
 ## 🔀 TIERED EXECUTION — MANDATORY
@@ -105,6 +107,7 @@ REPORTS  = ./reports/
 | Skill resolution | `SKILLS.md` |
 | Error occurred | `ERRORS.md` |
 | Quick lookup | `REFERENCE.md` |
+| Team execution | `TEAMS.md` |
 
 ---
 

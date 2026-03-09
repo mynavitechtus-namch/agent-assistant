@@ -21,7 +21,7 @@ Transform one AI into a coordinated team of 21 specialist agents with structured
 | ------------------------------- | ---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
 | **One-Time Setup, Forever Use** | Configure once at global level (`~/.cursor/`, `~/.claude/`, etc.) and it auto-applies to ALL your projects. No more repetitive config for every new repo.                                      |
 | **Sub-Agent Orchestration**     | When supported (Claude Code, Cursor Max mode), the main agent spawns specialized sub-agents to handle tasks **in parallel** — backend, frontend, testing, security all working simultaneously. |
-| **Multi-Platform Support**      | Works seamlessly across **Cursor**, **GitHub Copilot**, **Claude Code**, and **Antigravity/Gemini**. Same workflows, any tool.                                                                 |
+| **Multi-Platform Support**      | Works seamlessly across **Cursor**, **GitHub Copilot**, **Claude Code**, **Codex**, and **Antigravity/Gemini**. Same workflows, any tool.                                                                 |
 | **Matrix Skill Discovery (HSOL)** | Injects the right skills by profile and request; optional dynamic discovery (find-skills) for `hard`/`focus` when matrix fitness &lt; 0.8. 310+ matrix skills, zero manual config. |
 
 ### The Goal
@@ -53,6 +53,7 @@ agent-assistant install cursor # Setup for Cursor
 agent-assistant install claude # Setup for Claude Code
 agent-assistant install copilot # Setup for GitHub Copilot
 agent-assistant install antigravity # Setup for Antigravity/Gemini
+agent-assistant install codex # Setup for Codex
 agent-assistant install --all # Setup for ALL tools
 ```
 
@@ -68,6 +69,7 @@ node cli/install.js install cursor      # Cursor
 node cli/install.js install claude      # Claude Code
 node cli/install.js install copilot     # GitHub Copilot
 node cli/install.js install antigravity # Antigravity/Gemini
+node cli/install.js install codex       # Codex
 node cli/install.js install --all       # All tools
 ```
 
@@ -82,6 +84,7 @@ agent-assistant uninstall cursor      # Remove from Cursor
 agent-assistant uninstall claude      # Remove from Claude Code
 agent-assistant uninstall copilot     # Remove from GitHub Copilot
 agent-assistant uninstall antigravity # Remove from Antigravity/Gemini
+agent-assistant uninstall codex       # Remove from Codex
 agent-assistant uninstall --all       # Remove from ALL tools
 ```
 
@@ -99,6 +102,7 @@ node cli/install.js uninstall cursor      # Remove from Cursor
 node cli/install.js uninstall claude      # Remove from Claude Code
 node cli/install.js uninstall copilot     # Remove from GitHub Copilot
 node cli/install.js uninstall antigravity # Remove from Antigravity/Gemini
+node cli/install.js uninstall codex       # Remove from Codex
 node cli/install.js uninstall --all   # Remove from all tools
 # Then remove the directory
 cd ..
@@ -213,6 +217,7 @@ agent-assistant/
 | Claude Code    | ✅ Full | `~/.claude/`  |
 | GitHub Copilot | ✅ Full | `~/.copilot/` |
 | Antigravity    | ✅ Full | `~/.gemini/`  |
+| Codex          | ✅ Full | `~/.codex/`   |
 
 ---
 

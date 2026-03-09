@@ -1,0 +1,4 @@
+display_name: "/code:focus"
+short_description: "🔒 Focused Development — Full cycle with enforced context optimization"
+brand_color: "#6366F1"
+allow_implicit_invocation: true

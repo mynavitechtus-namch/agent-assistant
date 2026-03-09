@@ -19,6 +19,7 @@ agent-assistant/                     # Project root
 ├── skills/                          # 💡 310 domain skill definitions
 ├── AGENT-TEMPLATE.md                # 📝 Agent file template
 ├── CLAUDE.md                        # 🟣 Claude Code entry point
+├── CODEX.md                         # 💻 OpenAI Codex entry point
 ├── COPILOT.md                       # 🔵 GitHub Copilot entry point
 ├── CURSOR.md                        # 🟢 Cursor entry point
 ├── GEMINI.md                        # 🟡 Antigravity/Gemini entry point
@@ -255,6 +256,8 @@ code-assistants/
 │   └── GEMINI.md
 ├── claude-assistant/                # Claude Code integration
 │   └── CLAUDE.md
+├── codex-assistant/                 # OpenAI Codex integration
+│   └── CODEX.md
 ├── copilot-assistant/               # GitHub Copilot integration
 │   └── agent-assistant.agent.md
 └── cursor-assistant/                # Cursor integration
@@ -267,6 +270,7 @@ code-assistants/
 | Tool | Entry File | Method |
 |------|------------|--------|
 | Claude Code | `~/.claude/CLAUDE.md` | CLI → `~/.claude/` |
+| Codex | `~/.codex/AGENTS.md` (primary), `~/.codex/CODEX.md` (compat) | CLI → `~/.codex/` |
 | Cursor | agent-assistant.mdc | MDC rule file injection |
 | Copilot | agent-assistant.agent.md | VS Code prompts |
 | Antigravity | GEMINI.md | Global config |

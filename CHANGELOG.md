@@ -5,6 +5,34 @@ All notable changes to this project will be documented in this file.
 The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/),
 and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0.html).
 
+## [1.2.0] - 2026-03-09
+
+### Added
+
+- **Agent Teams — Golden Triangle Architecture**: Adversarial collaboration system with 17 specialized domain teams
+  - **17 Domain Teams**: backend, frontend, fullstack, database, research, planning, qa, design, debug, devops, security, game, mobile, performance, docs, project, report
+  - **51 Team Agent Files**: Each team has 3 role-specific agents (`techlead.md`, `executor.md`, `reviewer.md`) under `agents/teams/{domain}-team/`
+  - **Golden Triangle Protocol**: Structured debate mechanism — Tech Lead decomposes, Executor builds & defends, Reviewer challenges & validates
+  - **Mailbox Communication**: Append-only `./reports/MAILBOX-{date}.md` for traceable inter-agent communication (TASK_ASSIGNMENT, SUBMISSION, REVIEW, DEFENSE, ARBITRATION, DECISION)
+  - **Consensus Protocol**: Three resolution paths — Clean Pass, Resolved Pass (after defense/fix), Arbitrated Pass (Tech Lead binding decision after max 3 rounds)
+  - **`:team` Command Variants**: 9 team-enabled commands — `/cook:team`, `/fix:team`, `/debug:team`, `/test:team`, `/review:team`, `/plan:team`, `/design:team`, `/report:team`, `/deploy:team`
+  - **Rules**: `rules/TEAMS.md` (530 lines) — complete Golden Triangle protocol, team roster, debate mechanism, consensus stamp format
+  - **Rules Updates**: `rules/PHASES.md` and `rules/AGENTS.md` updated with Golden Triangle phase output format and team execution support
+  - **Web**: New `/features/agent-teams` page showcasing the Golden Triangle architecture, 17 teams roster, debate mechanism, and consensus protocol. Added route, navigation, and SEO config.
+
+- **Codex Support**: Full integration of OpenAI Codex as supported platform (`~/.codex/`)
+  - **CLI**: `installCodex()` / `uninstallCodex()` functions, `install:codex` / `uninstall:codex` npm scripts
+  - **Entry Points**: `~/.codex/AGENTS.md` (primary discovery), `CODEX.md` (compat), and `code-assistants/codex-assistant/CODEX.md` (source template)
+  - **Codex Assistant**: Full `code-assistants/codex-assistant/` with `config.toml`, 21 agent TOML files, and skill TOML configs
+  - **Platform Resolution**: Added `codex → .codex` in `rules/CORE.md` and `AGENT.md`
+  - **Web**: Platform data, comparison features, SEO config, and metrics updated
+- **Codex Support**: Full integration of OpenAI Codex as 5th supported platform (`~/.codex/`)
+  - **CLI**: `installCodex()` / `uninstallCodex()` functions, `install:codex` / `uninstall:codex` npm scripts
+  - **Entry Points**: `~/.codex/AGENTS.md` (primary discovery), `CODEX.md` (compat), and `code-assistants/codex-assistant/CODEX.md` (source template)
+  - **Platform Resolution**: Added `codex → .codex` in `rules/CORE.md` and `AGENT.md`
+  - **Web**: Platform data, comparison features, SEO config, and metrics updated
+  - **Documentation**: README, CLI README, knowledge docs, architecture docs, and HSOL blueprint updated
+
 ## [1.1.1] - 2026-02-05
 
 ### Fixed
@@ -97,4 +125,4 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 - **Initial Release**: First stable release of `@namch/agent-assistant`.
 - **Core Orchestration**: Framework for managing multi-agent workflows.
 - **CLI Tool**: `agent-assistant` CLI for easy installation and management.
-- **Multi-Assistant Support**: Compatibility with Cursor, GitHub Copilot, and Claude Code (Antigravity).
+- **Multi-Assistant Support**: Compatibility with Cursor, GitHub Copilot, Claude Code, Codex, and Antigravity.

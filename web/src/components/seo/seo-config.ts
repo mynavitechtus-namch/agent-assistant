@@ -16,7 +16,7 @@ export const pageSEO = {
   },
   installation: {
     title: 'Installation Guide',
-    description: 'Install Agent Assistant globally and start using specialized agents in all your projects. Quick setup for Cursor, Claude Code, GitHub Copilot, and Antigravity.',
+    description: 'Install Agent Assistant globally and start using specialized agents in all your projects. Quick setup for Cursor, Claude Code, GitHub Copilot, Codex, and Antigravity.',
     pathname: '/installation',
   },
   docs: {
@@ -41,7 +41,7 @@ export const pageSEO = {
   },
   multiPlatform: {
     title: 'Multi-Platform Support',
-    description: 'Works seamlessly with Cursor, Claude Code, GitHub Copilot, and Antigravity. One configuration, multiple platforms.',
+    description: 'Works seamlessly with Cursor, Claude Code, GitHub Copilot, Codex, and Antigravity. One configuration, multiple platforms.',
     pathname: '/features/multi-platform-support',
   },
   oneTimeSetup: {
@@ -63,5 +63,10 @@ export const pageSEO = {
     title: 'System Architecture',
     description: 'Interactive architecture diagram showing how Agent Assistant orchestrates 21 specialist agents, 310+ skills, and tiered execution through the Orchestrator Pattern.',
     pathname: '/features/workflow',
+  },
+  agentTeams: {
+    title: 'Agent Teams — Golden Triangle',
+    description: 'Adversarial collaboration with 17 specialized teams. Each team has a Tech Lead, Executor, and Reviewer working through structured debate for maximum quality output.',
+    pathname: '/features/agent-teams',
   },
 } as const

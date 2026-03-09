@@ -37,6 +37,9 @@ IF design is complex (full feature, system):
 IF design is complex AND clean implementation handoff is critical:
   → Route to /design:focus
 
+IF design is complex AND maximum quality with team collaboration needed:
+  → Route to /design:team
+
 IF unsure:
   → Default to /design:fast
 ```
@@ -50,6 +53,7 @@ IF unsure:
 | `/design:fast`  | Quick component design, simple UI                  |
 | `/design:hard`  | Full feature design, system design                 |
 | `/design:focus` | Full design with **enforced context optimization** |
+| `/design:team`  | Maximum quality with parallel agent team collaboration |
 
 ---
 
@@ -65,6 +69,7 @@ IF unsure:
 1. ⚡ **Fast** → `/design:fast` — Quick design
 2. ⚡⚡⚡ **Hard** → `/design:hard` — Full design process
 3. 🎯 **Focus** → `/design:focus` — Full design with **automatic context clearing** (clean implementation handoff)
+4. 👥 **Team** → `/design:team` — Full team collaboration (parallel agents, maximum quality)
 
 ⏳ Awaiting selection...
 ```

@@ -114,16 +114,41 @@ export const platforms: Platform[] = [
       'agent-assistant uninstall antigravity',
     ]
   },
+  {
+    id: 'codex',
+    name: 'Codex',
+    icon: '💻',
+    description: 'Full support for OpenAI Codex through AGENTS.md (primary) and CODEX.md compatibility.',
+    status: 'full',
+    configFile: 'AGENTS.md + CODEX.md',
+    installPath: '~/.codex/skills/agent-assistant/',
+    features: [
+      'Codex integration',
+      'CODEX.md configuration',
+      'Full skill library',
+      'Orchestration laws',
+    ],
+    steps: [
+      'Install Agent Assistant globally',
+      'CODEX.md is auto-detected in projects',
+      'Global config applies to all projects',
+      'Use slash commands in any project',
+    ],
+    setup: [
+      'agent-assistant install codex',
+      'agent-assistant uninstall codex',
+    ]
+  },
 ]
 
 // Platform comparison features
 export const platformComparisonFeatures = [
-  { feature: 'Agent Orchestration', cursor: true, claude: true, copilot: true, antigravity: true },
-  { feature: 'Skill Injection', cursor: true, claude: true, copilot: true, antigravity: true },
-  { feature: 'Command Workflows', cursor: true, claude: true, copilot: true, antigravity: true },
-  { feature: 'Quality Gates', cursor: true, claude: true, copilot: true, antigravity: true },
-  { feature: 'Global Config', cursor: true, claude: true, copilot: true, antigravity: true },
-  { feature: 'Sub-agent Invocation', cursor: true, claude: true, copilot: true, antigravity: true },
+  { feature: 'Agent Orchestration', cursor: true, claude: true, copilot: true, antigravity: true, codex: true },
+  { feature: 'Skill Injection', cursor: true, claude: true, copilot: true, antigravity: true, codex: true },
+  { feature: 'Command Workflows', cursor: true, claude: true, copilot: true, antigravity: true, codex: true },
+  { feature: 'Quality Gates', cursor: true, claude: true, copilot: true, antigravity: true, codex: true },
+  { feature: 'Global Config', cursor: true, claude: true, copilot: true, antigravity: true, codex: true },
+  { feature: 'Sub-agent Invocation', cursor: true, claude: true, copilot: true, antigravity: true, codex: true },
 ]
 
 // Simplified platform data for badges

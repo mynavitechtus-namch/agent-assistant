@@ -99,7 +99,7 @@ describe('CLI Installer', () => {
     describe('Input Validation', () => {
         test('should reject invalid tool names', () => {
             // Test that invalid tools are rejected
-            // const validTools = ['cursor', 'copilot', 'antigravity', 'gemini', 'claude', 'claude-code'];
+            // const validTools = ['cursor', 'copilot', 'antigravity', 'gemini', 'claude', 'claude-code', 'codex'];
             // const invalidTools = ['invalid', '../path', '', null];
             assert.ok(true, 'Test placeholder');
         });

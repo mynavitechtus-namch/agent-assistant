@@ -36,6 +36,9 @@ IF issue is complex (intermittent, unclear cause):
 IF issue is complex AND clean fix handoff is critical:
   → Route to /debug:focus
 
+IF issue is complex AND maximum quality with team collaboration needed:
+  → Route to /debug:team
+
 IF unsure:
   → Default to /debug:fast (escalate if needed)
 ```
@@ -49,6 +52,7 @@ IF unsure:
 | `/debug:fast`   | Quick diagnosis for simple bugs                      |
 | `/debug:hard`   | Deep investigation for complex issues                |
 | `/debug:focus` | Deep investigation with **enforced context optimization** |
+| `/debug:team`  | Maximum quality with parallel agent team collaboration |
 
 ---
 
@@ -64,6 +68,7 @@ IF unsure:
 1. ⚡ **Fast** → `/debug:fast` — Quick diagnosis
 2. ⚡⚡⚡ **Hard** → `/debug:hard` — Deep investigation
 3. 🔒 **Focus** → `/debug:focus` — Deep investigation with **automatic context clearing** (clean fix handoff)
+4. 👥 **Team** → `/debug:team` — Full team collaboration (parallel agents, maximum quality)
 
 ⏳ Awaiting selection...
 ```

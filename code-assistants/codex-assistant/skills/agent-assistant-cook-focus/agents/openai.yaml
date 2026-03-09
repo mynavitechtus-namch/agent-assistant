@@ -1,0 +1,4 @@
+display_name: "/cook:focus"
+short_description: "🔒 Focused Feature — Complete development with enforced context optimization"
+brand_color: "#6366F1"
+allow_implicit_invocation: true
