@@ -65,29 +65,6 @@ One phase at a time, each phase independent: Phase 1 → then Phase 2 → … in
 | Exit  | Strategy defined, test types identified |
 
 ---
-
-## 🛡️ CONTEXT GATE CHECKPOINT
-
-> **⛔ BLOCKING**: Load Context Gate protocol NOW before proceeding.
->
-> **LOAD**: `rules/CONTEXT-GATE.md` — Execute FOCUS MODE (Test variant)
->
-> This is a MANDATORY checkpoint. Cannot skip or bypass.
-
-### ⚡ EXECUTION
-
-```yaml
-context_gate_execution:
-  mode: "FOCUS (Automatic)"
-  trigger: "After Phase 1 (Test Strategy) completes"
-  protocol: "Follow rules/CONTEXT-GATE.md § FOCUS MODE § test_focus_variant"
-  
-  variant_adjustments:
-    plan_source: "Finalized test strategy from Phase 1"
-    remaining_phases: "Phase 2 → 3 → 4 → 5"
-```
-
-**DO NOT proceed to Phase 2 until Context Gate completes.**
 - Rejected approaches
 - Planning noise
 - Chat history

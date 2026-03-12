@@ -5,6 +5,14 @@ All notable changes to this project will be documented in this file.
 The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/),
 and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0.html).
 
+## [1.2.2] - 2026-03-12
+
+### Fixed
+- **Context Gate Enforcement**: Remove context gate because it was causing more issues than it solved (complexity, maintenance, AI bypass). Instead, rely on agent-specific blocking checkpoints within the Golden Triangle protocol for guaranteed input validation and clean execution.
+  - Removed `rules/CONTEXT-GATE.md` and all references to it in command files
+  - Updated all team command files to rely solely on phase-specific blocking checkpoints (P2–P7) for input validation
+  - Updated documentation to reflect removal of context gate and new reliance on phase checkpoints for clean execution
+
 ## [1.2.1] - 2026-03-12
 
 ### Fixed

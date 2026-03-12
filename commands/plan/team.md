@@ -308,28 +308,6 @@ FOR EACH requirement in BRAINSTORM-{task}.md:
 
 ---
 
-## 🛡️ VERIFICATION CHECKPOINT
-
-> **⛔ BLOCKING**: Load Context Gate protocol NOW before proceeding.
->
-> **LOAD**: `rules/CONTEXT-GATE.md` — Execute HARD MODE protocol
-
-```yaml
-context_gate_execution:
-  mode: "HARD (User Choice)"
-  trigger: "After Phase 4 completes with PASS"
-  protocol: "Follow rules/CONTEXT-GATE.md § HARD MODE"
-  variant_adjustments:
-    plan_file: "PLAN-{task}.md"
-    qa_report: "QA-PLAN-{task}.md"
-    mailbox: "MAILBOX-{date}.md contains full debate history"
-    remaining_action: "Hand off to implementation workflow"
-```
-
-**DO NOT present completion until user selects option.**
-
----
-
 ## ✅ COMPLETION
 
 ```markdown

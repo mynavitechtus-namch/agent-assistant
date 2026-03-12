@@ -178,29 +178,6 @@ One phase at a time, each phase independent: Phase 1 → then Phase 2 → … in
 
 ---
 
-## 🛡️ CONTEXT GATE CHECKPOINT
-
-> **⛔ BLOCKING**: Load Context Gate protocol NOW before proceeding.
->
-> **LOAD**: `rules/CONTEXT-GATE.md` — Execute FOCUS MODE (Design variant)
->
-> This is a MANDATORY checkpoint. Cannot skip or bypass.
-
-### ⚡ EXECUTION
-
-```yaml
-context_gate_execution:
-  mode: "FOCUS (Automatic)"
-  trigger: "After Phase 4 (Design Creation) completes"
-  protocol: "Follow rules/CONTEXT-GATE.md § FOCUS MODE § design_focus_variant"
-  
-  variant_adjustments:
-    remaining_phases: "Phase 5 (Design Review) → Implementation Handoff"
-    deliverable_file: "./reports/designs/DESIGN-{request}.md"
-```
-
-**DO NOT proceed to Phase 5 until Context Gate completes.**
-
 ## ❌ Discarded:
 - Design exploration noise
 - Rejected alternatives

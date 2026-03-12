@@ -45,8 +45,8 @@ execution-mode: execute
 2. **IF YES**:
    - **SKIP** Phase 1 (Requirements/Brainstorm), Phase 2 (Scout), Phase 3 (Planning).
    - **ANNOUNCE**: "✅ Plan provided/found — skipping research, scout, and planning. Proceeding to implementation."
-   - **GO TO**: Strict Context Gate (automatic) → then Phase 4 (Implementation) → Phase 5 (Testing) → Phase 6 (Review).
-3. **IF NO**: Run phases in order: Phase 1 → 2 → 3 → Context Gate → 4 → 5 → 6.
+   - **GO TO**: Phase 4 (Implementation) → Phase 5 (Testing) → Phase 6 (Review).
+3. **IF NO**: Run phases in order: Phase 1 → 2 → 3 → 4 → 5 → 6.
 
 ---
 
@@ -181,29 +181,6 @@ One phase at a time, each phase independent: Phase 1 → then Phase 2 → … in
 - [ ] **METHODOLOGY CHECK**: Output aligns with `planner` Thinking Protocol
 
 ---
-
-## 🛡️ CONTEXT GATE CHECKPOINT
-
-> **⛔ BLOCKING**: Load Context Gate protocol NOW before proceeding.
->
-> **LOAD**: `rules/CONTEXT-GATE.md` — Execute FOCUS MODE protocol
->
-> This is a MANDATORY checkpoint. Cannot skip or bypass.
-
-### ⚡ EXECUTION
-
-```yaml
-context_gate_execution:
-  mode: "FOCUS (Automatic)"
-  trigger: "After Phase 3 (Planning) completes"
-  protocol: "Follow rules/CONTEXT-GATE.md § FOCUS MODE"
-  
-  variant_adjustments:
-    remaining_phases: "Phase 4 → 5 → 6"
-    plan_file: "./reports/plans/PLAN-{task}.md"
-```
-
-**DO NOT proceed to Phase 4 until Context Gate completes.**
 
 Mode: Fresh implementation start
 

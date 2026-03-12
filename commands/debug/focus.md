@@ -92,54 +92,6 @@ One phase at a time, each phase independent: Phase 1 → then Phase 2 → … in
 
 ---
 
-## 🛡️ CONTEXT GATE CHECKPOINT
-
-> **⛔ BLOCKING**: Load Context Gate protocol NOW before proceeding.
->
-> **LOAD**: `rules/CONTEXT-GATE.md` — Execute FOCUS MODE (Debug variant)
->
-> This is a MANDATORY checkpoint. Cannot skip or bypass.
-
-### ⚡ EXECUTION
-
-```yaml
-context_gate_execution:
-  mode: "FOCUS (Automatic)"
-  trigger: "After Phase 4 (Solution Design) completes"
-  protocol: "Follow rules/CONTEXT-GATE.md § FOCUS MODE § debug_focus_variant"
-  
-  variant_adjustments:
-    reload_type: "OUTPUT_ESSENTIAL_CONTEXT"
-    handoff_to: "/fix:focus"
-```
-
-**Note**: Debug outputs context for fix handoff, doesn't implement directly.
-```
-
-### 📋 Post-Gate Status
-
-```markdown
-🔒 **Context Gate Passed**
-
-## ✅ Output for Handoff:
-- User request (original issue verbatim)
-- Root cause summary with evidence
-- Fix strategy with rollback
-- Acceptance criteria for fix verification
-
-## ❌ Discarded:
-- Failed investigation hypotheses
-- Rejected theories
-- Debugging noise
-- Chat history
-
-Mode: Clean handoff ready
-
-Ready for fix implementation...
-```
-
----
-
 ## COMPLETION
 
 Present findings with:

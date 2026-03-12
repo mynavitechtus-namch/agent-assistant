@@ -140,31 +140,6 @@ One phase at a time, each phase independent: Phase 1 → then Phase 2 → … in
 
 ---
 
-## 🛡️ CONTEXT GATE CHECKPOINT
-
-> **⛔ BLOCKING**: Load Context Gate protocol NOW before proceeding.
->
-> **LOAD**: `rules/CONTEXT-GATE.md` — Execute FOCUS MODE protocol
->
-> This is a MANDATORY checkpoint. Cannot skip or bypass.
-
-### ⚡ EXECUTION
-
-```yaml
-context_gate_execution:
-  mode: "FOCUS (Automatic)"
-  trigger: "After Phase 5 (Planning) completes"
-  protocol: "Follow rules/CONTEXT-GATE.md § FOCUS MODE"
-  
-  variant_adjustments:
-    remaining_phases: "Phase 6 → 7 → 8"
-    plan_file: "./reports/plans/PLAN-{feature}.md"
-```
-
-**DO NOT proceed to Phase 6 until Context Gate completes.**
-
----
-
 ## 🎭 Phase 6: IMPLEMENTATION
 
 | Agent        | `tech-lead` → routes to specialists                     |

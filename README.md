@@ -140,20 +140,8 @@ Creates `./documents/` files that agents reference. Without docs, agents work ge
 | ------- | ---------------- | -------------------------- |
 | `:fast` | Simple tasks     | 2-3 agents                 |
 | `:hard` | Complex features | 5-8 agents + quality gates |
-| `:focus` | Clean execution | **Clear context** + auto-run phases (cook, code, fix, debug, design, plan, test, report) |
-
-### Clear context — stay on your request, avoid history hallucination
-
-**`:hard`** and **`:focus`** are designed to reduce **context rot** (the model drifting or "hallucinating" from long chat history):
-
-- **Problem**: Long conversations can make the model latch onto old context and drift from your current request.
-- **How we handle it**:
-  - **`:hard`**: Structured workflow (phases + deliverables) so each step is grounded in **your input + prior phase output**, not arbitrary chat history.
-  - **`:focus`**: **Clear context** before running—execution starts "clean" for your request; phases run in order without pulling in old conversation.
-
-Use **`:focus`** when you want execution to **stick strictly to the current request** (e.g. large refactors, tricky bugs, or after a long chat). More stable results, less "history hallucination".
-
----
+| `:focus` | Clean execution | (cook, code, fix, debug, design, plan, test, report) |
+| `:team` | Team workflows   | All agents, structured phases |
 
 ## Commands Reference
 

@@ -328,42 +328,6 @@ One phase at a time. Within each phase follow the **Golden Triangle Loop** (per 
 
 ---
 
-## 🛡️ VERIFICATION CHECKPOINT
-
-> **⛔ BLOCKING**: Load Context Gate protocol NOW before proceeding.
->
-> **LOAD**: `rules/CONTEXT-GATE.md` — Execute HARD MODE (Debug variant)
-
-```yaml
-context_gate_execution:
-  mode: "HARD (User Choice)"
-  trigger: "After Phase 4 (Root Cause Report) completes"
-  protocol: "Follow rules/CONTEXT-GATE.md § HARD MODE § debug_hard_variant"
-  variant_adjustments:
-    report_file: "DEBUG-REPORT-{issue}.md"
-    handoff_to: "/fix:team OR /fix:hard"
-```
-
-### ⚡ OPTIONS (Present to User)
-
-```markdown
-## 🛡️ Context Optimization Checkpoint
-
-**Team Debug Investigation Complete** — Root cause identified, fix approaches recommended.
-
-| Option | Action | Description |
-|--------|--------|-------------|
-| **1. 🚀 Clear context & Fix** | `RECOMMENDED` | Fresh start with debug report → `/fix:team` or `/fix:hard` |
-| **2. ⏸️ Review First** | `SAFE` | Show report summary, wait for approval before proceeding |
-| **3. ⚠️ Continue (No Clear)** | `RISKY` | Keep debug history (may cause fix drift from noisy context) |
-
-⏳ Awaiting selection...
-```
-
-**DO NOT proceed past this checkpoint until user selects option.**
-
----
-
 ## ✅ COMPLETION
 
 Present final investigation report with consensus stamps from ALL phases:

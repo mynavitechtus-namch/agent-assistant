@@ -148,13 +148,6 @@ Format: rules/PHASES.md § Phase output + rules/TEAMS.md § Golden Triangle Phas
 
 ---
 
-## 🛡️ VERIFICATION CHECKPOINT
-
-> **⛔ BLOCKING**: `rules/CONTEXT-GATE.md` — HARD MODE. Prevents context rot between planning and implementation.
-> Trigger: After Phase 2 completes. Plan file: `TEST-PLAN-{scope}.md`. Remaining: Phase 3 → 4.
-
-**DO NOT proceed to Phase 3 until user selects option.**
-
 ---
 
 ## 🎭 Phase 3: TEST IMPLEMENTATION — 🔺 GOLDEN TRIANGLE (CRITICAL)

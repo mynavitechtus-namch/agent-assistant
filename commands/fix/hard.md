@@ -81,45 +81,6 @@ One phase at a time, each phase independent: Phase 1 → then Phase 2 → … in
 
 ---
 
-## 🛡️ VERIFICATION CHECKPOINT — Context Optimization
-
-> **PURPOSE**: Prevent "context rot" by clearing noisy debugging/planning history before implementation.
-> 
-> Long-running analysis sessions fill context with noise that degrades code generation quality.
-> This checkpoint acts as a "firewall" between Planning and Implementation phases.
-
-### ⚡ OPTIONS (Present to User)
-
-```markdown
-## 🛡️ Context Optimization Checkpoint
-
-**Planning Complete** — Fix plan created with rollback strategy.
-
-**Choose how to proceed with implementation:**
-
-## 🛡️ VERIFICATION CHECKPOINT
-
-> **⛔ BLOCKING**: Load Context Gate protocol NOW before proceeding.
->
-> **LOAD**: `rules/CONTEXT-GATE.md` — Execute HARD MODE protocol
->
-> This is a MANDATORY checkpoint. Cannot skip or bypass.
-
-### ⚡ EXECUTION
-
-```yaml
-context_gate_execution:
-  mode: "HARD (User Choice)"
-  trigger: "After Phase 3 (Fix Planning) completes"
-  protocol: "Follow rules/CONTEXT-GATE.md § HARD MODE"
-  
-  variant_adjustments:
-    plan_type: "Fix plan with rollback strategy"
-    remaining_phases: "Phase 4 → 5 → 5.5"
-```
-
-**DO NOT proceed to Phase 4 until user selects option.**
-
 ---
 
 ## 🎭 Phase 4: IMPLEMENTATION

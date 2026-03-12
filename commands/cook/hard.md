@@ -136,31 +136,6 @@ One phase at a time, each phase independent: Phase 1 → then Phase 2 → … in
 
 ---
 
-## 🛡️ VERIFICATION CHECKPOINT
-
-> **⛔ BLOCKING**: Load Context Gate protocol NOW before proceeding.
->
-> **LOAD**: `rules/CONTEXT-GATE.md` — Execute HARD MODE protocol
->
-> This is a MANDATORY checkpoint. Cannot skip or bypass.
-
-### ⚡ EXECUTION
-
-```yaml
-context_gate_execution:
-  mode: "HARD (User Choice)"
-  trigger: "After Phase 5 (Planning) completes"
-  protocol: "Follow rules/CONTEXT-GATE.md § HARD MODE"
-  
-  variant_adjustments:
-    plan_file: "PLAN-{feature}.md"
-    remaining_phases: "Phase 6 → 7 → 8"
-```
-
-**DO NOT proceed to Phase 6 until user selects option.**
-
----
-
 ## 🎭 Phase 6: IMPLEMENTATION
 
 | Agent        | `tech-lead` → routes to specialists                     |
