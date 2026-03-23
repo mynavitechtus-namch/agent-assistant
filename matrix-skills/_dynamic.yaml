@@ -17,6 +17,7 @@
 #   3. Skill becomes available for resolution
 #   4. Trust level increases with successful executions
 #   5. High-trust skills may be promoted to matrix-skills/
+#   6. Dynamic entries must preserve owner, freshness, integrity, and support-state metadata
 # ============================================================================
 
 version: "1.1"
@@ -39,7 +40,8 @@ config:
     new_skill: 0.3
     after_3_executions: 0.5
     after_10_executions: 0.7
-    promoted_to_matrix: 1.0
+    matrix_promoted: 1.0
+    promoted_to_matrix: 1.0  # backward-compatible alias
     
   # Promotion criteria — when met, skill is auto-promoted to matrix (no queue)
   promotion:
@@ -47,6 +49,21 @@ config:
     min_success_rate: 0.85
     max_inactive_days: 30
     automatic: true   # Promote to matrix when criteria met; no human review queue
+  
+  governance:
+    support_states: ["supported", "experimental", "blocked"]
+    promotion_states: ["new", "evaluating", "validated", "promoted", "blocked"]
+    freshness:
+      review_after_days: 30
+      stale_after_days: 90
+    required_fields:
+      - owner
+      - checksum
+      - support_state
+      - promotion_state
+      - freshness
+      - installed_at
+      - last_execution
 
 # ============================================================================
 # INSTALLED DYNAMIC SKILLS
@@ -58,7 +75,13 @@ config:
 #   version: "vX.Y.Z"
 #   installed_at: "ISO-8601 timestamp"
 #   installed_by: "user|system"
+#   owner: "person-or-team"
 #   checksum: "sha256:..."
+#   support_state: "supported|experimental|blocked"
+#   promotion_state: "new|evaluating|validated|promoted|blocked"
+#   freshness:
+#     last_verified: "ISO-8601 timestamp"
+#     stale_after_days: 90
 #   
 #   # Resolution metadata
 #   domains: [domain1, domain2]
@@ -86,7 +109,13 @@ skills: []
   #   version: "v1.2.0"
   #   installed_at: "2026-01-30T12:00:00Z"
   #   installed_by: "user"
+  #   owner: "identity-platform"
   #   checksum: "sha256:abc123def456..."
+  #   support_state: "experimental"
+  #   promotion_state: "new"
+  #   freshness:
+  #     last_verified: "2026-01-30T12:00:00Z"
+  #     stale_after_days: 90
   #   
   #   domains: ["backend", "security"]
   #   keywords: ["clerk", "authentication", "oauth", "jwt"]
@@ -134,4 +163,3 @@ telemetry_summary:
   skills_rejected_count: 0
   discovery_requests_today: 0
   cache_hit_rate: null
-

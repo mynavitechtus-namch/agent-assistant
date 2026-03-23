@@ -1,10 +1,9 @@
 ---
 name: web-design-guidelines
-description: Review UI code for Web Interface Guidelines compliance. Use when asked to "review my UI", "check accessibility", "audit design", "review UX", or "check my site against best practices".
-metadata:
-  author: vercel
-  version: "1.0.0"
-  argument-hint: <file-or-pattern>
+description: "Review files for compliance with Web Interface Guidelines."
+risk: unknown
+source: community
+date_added: "2026-02-27"
 ---
 
 # Web Interface Guidelines
@@ -37,3 +36,6 @@ When a user provides a file or pattern argument:
 4. Output findings using the format specified in the guidelines
 
 If no files specified, ask the user which files to review.
+
+## When to Use
+This skill is applicable to execute the workflow or actions described in the overview.

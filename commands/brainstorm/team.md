@@ -45,7 +45,7 @@ execution-mode: execute
 
 ## 📬 MAILBOX — Central Communication Hub
 
-**Location**: `./reports/MAILBOX-{date}.md` — Append only, never overwrite.
+**Location**: `./reports/{topic}/MAILBOX-{date}.md` — Append only, never overwrite.
 
 | Type              | Sender    | Receiver  | Purpose                                        |
 | ----------------- | --------- | --------- | ---------------------------------------------- |
@@ -65,10 +65,12 @@ execution-mode: execute
 
 | Phase              | Output                                          |
 | ------------------ | ----------------------------------------------- |
-| P1: Diverge        | `./reports/brainstorms/IDEAS-{topic}.md`        |
-| P2: Converge       | `./reports/brainstorms/ANALYSIS-{topic}.md`     |
-| P3: Synthesize     | `./reports/brainstorms/BRAINSTORM-{topic}.md`   |
-| ALL Phases         | `./reports/MAILBOX-{date}.md`                   |
+| P1: Diverge        | `./reports/{topic}/brainstorms/IDEAS-{topic}`        |
+| P2: Converge       | `./reports/{topic}/brainstorms/ANALYSIS-{topic}`     |
+| P3: Synthesize     | `./reports/{topic}/brainstorms/BRAINSTORM-{topic}`   |
+| ALL Phases         | `./reports/{topic}/MAILBOX-{date}.md`                   |
+
+**⚠️ Paths above = base names.** Small (≤ 150 lines) → create as `{name}.md`. Large (> 150 lines or ≥ 4 sections) → create as `{name}/` folder with `00-index.md` + `01-*.md`, `02-*.md` section files.
 
 ---
 
@@ -85,6 +87,8 @@ execution-mode: execute
 ---
 
 ## ⛔ INCREMENTAL EXECUTION (MANDATORY)
+
+**Deliverable paths = base names.** Small (≤ 150 lines) → `{name}.md`. Large (> 150 lines or ≥ 4 sections) → `{name}/` folder with `00-index.md` + section files.
 
 One phase at a time. Per phase: Spawn Triangle → Decompose → Execute → Review → Debate → Consensus → Release.
 
@@ -119,7 +123,7 @@ One phase at a time. Per phase: Spawn Triangle → Decompose → Execute → Rev
 5. If FAIL → expand or defend → max 3 rounds → ESCALATION if unresolved
 6. `brainstormer` synthesizes approved explorations into unified idea catalog
 
-**Deliverable**: `./reports/brainstorms/IDEAS-{topic}.md`
+**Deliverable**: `./reports/{topic}/brainstorms/IDEAS-{topic}`
 - Raw idea catalog (minimum 8-12 distinct ideas across dimensions)
 - Prior art references, codebase context, assumptions stated
 - Each idea tagged: possible / stretch / moonshot
@@ -145,7 +149,7 @@ One phase at a time. Per phase: Spawn Triangle → Decompose → Execute → Rev
 | Executor  | `researcher`                         | Execute: deep analysis of top candidates, pros/cons, feasibility scoring       |
 | Reviewer  | `reviewer` + `business-analyst` lens | Challenge: evaluation fair? Bias in ranking? Hidden risks? Missing trade-offs? |
 
-**Prerequisite**: **READ** `./reports/brainstorms/IDEAS-{topic}.md`
+**Prerequisite**: **READ** `./reports/{topic}/brainstorms/IDEAS-{topic}`
 
 ### GOLDEN TRIANGLE CONVERGENT ANALYSIS LOOP (Step by Step)
 
@@ -203,7 +207,7 @@ One phase at a time. Per phase: Spawn Triangle → Decompose → Execute → Rev
 ╚══════════════════════════════════════════════════════════════════════╝
 ```
 
-**Deliverable**: `./reports/brainstorms/ANALYSIS-{topic}.md`
+**Deliverable**: `./reports/{topic}/brainstorms/ANALYSIS-{topic}`
 - Evaluation criteria and weights
 - Per-idea deep analysis (feasibility, impact, effort, risks)
 - Cross-idea comparison matrix
@@ -230,7 +234,7 @@ One phase at a time. Per phase: Spawn Triangle → Decompose → Execute → Rev
 | Executor  | `reporter`     | Execute: write BRAINSTORM-{topic}.md with ideas, analysis, recommendations |
 | Reviewer  | `tech-lead`    | Challenge: recommendation sound? Options fairly presented? Decision-ready? |
 
-**Prerequisite**: **READ** `./reports/brainstorms/ANALYSIS-{topic}.md`
+**Prerequisite**: **READ** `./reports/{topic}/brainstorms/ANALYSIS-{topic}`
 
 **Triangle Loop**:
 1. `brainstormer` reads analysis → decomposes synthesis → Shared Task List:
@@ -251,7 +255,7 @@ One phase at a time. Per phase: Spawn Triangle → Decompose → Execute → Rev
 5. If FAIL → revise or defend → max 3 rounds → ESCALATION if unresolved
 6. `brainstormer` synthesizes approved sections into final document
 
-**Deliverable**: `./reports/brainstorms/BRAINSTORM-{topic}.md`
+**Deliverable**: `./reports/{topic}/brainstorms/BRAINSTORM-{topic}`
 - Executive summary and top recommendation
 - Complete idea catalog (explored / shortlisted / recommended)
 - Evidence-backed analysis with comparison matrix
@@ -285,7 +289,7 @@ One phase at a time. Per phase: Spawn Triangle → Decompose → Execute → Rev
 - Debates triggered: {count} | Arbitrations: {count}
 - Ideas generated: {count} | Ideas shortlisted: {count}
 
-## Mailbox: `./reports/MAILBOX-{date}.md`
+## Mailbox: `./reports/{topic}/MAILBOX-{date}.md`
 
 ## Next Actions
 1. ✅ **Done** — Brainstorm complete (triangle-validated)

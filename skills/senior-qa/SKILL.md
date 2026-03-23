@@ -15,13 +15,13 @@ This skill provides three core capabilities through automated scripts:
 
 ```bash
 # Script 1: Test Suite Generator
-python3 ~/.{TOOL}/skills/senior-qa/scripts/test_suite_generator.py [options]
+python3 ~/.Codex/skills/senior-qa/scripts/test_suite_generator.py [options]
 
 # Script 2: Coverage Analyzer
-python3 ~/.{TOOL}/skills/senior-qa/scripts/coverage_analyzer.py [options]
+python3 ~/.Codex/skills/senior-qa/scripts/coverage_analyzer.py [options]
 
 # Script 3: E2E Test Scaffolder
-python3 ~/.{TOOL}/skills/senior-qa/scripts/e2e_test_scaffolder.py [options]
+python3 ~/.Codex/skills/senior-qa/scripts/e2e_test_scaffolder.py [options]
 ```
 
 ## Core Capabilities
@@ -38,7 +38,7 @@ Automated tool for test suite generator tasks.
 
 **Usage:**
 ```bash
-python3 ~/.{TOOL}/skills/senior-qa/scripts/test_suite_generator.py <project-path> [options]
+python3 ~/.Codex/skills/senior-qa/scripts/test_suite_generator.py <project-path> [options]
 ```
 
 ### 2. Coverage Analyzer
@@ -53,7 +53,7 @@ Comprehensive analysis and optimization tool.
 
 **Usage:**
 ```bash
-python3 ~/.{TOOL}/skills/senior-qa/scripts/coverage_analyzer.py <target-path> [--verbose]
+python3 ~/.Codex/skills/senior-qa/scripts/coverage_analyzer.py <target-path> [--verbose]
 ```
 
 ### 3. E2E Test Scaffolder
@@ -68,7 +68,7 @@ Advanced tooling for specialized tasks.
 
 **Usage:**
 ```bash
-python3 ~/.{TOOL}/skills/senior-qa/scripts/e2e_test_scaffolder.py [arguments] [options]
+python3 ~/.Codex/skills/senior-qa/scripts/e2e_test_scaffolder.py [arguments] [options]
 ```
 
 ## Reference Documentation
@@ -130,7 +130,7 @@ cp .env.example .env
 
 ```bash
 # Use the analyzer script
-python3 ~/.{TOOL}/skills/senior-qa/scripts/coverage_analyzer.py .
+python3 ~/.Codex/skills/senior-qa/scripts/coverage_analyzer.py .
 
 # Review recommendations
 # Apply fixes
@@ -179,8 +179,8 @@ npm run test
 npm run lint
 
 # Analysis
-python3 ~/.{TOOL}/skills/senior-qa/scripts/coverage_analyzer.py .
-python3 ~/.{TOOL}/skills/senior-qa/scripts/e2e_test_scaffolder.py --analyze
+python3 ~/.Codex/skills/senior-qa/scripts/coverage_analyzer.py .
+python3 ~/.Codex/skills/senior-qa/scripts/e2e_test_scaffolder.py --analyze
 
 # Deployment
 docker build -t app:latest .

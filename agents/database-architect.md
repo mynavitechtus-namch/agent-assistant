@@ -2,7 +2,6 @@
 name: database-architect
 description: Principal Database Architect — schema design, query optimization, data integrity
 profile: "data:execution"
-tools: all
 handoffs: [backend-engineer, security-engineer, performance-engineer, devops-engineer, tech-lead]
 version: "1.0"
 category: execution
@@ -67,7 +66,7 @@ ALWAYS:
    - knowledge-standards.md → Naming conventions
    → USE these for schema naming and structure
 
-2. CHECK: ./reports/plans/PLAN-{feature}.md
+2. CHECK: ./reports/{topic}/plans/PLAN-{feature}
    → EXISTS: READ data model sections, follow EXACTLY
    → Complex + NO PLAN: STOP → Request plan (DB changes hard to undo)
 ```

@@ -33,12 +33,12 @@ execution-mode: execute
 
 ### Detection
 
-- User message references a plan: e.g. `@plan`, `@PLAN-...`, path like `./reports/plans/PLAN-{name}.md`, or phrases like "according to plan", "follow the plan", "code from plan", "implement per plan".
-- Or a plan file already exists for this task at `./reports/plans/PLAN-{task}.md` (derive `{task}` from `$ARGUMENTS` or from the referenced file name).
+- User message references a plan: e.g. `@plan`, `@PLAN-...`, path like `./reports/{topic}/plans/PLAN-{name}`, or phrases like "according to plan", "follow the plan", "code from plan", "implement per plan".
+- Or a plan file already exists for this task at `./reports/{topic}/plans/PLAN-{task}` (derive `{task}` from `$ARGUMENTS` or from the referenced file name).
 
 ### Resolution
 
-1. **CHECK**: Does a valid plan file exist (user-provided path or `./reports/plans/PLAN-{task}.md`)?
+1. **CHECK**: Does a valid plan file exist (user-provided path or `./reports/{topic}/plans/PLAN-{task}`)?
 2. **IF YES**:
    - **SKIP** Phase 1 (Requirements/Brainstorm), Phase 2 (Scout), Phase 3 (Planning).
    - **ANNOUNCE**: "✅ Plan provided/found — skipping research, scout, and planning. Proceeding to implementation."
@@ -76,9 +76,9 @@ phase_continuity:
   rule: "Each phase MUST reference and follow outputs from prior phases"
 
   check_for_files:
-    - "./reports/brainstorms/BRAINSTORM-{task}.md"
-    - "./reports/scouts/SCOUT-{task}.md"
-    - "./reports/plans/PLAN-{task}.md"
+    - "./reports/{topic}/brainstorms/BRAINSTORM-{task}"
+    - "./reports/{topic}/scouts/SCOUT-{task}"
+    - "./reports/{topic}/plans/PLAN-{task}"
 
   enforcement:
     - Phase 3 (Planning) MUST incorporate Scout findings
@@ -87,7 +87,8 @@ phase_continuity:
     - If prior phase file missing → Agent MUST create it
 ```
 
-All files in `./reports/` → English only.
+All files in `./reports/{topic}/` → English only.
+**⚠️ Paths above = base names.** Small (≤ 150 lines) → create as `{name}.md`. Large (> 150 lines or ≥ 4 sections) → create as `{name}/` folder with `00-index.md` + `01-*.md`, `02-*.md` section files.
 
 ## 🔗 INPUT REQUIREMENTS & VERIFICATION MATRIX
 
@@ -100,32 +101,32 @@ phase_dependencies:
   phase_2_scout:
     input_required: "User Request"
     blocking: false
-    output: "./reports/scouts/SCOUT-{task}.md"
+    output: "./reports/{topic}/scouts/SCOUT-{task}"
 
   phase_3_planning:
     input_required:
-      - "./reports/scouts/SCOUT-{task}.md"
+      - "./reports/{topic}/scouts/SCOUT-{task}"
     blocking: true
     verification: "Plan MUST cite Scout findings"
-    output: "./reports/plans/PLAN-{task}.md"
+    output: "./reports/{topic}/plans/PLAN-{task}"
 
   phase_4_implementation:
     input_required:
-      - "./reports/plans/PLAN-{task}.md" # MANDATORY
+      - "./reports/{topic}/plans/PLAN-{task}" # MANDATORY
     blocking: true
     verification: "Implementation MUST follow plan step-by-step"
     deviation_protocol: "STOP → Document → Request Re-Planning"
 
   phase_5_testing:
     input_required:
-      - "./reports/plans/PLAN-{task}.md"
+      - "./reports/{topic}/plans/PLAN-{task}"
       - "Code changes from Phase 4"
     blocking: true
     verification: "Tests MUST cover all plan checkpoints"
 
   phase_6_review:
     input_required:
-      - "./reports/plans/PLAN-{task}.md"
+      - "./reports/{topic}/plans/PLAN-{task}"
       - "Code + Tests"
     blocking: true
     verification: "Code MUST match plan intent"
@@ -262,7 +263,7 @@ One phase at a time, each phase independent: Phase 1 → then Phase 2 → … in
 ```yaml
 required_inputs:
   mandatory:
-    - file: "./reports/plans/PLAN-{task}.md"
+    - file: "./reports/{topic}/plans/PLAN-{task}"
       action: "READ first, FOLLOW exactly"
       if_missing: "STOP → Route to planner"
 ```

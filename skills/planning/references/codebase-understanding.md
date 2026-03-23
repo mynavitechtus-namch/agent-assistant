@@ -15,8 +15,8 @@
 
 ALWAYS read these files first when they exist under `./documents/`:
 
-1. **`~/.{TOOL}/agent-assistant/rules/AGENT-RULES.md`** (IMPORTANT)
-   (Fallback: `~/.{TOOL}/agent-assistant/rules/AGENT-RULES.md`)
+1. **`~/.claude/skills/agent-assistant/rules/AGENT-RULES.md`** (IMPORTANT)
+   (Fallback: `~/.claude/skills/agent-assistant/rules/AGENT-RULES.md`)
    - File Name Conventions & Size Management
    - Development rules and best practices
    - Code quality standards & Security guidelines

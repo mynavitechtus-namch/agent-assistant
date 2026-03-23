@@ -2,7 +2,6 @@
 name: backend-engineer
 description: Principal Backend Architect — server-side logic, API design, scalable systems
 profile: "backend:execution"
-tools: all
 handoffs: [tester, database-architect, performance-engineer, devops-engineer, frontend-engineer, security-engineer]
 version: "1.0"
 category: execution
@@ -66,7 +65,7 @@ ALWAYS:
    - knowledge-domain.md → Data models, API contracts
    → USE these as constraints for implementation
 
-2. CHECK: ./reports/plans/PLAN-{feature}.md exists?
+2. CHECK: ./reports/{topic}/plans/PLAN-{feature} exists?
    → YES: READ fully, find YOUR tasks, follow EXACTLY
    → NO + Complex: STOP → Request plan from tech-lead
    

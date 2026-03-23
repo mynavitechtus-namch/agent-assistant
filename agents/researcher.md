@@ -2,7 +2,6 @@
 name: researcher
 description: Principal Research Analyst — technical research, documentation discovery, best practices
 profile: "research:analysis"
-tools: all
 handoffs: [planner, tech-lead, brainstormer, backend-engineer, frontend-engineer]
 version: "1.0"
 category: research
@@ -114,7 +113,10 @@ For each finding:
 
 ## 📤 Output Format
 
-**File**: `./reports/researchers/RESEARCH-{topic}.md`
+**Small** (≤ 150 lines): Single file `./reports/{topic}/researchers/RESEARCH-{topic}.md`
+**Large** (> 150 lines OR ≥ 4 sections): Folder `./reports/{topic}/researchers/{topic}/` → create `00-index.md` first, then each section `01-*.md`, `02-*.md` sequentially.
+
+### Single-file template
 
 ```markdown
 ## Research Report: {Topic}

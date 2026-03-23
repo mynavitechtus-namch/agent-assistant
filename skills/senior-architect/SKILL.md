@@ -1,6 +1,9 @@
 ---
 name: senior-architect
-description: Comprehensive software architecture skill for designing scalable, maintainable systems using ReactJS, NextJS, NodeJS, Express, React Native, Swift, Kotlin, Flutter, Postgres, GraphQL, Go, Python. Includes architecture diagram generation, system design patterns, tech stack decision frameworks, and dependency analysis. Use when designing system architecture, making technical decisions, creating architecture diagrams, evaluating trade-offs, or defining integration patterns.
+description: "Complete toolkit for senior architect with modern tools and best practices."
+risk: unknown
+source: community
+date_added: "2026-02-27"
 ---
 
 # Senior Architect
@@ -15,13 +18,13 @@ This skill provides three core capabilities through automated scripts:
 
 ```bash
 # Script 1: Architecture Diagram Generator
-python3 ~/.{TOOL}/skills/senior-architect/scripts/architecture_diagram_generator.py [options]
+python scripts/architecture_diagram_generator.py [options]
 
 # Script 2: Project Architect
-python3 ~/.{TOOL}/skills/senior-architect/scripts/project_architect.py [options]
+python scripts/project_architect.py [options]
 
 # Script 3: Dependency Analyzer
-python3 ~/.{TOOL}/skills/senior-architect/scripts/dependency_analyzer.py [options]
+python scripts/dependency_analyzer.py [options]
 ```
 
 ## Core Capabilities
@@ -38,7 +41,7 @@ Automated tool for architecture diagram generator tasks.
 
 **Usage:**
 ```bash
-python3 ~/.{TOOL}/skills/senior-architect/scripts/architecture_diagram_generator.py <project-path> [options]
+python scripts/architecture_diagram_generator.py <project-path> [options]
 ```
 
 ### 2. Project Architect
@@ -53,7 +56,7 @@ Comprehensive analysis and optimization tool.
 
 **Usage:**
 ```bash
-python3 ~/.{TOOL}/skills/senior-architect/scripts/project_architect.py <target-path> [--verbose]
+python scripts/project_architect.py <target-path> [--verbose]
 ```
 
 ### 3. Dependency Analyzer
@@ -68,7 +71,7 @@ Advanced tooling for specialized tasks.
 
 **Usage:**
 ```bash
-python3 ~/.{TOOL}/skills/senior-architect/scripts/dependency_analyzer.py [arguments] [options]
+python scripts/dependency_analyzer.py [arguments] [options]
 ```
 
 ## Reference Documentation
@@ -130,7 +133,7 @@ cp .env.example .env
 
 ```bash
 # Use the analyzer script
-python3 ~/.{TOOL}/skills/senior-architect/scripts/project_architect.py .
+python scripts/project_architect.py .
 
 # Review recommendations
 # Apply fixes
@@ -179,8 +182,8 @@ npm run test
 npm run lint
 
 # Analysis
-python3 ~/.{TOOL}/skills/senior-architect/scripts/project_architect.py .
-python3 ~/.{TOOL}/skills/senior-architect/scripts/dependency_analyzer.py --analyze
+python scripts/project_architect.py .
+python scripts/dependency_analyzer.py --analyze
 
 # Deployment
 docker build -t app:latest .
@@ -207,3 +210,6 @@ Check the comprehensive troubleshooting section in `references/tech_decision_gui
 - Workflow Guide: `references/system_design_workflows.md`
 - Technical Guide: `references/tech_decision_guide.md`
 - Tool Scripts: `scripts/` directory
+
+## When to Use
+This skill is applicable to execute the workflow or actions described in the overview.

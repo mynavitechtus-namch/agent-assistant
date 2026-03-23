@@ -2,7 +2,6 @@
 name: tech-lead
 description: Technical Lead — orchestrates implementation, routes to specialists, ensures quality
 profile: "architecture:orchestration"
-tools: all
 handoffs: [backend-engineer, frontend-engineer, database-architect, security-engineer, devops-engineer, tester, reviewer]
 version: "1.0"
 category: execution
@@ -66,7 +65,7 @@ ALWAYS:
    - knowledge-domain.md → Data/API constraints
    → VERIFY all work aligns with project standards
 
-2. IF ./reports/plans/PLAN-{feature}.md exists:
+2. IF ./reports/{topic}/plans/PLAN-{feature} exists:
    - READ completely
    - EXTRACT phases and tasks
    - TREAT as HARD CONSTRAINT

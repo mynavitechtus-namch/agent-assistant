@@ -48,16 +48,17 @@ tiered_execution:
 
 ```yaml
 deliverable_files:
-  researcher: "./reports/researchers/RESEARCH-{request}.md"
-  scouter: "./reports/scouts/SCOUT-{request}.md"
-  designer: "./reports/designs/DESIGN-{request}.md" # MANDATORY OUTPUT
+  researcher: "./reports/{topic}/researchers/RESEARCH-{request}"
+  scouter: "./reports/{topic}/scouts/SCOUT-{request}"
+  designer: "./reports/{topic}/designs/DESIGN-{request}" # MANDATORY OUTPUT
 
 enforcement:
   - Design phase MUST create design file
   - Design file is the deliverable for implementation phases
 ```
 
-All files in `./reports/` → English only.
+All files in `./reports/{topic}/` → English only.
+**⚠️ Paths above = base names.** Small (≤ 150 lines) → create as `{name}.md`. Large (> 150 lines or ≥ 4 sections) → create as `{name}/` folder with `00-index.md` + `01-*.md`, `02-*.md` section files.
 
 ---
 
@@ -208,6 +209,6 @@ One phase at a time, each phase independent: Phase 1 → then Phase 2 → … in
 
 Present design with:
 
-1. ✅ **Done** — Design approved
+1. ✅ **Done** — Design complete
 2. 💻 **Implement** → `/code:hard`
 3. 🔄 **Iterate** — Further refinement

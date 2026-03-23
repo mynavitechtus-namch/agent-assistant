@@ -2,7 +2,6 @@
 name: brainstormer
 description: Principal Requirements Architect — requirements discovery, Socratic clarification, ideation
 profile: "planning:discovery"
-tools: all
 handoffs: [planner, researcher, tech-lead, designer]
 version: "1.0"
 category: research
@@ -125,7 +124,10 @@ Level 4: CONSTRAINTS
 
 ## 📤 Output Format
 
-**File**: `./reports/brainstorms/BRAINSTORM-{feature}.md`
+**Small** (≤ 150 lines): Single file `./reports/{topic}/brainstorms/BRAINSTORM-{feature}.md`
+**Large** (> 150 lines OR ≥ 4 sections): Folder `./reports/{topic}/brainstorms/{feature}/` → create `00-index.md` first, then each section `01-*.md`, `02-*.md` sequentially.
+
+### Single-file template
 
 ```markdown
 ## Requirements Discovery: {Feature}

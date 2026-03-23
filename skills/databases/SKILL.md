@@ -185,13 +185,13 @@ Database utility scripts in `scripts/`:
 
 ```bash
 # Generate migration
-python3 ~/.{TOOL}/skills/databases/scripts/db_migrate.py --db mongodb --generate "add_user_index"
+python3 ~/.Codex/skills/databases/scripts/db_migrate.py --db mongodb --generate "add_user_index"
 
 # Run backup
-python3 ~/.{TOOL}/skills/databases/scripts/db_backup.py --db postgres --output /backups/
+python3 ~/.Codex/skills/databases/scripts/db_backup.py --db postgres --output /backups/
 
 # Check performance
-python3 ~/.{TOOL}/skills/databases/scripts/db_performance_check.py --db mongodb --threshold 100ms
+python3 ~/.Codex/skills/databases/scripts/db_performance_check.py --db mongodb --threshold 100ms
 ```
 
 ## Key Differences Summary

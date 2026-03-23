@@ -159,7 +159,7 @@ agents/teams/{team-name}/
 ### Communication Protocol
 
 - **Shared Task List**: Published by Tech Lead at phase start, tracks task status
-- **Mailbox**: `./reports/MAILBOX-{date}.md` — append-only log of all exchanges
+- **Mailbox**: `./reports/{topic}/MAILBOX-{date}.md` — append-only log of all exchanges
 - **Debate**: Max 3 rounds per task → Tech Lead arbitrates
 - **Consensus**: `✅ CONSENSUS: TechLead ✓ | Executor ✓ | Reviewer ✓` required to release output
 
@@ -200,11 +200,23 @@ INCLUDE:
   - Decisions from prior phases
   - Concrete deliverables
   - Current state
+  - Deliverable size directive (single file vs chunked)
 
 EXCLUDE:
   - Internal reasoning
   - Failed attempts
   - Alternatives not selected
+```
+
+### Deliverable Size Directive (MANDATORY in handoff)
+
+```
+WHEN delegating to any agent that produces deliverables:
+  ADD to handoff context:
+    "DELIVERABLE SIZE: If output exceeds 150 lines or has ≥ 4 major sections,
+     use CHUNKED strategy: create folder with 00-index.md first, then each
+     section file sequentially. Never create a single file > 200 lines.
+     Never create multiple files in parallel."
 ```
 
 ---

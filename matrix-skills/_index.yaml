@@ -9,7 +9,7 @@
 #   - Discovery: find-skills skill ({SKILLS_PATH}/find-skills/SKILL.md)
 #   - Unified resolution: Matrix-first, dynamic-enhanced
 #
-# TOTAL: 310 matrix skills across 19 domains + dynamic skills
+# TOTAL: 1430 matrix skills across 19 domains + dynamic skills
 #
 # USAGE:
 #   1. Agent declares profile in frontmatter (e.g., "backend:execution")
@@ -20,13 +20,13 @@
 #
 # REFERENCE: 
 #   - documents/SMART-SKILL-ORCHESTRATION-BLUEPRINT.md
-#   - rules/SKILL-ORCHESTRATION.md
+#   - rules/SKILLS.md
 #   - {SKILLS_PATH}/find-skills/SKILL.md
 # ============================================================================
 
 version: "1.1"
 last_updated: "2026-01-30"
-total_matrix_skills: 310
+total_matrix_skills: 1430
 
 # ============================================================================
 # HYBRID SKILL ORCHESTRATION LAYER (HSOL) CONFIGURATION
@@ -87,6 +87,20 @@ hsol:
     min_success_rate: 0.85
     max_inactive_days: 30
     automatic: true   # Auto-promote when criteria met; no human review queue
+  
+  # Governance baseline for dynamic skill lifecycle
+  governance:
+    canonical_runtime_rule: "rules/SKILLS.md"
+    support_states: ["supported", "experimental", "blocked"]
+    promotion_states: ["new", "evaluating", "validated", "promoted", "blocked"]
+    required_dynamic_fields:
+      - owner
+      - checksum
+      - support_state
+      - promotion_state
+      - freshness
+      - installed_at
+      - last_execution
 
 # ============================================================================
 # DOMAIN REGISTRY
@@ -96,115 +110,115 @@ domains:
     file: "backend.yaml"
     name: "Backend Development"
     description: "Server-side logic, APIs, data access"
-    skill_count: 32
+    skill_count: 208
 
   frontend:
     file: "frontend.yaml"
     name: "Frontend Development"
     description: "UI/UX, web applications, client-side"
-    skill_count: 22
+    skill_count: 109
 
   architecture:
     file: "architecture.yaml"
     name: "System Architecture"
     description: "Design patterns, system design, ADRs"
-    skill_count: 9
+    skill_count: 22
 
   quality:
     file: "quality.yaml"
     name: "Quality Assurance"
     description: "Testing, code review, validation"
-    skill_count: 21
+    skill_count: 61
 
   security:
     file: "security.yaml"
     name: "Security Engineering"
     description: "Threat modeling, secure coding, compliance"
-    skill_count: 35
+    skill_count: 102
 
   design:
     file: "design.yaml"
     name: "UI/UX Design"
     description: "Visual design, user experience, accessibility"
-    skill_count: 10
+    skill_count: 28
 
   planning:
     file: "planning.yaml"
     name: "Planning & Analysis"
     description: "Requirements, task breakdown, roadmaps"
-    skill_count: 12
+    skill_count: 38
 
   devops:
     file: "devops.yaml"
     name: "DevOps & Deployment"
     description: "CI/CD, infrastructure, containerization"
-    skill_count: 22
+    skill_count: 66
 
   data:
     file: "data.yaml"
     name: "Data & Database"
     description: "Schema design, queries, migrations"
-    skill_count: 7
+    skill_count: 33
 
   performance:
     file: "performance.yaml"
     name: "Performance Engineering"
     description: "Profiling, optimization, benchmarking"
-    skill_count: 1
+    skill_count: 22
 
   research:
     file: "research.yaml"
     name: "Research & Documentation"
     description: "Technical research, documentation"
-    skill_count: 11
+    skill_count: 83
 
   mobile:
     file: "mobile.yaml"
     name: "Mobile Development"
     description: "iOS, Android, cross-platform apps"
-    skill_count: 8
+    skill_count: 27
 
   gaming:
     file: "gaming.yaml"
     name: "Game Development"
     description: "Game engines, graphics, game loop"
-    skill_count: 3
+    skill_count: 14
 
   management:
     file: "management.yaml"
     name: "Project Management"
     description: "Delivery, risk management, agile"
-    skill_count: 4
+    skill_count: 21
 
   ai_ml:
     file: "ai-ml.yaml"
     name: "AI/ML Engineering"
     description: "Machine learning, LLMs, data science"
-    skill_count: 40
+    skill_count: 229
 
   cloud:
     file: "cloud.yaml"
     name: "Cloud & Infrastructure"
     description: "AWS, Azure, GCP, serverless"
-    skill_count: 11
+    skill_count: 67
 
   languages:
     file: "languages.yaml"
     name: "Programming Languages"
     description: "Language-specific patterns and expertise"
-    skill_count: 17
+    skill_count: 57
 
   tools:
     file: "tools.yaml"
     name: "Tools & Utilities"
     description: "Productivity tools, document processing"
-    skill_count: 41
+    skill_count: 234
 
   mcp:
     file: "mcp.yaml"
     name: "MCP & Agents"
     description: "Model Context Protocol, agent frameworks"
-    skill_count: 8
+    skill_count: 9
 
 # ============================================================================
 # AGENT PROFILES

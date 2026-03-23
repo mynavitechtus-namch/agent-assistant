@@ -6,7 +6,7 @@
 
 **Multi-agent orchestration for AI coding assistants**
 
-Transform one AI into a coordinated team of 21 specialist agents with structured workflows and 310+ domain skills.
+Transform one AI into a coordinated team of 21 specialist agents with structured workflows and 1400+ domain skills.
 
 [![npm (scoped)](https://img.shields.io/npm/v/@namch/agent-assistant?label=npm%20global)](https://www.npmjs.com/package/@namch/agent-assistant)
 [![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
@@ -22,7 +22,7 @@ Transform one AI into a coordinated team of 21 specialist agents with structured
 | **One-Time Setup, Forever Use** | Configure once at global level (`~/.cursor/`, `~/.claude/`, etc.) and it auto-applies to ALL your projects. No more repetitive config for every new repo.                                      |
 | **Sub-Agent Orchestration**     | When supported (Claude Code, Cursor Max mode), the main agent spawns specialized sub-agents to handle tasks **in parallel** — backend, frontend, testing, security all working simultaneously. |
 | **Multi-Platform Support**      | Works seamlessly across **Cursor**, **GitHub Copilot**, **Claude Code**, **Codex**, and **Antigravity/Gemini**. Same workflows, any tool.                                                                 |
-| **Matrix Skill Discovery (HSOL)** | Injects the right skills by profile and request; optional dynamic discovery (find-skills) for `hard`/`focus` when matrix fitness &lt; 0.8. 310+ matrix skills, zero manual config. |
+| **Matrix Skill Discovery (HSOL)** | Injects the right skills by profile and request; optional dynamic discovery (find-skills) for `hard`/`focus` when matrix fitness &lt; 0.8. 1400+ matrix skills, zero manual config. |
 
 ### The Goal
 
@@ -179,7 +179,7 @@ profile: "backend:execution"
 # Matrix resolves → 20+ backend skills injected automatically
 ```
 
-**310+ skills** across 19 domains. Add a new skill once, all relevant agents get it instantly.
+**1400+ skills** across 19 domains. Add a new skill once, all relevant agents get it instantly.
 
 ---
 
@@ -191,7 +191,7 @@ agent-assistant/
 ├── commands/        # 50+ workflow commands (routers + variants: fast, hard, focus)
 ├── rules/           # 8 orchestration rules
 ├── matrix-skills/   # 19 domain skill registries
-├── skills/          # 310+ domain skills
+├── skills/          # 1400+ domain skills
 └── cli/             # Installer
 ```
 

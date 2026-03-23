@@ -48,14 +48,15 @@ tiered_execution:
 
 ```yaml
 deliverable_files:
-  designer: "./reports/designs/DESIGN-{request}.md" # For substantial designs
+  designer: "./reports/{topic}/designs/DESIGN-{request}" # For substantial designs
 
 enforcement:
   - Simple component → Chat output OK
   - Page/feature design → MUST create design file
 ```
 
-All files in `./reports/` → English only.
+All files in `./reports/{topic}/` → English only.
+**⚠️ Paths above = base names.** Small (≤ 150 lines) → create as `{name}.md`. Large (> 150 lines or ≥ 4 sections) → create as `{name}/` folder with `00-index.md` + `01-*.md`, `02-*.md` section files.
 
 ---
 

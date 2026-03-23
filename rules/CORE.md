@@ -30,7 +30,7 @@ COMMANDS = ~/.{TOOL}/skills/agent-assistant/commands/
 AGENTS   = ~/.{TOOL}/skills/agent-assistant/agents/
 SKILLS   = ~/.{TOOL}/skills/
 RULES    = ~/.{TOOL}/skills/agent-assistant/rules/
-REPORTS  = ./reports/
+REPORTS  = ./reports/{topic}/
 ```
 
 **Platform Resolution** (replace `{TOOL}` with):
@@ -62,11 +62,12 @@ REPORTS  = ./reports/
 - "brainstorm/ideas/explore" → `/brainstorm`
 - "question/how/what/why" → `/ask`
 - "code/snippet/generate" → `/code`
-- "Investigate/research/look up" → `/research` or `/report`
+- "Investigate/research/look up" → `/ask` or `/report`
 - "design/ui/ux/mockup" → `/design`
 - "document/docs/readme/spec" → `/docs`
 
 **Variant syntax**: `/cmd:variant` or `/cmd/variant` both work.
+**Team variant baseline**: `:team` is supported only where `commands/{cmd}/team.md` exists. Deploy uses specialized variants (`check`, `preview`, `production`, `rollback`).
 
 ---
 
@@ -103,7 +104,7 @@ REPORTS  = ./reports/
 
 - Response → **Same as user's language**
 - Code/comments → **Always English**
-- Files in `./reports/`, `./documents/` → **Always English**
+- Files in `./reports/{topic}/`, `./documents/` → **Always English**
 
 ---
 
@@ -165,14 +166,20 @@ IF requirement is ambiguous:
 
 ## 📁 DELIVERABLES
 
-| Agent | Path |
-|-------|------|
-| brainstormer | `./reports/brainstorms/BRAINSTORM-{feature}.md` |
-| researcher | `./reports/researchers/RESEARCH-{feature}.md` |
-| scouter | `./reports/scouts/SCOUT-{feature}.md` |
-| designer | `./reports/designs/DESIGN-{feature}.md` |
-| planner | `./reports/plans/PLAN-{feature}.md` |
-| reporter | `./reports/` |
+| Agent | Single File | Chunked (> 150 lines) |
+|-------|-------------|----------------------|
+| brainstormer | `./reports/{topic}/brainstorms/BRAINSTORM-{feature}.md` | `./reports/{topic}/brainstorms/{feature}/00-index.md` |
+| researcher | `./reports/{topic}/researchers/RESEARCH-{feature}.md` | `./reports/{topic}/researchers/{feature}/00-index.md` |
+| scouter | `./reports/{topic}/scouts/SCOUT-{feature}.md` | `./reports/{topic}/scouts/{feature}/00-index.md` |
+| designer | `./reports/{topic}/designs/DESIGN-{feature}.md` | `./reports/{topic}/designs/{feature}/00-index.md` |
+| planner | `./reports/{topic}/plans/PLAN-{feature}.md` | `./reports/{topic}/plans/{feature}/00-index.md` |
+| reporter | `./reports/{topic}/general/REPORT-{type}-{date}.md` | `./reports/{topic}/general/{type}-{date}/00-index.md` |
+| debugger | `./reports/{topic}/debugs/DEBUG-{issue}.md` | `./reports/{topic}/debugs/{issue}/00-index.md` |
+| tester | `./reports/{topic}/tests/TEST-{feature}.md` | `./reports/{topic}/tests/{feature}/00-index.md` |
+| business-analyst | `./reports/{topic}/requirements/REQ-{feature}.md` | `./reports/{topic}/requirements/{feature}/00-index.md` |
+| performance-engineer | `./reports/{topic}/performance/PERF-{component}.md` | `./reports/{topic}/performance/{component}/00-index.md` |
+
+> **Size rule**: ≤ 150 lines → single file | > 150 lines OR ≥ 4 sections → chunked folder. See `PHASES.md § DELIVERABLE SIZE MANAGEMENT`.
 
 ---
 

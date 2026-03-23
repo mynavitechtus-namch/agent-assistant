@@ -36,12 +36,12 @@ execution-mode: execute
 
 ### Detection
 
-- User message references a plan: e.g. `@plan`, `@PLAN-...`, path like `./reports/plans/PLAN-{name}.md`, or phrases like "according to plan", "follow the plan", "code from plan", "implement per plan".
-- Or a plan file already exists for this task at `./reports/plans/PLAN-{task}.md` (derive `{task}` from `$ARGUMENTS` or from the referenced file name).
+- User message references a plan: e.g. `@plan`, `@PLAN-...`, path like `./reports/{topic}/plans/PLAN-{name}`, or phrases like "according to plan", "follow the plan", "code from plan", "implement per plan".
+- Or a plan file already exists for this task at `./reports/{topic}/plans/PLAN-{task}` (derive `{task}` from `$ARGUMENTS` or from the referenced file name).
 
 ### Resolution
 
-1. **CHECK**: Does a valid plan file exist (user-provided path or `./reports/plans/PLAN-{task}.md`)?
+1. **CHECK**: Does a valid plan file exist (user-provided path or `./reports/{topic}/plans/PLAN-{task}`)?
 2. **IF YES**:
    - **SKIP** Phase 1 (Requirements/Brainstorm), Phase 2 (Scout), Phase 3 (Planning).
    - **ANNOUNCE**: "✅ Plan provided/found — skipping research, scout, and planning. Proceeding to implementation."
@@ -79,9 +79,9 @@ phase_continuity:
   rule: "Each phase MUST reference and follow outputs from prior phases"
 
   check_for_files:
-    - "./reports/brainstorms/BRAINSTORM-{task}.md"
-    - "./reports/scouts/SCOUT-{task}.md"
-    - "./reports/plans/PLAN-{task}.md"
+    - "./reports/{topic}/brainstorms/BRAINSTORM-{task}"
+    - "./reports/{topic}/scouts/SCOUT-{task}"
+    - "./reports/{topic}/plans/PLAN-{task}"
 
   enforcement:
     - Phase 3 (Planning) MUST incorporate Scout findings
@@ -90,7 +90,8 @@ phase_continuity:
     - If prior phase file missing → Agent MUST create it
 ```
 
-All files in `./reports/` → English only.
+All files in `./reports/{topic}/` → English only.
+**⚠️ Paths above = base names.** Small (≤ 150 lines) → create as `{name}.md`. Large (> 150 lines or ≥ 4 sections) → create as `{name}/` folder with `00-index.md` + `01-*.md`, `02-*.md` section files.
 
 ---
 

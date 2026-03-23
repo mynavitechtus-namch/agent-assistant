@@ -1,6 +1,6 @@
 ---
 name: senior-prompt-engineer
-description: World-class prompt engineering skill for LLM optimization, prompt patterns, structured outputs, and AI product development. Expertise in Claude, GPT-4, prompt design patterns, few-shot learning, chain-of-thought, and AI evaluation. Includes RAG optimization, agent design, and LLM system architecture. Use when building AI products, optimizing LLM performance, designing agentic systems, or implementing advanced prompting techniques.
+description: World-class prompt engineering skill for LLM optimization, prompt patterns, structured outputs, and AI product development. Expertise in Codex, GPT-4, prompt design patterns, few-shot learning, chain-of-thought, and AI evaluation. Includes RAG optimization, agent design, and LLM system architecture. Use when building AI products, optimizing LLM performance, designing agentic systems, or implementing advanced prompting techniques.
 ---
 
 # Senior Prompt Engineer
@@ -13,13 +13,13 @@ World-class senior prompt engineer skill for production-grade AI/ML/Data systems
 
 ```bash
 # Core Tool 1
-python3 ~/.{TOOL}/skills/senior-prompt-engineer/scripts/prompt_optimizer.py --input data/ --output results/
+python3 ~/.Codex/skills/senior-prompt-engineer/scripts/prompt_optimizer.py --input data/ --output results/
 
 # Core Tool 2  
-python3 ~/.{TOOL}/skills/senior-prompt-engineer/scripts/rag_evaluator.py --target project/ --analyze
+python3 ~/.Codex/skills/senior-prompt-engineer/scripts/rag_evaluator.py --target project/ --analyze
 
 # Core Tool 3
-python3 ~/.{TOOL}/skills/senior-prompt-engineer/scripts/agent_orchestrator.py --config config.yaml --deploy
+python3 ~/.Codex/skills/senior-prompt-engineer/scripts/agent_orchestrator.py --config config.yaml --deploy
 ```
 
 ## Core Expertise
@@ -171,8 +171,8 @@ python -m black src/
 python -m pylint src/
 
 # Training
-python3 ~/.{TOOL}/skills/senior-prompt-engineer/scripts/train.py --config prod.yaml
-python3 ~/.{TOOL}/skills/senior-prompt-engineer/scripts/evaluate.py --model best.pth
+python3 ~/.Codex/skills/senior-prompt-engineer/scripts/train.py --config prod.yaml
+python3 ~/.Codex/skills/senior-prompt-engineer/scripts/evaluate.py --model best.pth
 
 # Deployment
 docker build -t service:v1 .
@@ -181,7 +181,7 @@ helm upgrade service ./charts/
 
 # Monitoring
 kubectl logs -f deployment/service
-python3 ~/.{TOOL}/skills/senior-prompt-engineer/scripts/health_check.py
+python3 ~/.Codex/skills/senior-prompt-engineer/scripts/health_check.py
 ```
 
 ## Resources

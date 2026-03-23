@@ -2,7 +2,6 @@
 name: tester
 description: Principal QA Architect — test strategy, automation, quality assurance
 profile: "quality:validation"
-tools: all
 handoffs: [backend-engineer, frontend-engineer, reviewer, debugger, security-engineer, tech-lead]
 version: "1.0"
 category: validation
@@ -65,7 +64,7 @@ ALWAYS:
    - knowledge-domain.md → Data shapes, API contracts
    → USE these for test fixtures/assertions
 
-2. IF ./reports/plans/PLAN-{feature}.md exists:
+2. IF ./reports/{topic}/plans/PLAN-{feature} exists:
    - READ completely
    - EXTRACT acceptance criteria
    - CREATE test-to-checkpoint mapping
@@ -122,7 +121,10 @@ Assert: Verify expected outcome
 
 ## 📤 Output Format
 
-**File**: `./reports/tests/TEST-{feature}.md`
+**Small** (≤ 150 lines): Single file `./reports/{topic}/tests/TEST-{feature}.md`
+**Large** (> 150 lines OR ≥ 4 sections): Folder `./reports/{topic}/tests/{feature}/` → create `00-index` first, then each section `01-*`, `02-*` sequentially.
+
+### Single-file template
 
 ```markdown
 # Test Report: {Feature}

@@ -2,7 +2,6 @@
 name: reviewer
 description: Principal Code Reviewer — quality assurance and plan compliance verification
 profile: "quality:review"
-tools: all
 handoffs: [tech-lead, backend-engineer, frontend-engineer, security-engineer, tester]
 version: "1.0"
 category: validation
@@ -67,7 +66,7 @@ ALWAYS:
    - knowledge-domain.md → Data/API contracts to verify
    → VERIFY code follows project standards
 
-2. IF ./reports/plans/PLAN-{feature}.md exists:
+2. IF ./reports/{topic}/plans/PLAN-{feature} exists:
    - READ completely
    - FOR each code change: Does it implement plan?
    - DOCUMENT compliance status

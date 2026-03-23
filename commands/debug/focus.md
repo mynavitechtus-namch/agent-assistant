@@ -43,9 +43,10 @@ execution-mode: execute
 
 | Agent    | Output                              |
 | -------- | ----------------------------------- |
-| debugger | `./reports/debugs/DEBUG-{issue}.md` |
+| debugger | `./reports/{topic}/debugs/DEBUG-{issue}` |
 
-All files in `./reports/` → English only.
+All files in `./reports/{topic}/` → English only.
+**⚠️ Paths above = base names.** Small (≤ 150 lines) → create as `{name}.md`. Large (> 150 lines or ≥ 4 sections) → create as `{name}/` folder with `00-index.md` + `01-*.md`, `02-*.md` section files.
 
 ---
 
@@ -78,7 +79,7 @@ One phase at a time, each phase independent: Phase 1 → then Phase 2 → … in
 | Agent  | `debugger`                                      |
 | ------ | ----------------------------------------------- |
 | Goal   | Deep investigation                              |
-| Output | `./reports/debugs/DEBUG-{issue}.md`             |
+| Output | `./reports/{topic}/debugs/DEBUG-{issue}`             |
 | Exit   | Root cause identified, failure chain documented |
 
 ---

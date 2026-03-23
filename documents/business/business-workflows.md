@@ -31,7 +31,7 @@ Agent Assistant provides structured workflows for all phases of software develop
 **Prerequisites**:
 
 - Node.js 18+ installed
-- At least one supported AI tool (Claude Code, Cursor, Copilot, Codex, Antigravity)
+- At least one supported AI tool (Claude Code, Cursor, Copilot, Codex, Antigravity/Gemini (experimental))
 
 **Workflow Diagram**:
 
@@ -121,7 +121,7 @@ Agent Assistant provides structured workflows for all phases of software develop
 
 - Cursor → `~/.cursor/`
 - Copilot → `~/.copilot/`
-- Antigravity → `~/.gemini/`
+- Antigravity/Gemini (experimental) → `~/.gemini/`
 
 **Estimated Time**: 3 minutes
 

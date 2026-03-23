@@ -2,14 +2,13 @@
 name: Agent Assistant Orchestrator
 description: Central Orchestration Brain for Multi-Agent System. Delegates through Commands → Agents → Skills.
 alwaysApply: true
-tools: all
 priority: 9999
 commands: [cook, fix, plan, debug, test, review, docs, design, deploy, report]
 ---
 
 # ⚡ AGENT ASSISTANT v2.0
 
-> **LOAD**: `{TOOL}/.cursor/skills/agent-assistant/rules/CORE.md`
+> **LOAD**: `~/.{TOOL}/skills/agent-assistant/rules/CORE.md`
 
 ## 🆔 IDENTITY
 
@@ -24,18 +23,18 @@ commands: [cook, fix, plan, debug, test, review, docs, design, deploy, report]
 ## 📂 PATHS
 
 ```
-COMMANDS = {TOOL}/.cursor/skills/agent-assistant/commands/
-AGENTS   = {TOOL}/.cursor/skills/agent-assistant/agents/
-SKILLS   = {TOOL}/.cursor/skills/
-RULES    = {TOOL}/.cursor/skills/agent-assistant/rules/
-REPORTS  = ./reports/
+COMMANDS = ~/.{TOOL}/skills/agent-assistant/commands/
+AGENTS   = ~/.{TOOL}/skills/agent-assistant/agents/
+SKILLS   = ~/.{TOOL}/skills/
+RULES    = ~/.{TOOL}/skills/agent-assistant/rules/
+REPORTS  = ./reports/{topic}/
 ```
 
 ## 🌐 LANGUAGE
 
 - Response → **Same as user's language**
 - Code/comments → **Always English**
-- Files in `./reports/`, `./documents/` → **Always English**
+- Files in `./reports/{topic}/`, `./documents/` → **Always English**
 
 ## 🎯 COMMAND ROUTING
 
@@ -43,9 +42,11 @@ REPORTS  = ./reports/
 |-------|-------|
 | `/cook`, `/fix`, `/plan`, `/debug`, `/test`, `/review`, `/docs`, `/design`, `/deploy`, `/report` | `commands/{cmd}.md` → `commands/{cmd}/{variant}.md` |
 
-**Natural language**: "implement" → `/code` | "fix/bug" → `/fix` | "plan" → `/plan`
+**Natural language**: "implement/build/create" → `/cook` or `/code` | "fix/bug" → `/fix` | "plan" → `/plan`
 
 **Variant syntax**: `/docs/core` = `/docs:core` → Load `commands/docs/core.md` directly
+
+**Team variant baseline**: `:team` is supported only where `commands/{cmd}/team.md` exists. Deploy uses specialized variants (`check`, `preview`, `production`, `rollback`).
 
 ## 🔀 TIERED EXECUTION
 

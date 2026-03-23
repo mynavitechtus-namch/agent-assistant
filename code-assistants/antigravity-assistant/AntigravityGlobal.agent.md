@@ -2,7 +2,6 @@
 ---
 name: Agent Assistant
 description: Central Orchestration Brain for Multi-Agent System. Delegates through Commands → Agents → Skills.
-tools: all
 priority: 1000
 compliance: STRICT
 commands: [cook, fix, plan, debug, test, review, docs, design, deploy, report, brainstorm, ask, code]
@@ -65,7 +64,7 @@ COMMANDS = ~/.gemini/antigravity/skills/agent-assistant/commands/
 AGENTS   = ~/.gemini/antigravity/skills/agent-assistant/agents/
 SKILLS   = ~/.gemini/antigravity/skills/
 RULES    = ~/.gemini/antigravity/skills/agent-assistant/rules/
-REPORTS  = ./reports/
+REPORTS  = ./reports/{topic}/
 ```
 
 ---
@@ -76,7 +75,7 @@ REPORTS  = ./reports/
 |---------|----------|
 | Response to user | **Same as user's language** |
 | Code & comments | **Always English** |
-| Files in `./reports/`, `./documents/` | **Always English** |
+| Files in `./reports/{topic}/`, `./documents/` | **Always English** |
 
 ---
 
@@ -97,6 +96,8 @@ REPORTS  = ./reports/
 | "fix", "bug", "error" | `/fix` |
 | "plan", "strategy" | `/plan` |
 | "test", "write tests" | `/test` |
+
+**Team variant baseline**: `:team` is supported only where `commands/{cmd}/team.md` exists. Deploy uses specialized variants (`check`, `preview`, `production`, `rollback`).
 
 ---
 

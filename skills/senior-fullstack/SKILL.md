@@ -1,6 +1,9 @@
 ---
 name: senior-fullstack
-description: Comprehensive fullstack development skill for building complete web applications with React, Next.js, Node.js, GraphQL, and PostgreSQL. Includes project scaffolding, code quality analysis, architecture patterns, and complete tech stack guidance. Use when building new projects, analyzing code quality, implementing design patterns, or setting up development workflows.
+description: "Complete toolkit for senior fullstack with modern tools and best practices."
+risk: unknown
+source: community
+date_added: "2026-02-27"
 ---
 
 # Senior Fullstack
@@ -15,13 +18,13 @@ This skill provides three core capabilities through automated scripts:
 
 ```bash
 # Script 1: Fullstack Scaffolder
-python3 ~/.{TOOL}/skills/senior-fullstack/scripts/fullstack_scaffolder.py [options]
+python scripts/fullstack_scaffolder.py [options]
 
 # Script 2: Project Scaffolder
-python3 ~/.{TOOL}/skills/senior-fullstack/scripts/project_scaffolder.py [options]
+python scripts/project_scaffolder.py [options]
 
 # Script 3: Code Quality Analyzer
-python3 ~/.{TOOL}/skills/senior-fullstack/scripts/code_quality_analyzer.py [options]
+python scripts/code_quality_analyzer.py [options]
 ```
 
 ## Core Capabilities
@@ -38,7 +41,7 @@ Automated tool for fullstack scaffolder tasks.
 
 **Usage:**
 ```bash
-python3 ~/.{TOOL}/skills/senior-fullstack/scripts/fullstack_scaffolder.py <project-path> [options]
+python scripts/fullstack_scaffolder.py <project-path> [options]
 ```
 
 ### 2. Project Scaffolder
@@ -53,7 +56,7 @@ Comprehensive analysis and optimization tool.
 
 **Usage:**
 ```bash
-python3 ~/.{TOOL}/skills/senior-fullstack/scripts/project_scaffolder.py <target-path> [--verbose]
+python scripts/project_scaffolder.py <target-path> [--verbose]
 ```
 
 ### 3. Code Quality Analyzer
@@ -68,7 +71,7 @@ Advanced tooling for specialized tasks.
 
 **Usage:**
 ```bash
-python3 ~/.{TOOL}/skills/senior-fullstack/scripts/code_quality_analyzer.py [arguments] [options]
+python scripts/code_quality_analyzer.py [arguments] [options]
 ```
 
 ## Reference Documentation
@@ -130,7 +133,7 @@ cp .env.example .env
 
 ```bash
 # Use the analyzer script
-python3 ~/.{TOOL}/skills/senior-fullstack/scripts/project_scaffolder.py .
+python scripts/project_scaffolder.py .
 
 # Review recommendations
 # Apply fixes
@@ -179,8 +182,8 @@ npm run test
 npm run lint
 
 # Analysis
-python3 ~/.{TOOL}/skills/senior-fullstack/scripts/project_scaffolder.py .
-python3 ~/.{TOOL}/skills/senior-fullstack/scripts/code_quality_analyzer.py --analyze
+python scripts/project_scaffolder.py .
+python scripts/code_quality_analyzer.py --analyze
 
 # Deployment
 docker build -t app:latest .
@@ -207,3 +210,6 @@ Check the comprehensive troubleshooting section in `references/development_workf
 - Workflow Guide: `references/architecture_patterns.md`
 - Technical Guide: `references/development_workflows.md`
 - Tool Scripts: `scripts/` directory
+
+## When to Use
+This skill is applicable to execute the workflow or actions described in the overview.

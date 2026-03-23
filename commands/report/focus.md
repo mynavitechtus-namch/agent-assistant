@@ -45,7 +45,7 @@ execution-mode: execute
 
 | User intent | Reporter output |
 | ----------- | ---------------- |
-| **Create report** | `./reports/general/REPORT-FOCUS-{date}.md` or path user asked |
+| **Create report** | `./reports/{topic}/general/REPORT-FOCUS-{date}` or path user asked |
 | **Update existing** | **Edit** related files; do **not** create new report unless also asked |
 | **From template** | File(s) matching user format/template |
 
@@ -55,7 +55,8 @@ execution-mode: execute
 | scouter    | (optional) evidence output                        |
 | reporter   | Per table above — create / update / from template |
 
-All files in `./reports/` → English only.
+All files in `./reports/{topic}/` → English only.
+**⚠️ Paths above = base names.** Small (≤ 150 lines) → create as `{name}.md`. Large (> 150 lines or ≥ 4 sections) → create as `{name}/` folder with `00-index.md` + `01-*.md`, `02-*.md` section files.
 
 ---
 
@@ -91,7 +92,7 @@ One phase at a time, each phase independent: Phase 1 → then Phase 2 → … in
 | ----------- | -------------------------------------------------------------------------- |
 | Prerequisite| **USE** Phase 1 criteria + Phase 2 evidence only                            |
 | Goal        | From **user intent**: synthesize into (1) new report, (2) **updates** to existing files, or (3) file(s) from template |
-| Output      | **Create**: `./reports/general/REPORT-FOCUS-{date}.md`. **Update**: edit related files. **Template**: file(s) matching user format. |
+| Output      | **Create**: `./reports/{topic}/general/REPORT-FOCUS-{date}`. **Update**: edit related files. **Template**: file(s) matching user format. |
 | Exit        | Deliverable matches intent; every claim cited when creating report.       |
 
 ---
@@ -100,7 +101,7 @@ One phase at a time, each phase independent: Phase 1 → then Phase 2 → … in
 
 Deliverable per **user intent**:
 
-1. ✅ **Create report** → `./reports/general/REPORT-FOCUS-{date}.md` (or path user asked)
+1. ✅ **Create report** → `./reports/{topic}/general/REPORT-FOCUS-{date}` (or path user asked)
 2. ✅ **Update existing** → Related files edited; list what was updated
 3. ✅ **From template** → File(s) matching user format; list path(s)
 4. 🕵️ **Audit** → `/review:focus` (optional)

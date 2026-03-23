@@ -50,8 +50,8 @@ A **concrete output** produced by an agent during workflow execution. Deliverabl
 
 | Type | Example Location |
 |------|------------------|
-| Plan | `./reports/plans/PLAN-auth.md` |
-| Scout Report | `./reports/scouts/SCOUT-dashboard.md` |
+| Plan | `./reports/{topic}/plans/PLAN-auth.md` |
+| Scout Report | `./reports/{topic}/scouts/SCOUT-dashboard.md` |
 | Documentation | `./documents/knowledge-overview.md` |
 | Code | Implementation in codebase |
 
@@ -59,7 +59,7 @@ A **concrete output** produced by an agent during workflow execution. Deliverabl
 
 ### Matrix Skill Discovery (HSOL)
 
-A **Hybrid Skill Orchestration Layer (HSOL)** that combines static matrix-skills with dynamic community skills. Skills are resolved by agent profile and request context; dynamic discovery runs only for `hard`/`focus` variants when matrix fitness &lt; 0.8 (blocking when &lt; 0.75 so the current task uses the new skill; async when 0.75–0.8 for recommendations only). See `rules/SKILL-DISCOVERY.md` and `rules/SKILL-ORCHESTRATION.md`.
+A **Hybrid Skill Orchestration Layer (HSOL)** that combines static matrix-skills with dynamic community skills. Skills are resolved by agent profile and request context; dynamic discovery runs only for `hard`/`focus` variants when matrix fitness &lt; 0.8 (blocking when &lt; 0.75 so the current task uses the new skill; async when 0.75–0.8 for recommendations only). See `rules/SKILL.md`.
 
 **Resolution Flow**:
 ```

@@ -5,7 +5,7 @@ description: Package entire code repositories into single AI-friendly files usin
 
 # Repomix Skill
 
-Repomix packs entire repositories into single, AI-friendly files. Perfect for feeding codebases to LLMs like Claude, ChatGPT, and Gemini.
+Repomix packs entire repositories into single, AI-friendly files. Perfect for feeding codebases to LLMs like Codex, ChatGPT, and Gemini.
 
 ## When to Use
 
@@ -171,7 +171,7 @@ Repomix automatically counts tokens for individual files, total repository, and 
 
 Typical LLM context limits:
 
-- Claude Sonnet 4.5: ~200K tokens
+- Codex Sonnet 4.5: ~200K tokens
 - GPT-4: ~128K tokens
 - GPT-3.5: ~16K tokens
 

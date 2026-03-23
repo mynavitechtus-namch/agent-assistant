@@ -264,10 +264,10 @@ Python utilities in `scripts/` directory:
 Usage examples:
 ```bash
 # Initialize new Next.js app with TypeScript and recommended setup
-python3 ~/.{TOOL}/skills/web-frameworks/scripts/nextjs-init.py --name my-app --typescript --app-router
+python3 ~/.Codex/skills/web-frameworks/scripts/nextjs-init.py --name my-app --typescript --app-router
 
 # Migrate existing monorepo to Turborepo with dry-run
-python3 ~/.{TOOL}/skills/web-frameworks/scripts/turborepo-migrate.py --path ./my-monorepo --dry-run
+python3 ~/.Codex/skills/web-frameworks/scripts/turborepo-migrate.py --path ./my-monorepo --dry-run
 
 # Run tests
 cd scripts/tests

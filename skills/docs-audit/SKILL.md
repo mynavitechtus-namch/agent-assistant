@@ -1,6 +1,8 @@
 ---
 name: docs-audit
 description: "Generate or update the 4 core audit documentation files (security, compliance, dataflow, recommendations) in ./documents/audit/. Performs evidence-driven security review, compliance mapping, privacy analysis, strict scoring, and remediation planning. Use when user says 'docs-audit', 'security audit', 'compliance audit', 'audit docs', '/docs:audit', or wants security and compliance documentation."
+metadata:
+   version: 1.0.0
 ---
 
 # Docs-Audit

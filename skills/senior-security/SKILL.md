@@ -15,13 +15,13 @@ This skill provides three core capabilities through automated scripts:
 
 ```bash
 # Script 1: Threat Modeler
-python3 ~/.{TOOL}/skills/senior-security/scripts/threat_modeler.py [options]
+python3 ~/.Codex/skills/senior-security/scripts/threat_modeler.py [options]
 
 # Script 2: Security Auditor
-python3 ~/.{TOOL}/skills/senior-security/scripts/security_auditor.py [options]
+python3 ~/.Codex/skills/senior-security/scripts/security_auditor.py [options]
 
 # Script 3: Pentest Automator
-python3 ~/.{TOOL}/skills/senior-security/scripts/pentest_automator.py [options]
+python3 ~/.Codex/skills/senior-security/scripts/pentest_automator.py [options]
 ```
 
 ## Core Capabilities
@@ -38,7 +38,7 @@ Automated tool for threat modeler tasks.
 
 **Usage:**
 ```bash
-python3 ~/.{TOOL}/skills/senior-security/scripts/threat_modeler.py <project-path> [options]
+python3 ~/.Codex/skills/senior-security/scripts/threat_modeler.py <project-path> [options]
 ```
 
 ### 2. Security Auditor
@@ -53,7 +53,7 @@ Comprehensive analysis and optimization tool.
 
 **Usage:**
 ```bash
-python3 ~/.{TOOL}/skills/senior-security/scripts/security_auditor.py <target-path> [--verbose]
+python3 ~/.Codex/skills/senior-security/scripts/security_auditor.py <target-path> [--verbose]
 ```
 
 ### 3. Pentest Automator
@@ -68,7 +68,7 @@ Advanced tooling for specialized tasks.
 
 **Usage:**
 ```bash
-python3 ~/.{TOOL}/skills/senior-security/scripts/pentest_automator.py [arguments] [options]
+python3 ~/.Codex/skills/senior-security/scripts/pentest_automator.py [arguments] [options]
 ```
 
 ## Reference Documentation
@@ -130,7 +130,7 @@ cp .env.example .env
 
 ```bash
 # Use the analyzer script
-python3 ~/.{TOOL}/skills/senior-security/scripts/security_auditor.py .
+python3 ~/.Codex/skills/senior-security/scripts/security_auditor.py .
 
 # Review recommendations
 # Apply fixes
@@ -179,8 +179,8 @@ npm run test
 npm run lint
 
 # Analysis
-python3 ~/.{TOOL}/skills/senior-security/scripts/security_auditor.py .
-python3 ~/.{TOOL}/skills/senior-security/scripts/pentest_automator.py --analyze
+python3 ~/.Codex/skills/senior-security/scripts/security_auditor.py .
+python3 ~/.Codex/skills/senior-security/scripts/pentest_automator.py --analyze
 
 # Deployment
 docker build -t app:latest .

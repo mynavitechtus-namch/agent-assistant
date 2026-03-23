@@ -1,6 +1,8 @@
 ---
 name: docs-core
 description: "Generate or update the 5 core project knowledge documents (overview, architecture, domain, source-base, standards) in ./documents/. Performs autonomous codebase scanning, gap analysis, and produces enterprise-grade documentation for rapid onboarding. Use when user says 'generate docs', 'update docs', 'create project documentation', 'docs-core', '/docs-core', 'onboarding docs', or wants to create/refresh the knowledge base."
+metadata:
+  version: 1.0.0
 ---
 
 # Docs-Core — Core Project Documentation Generator

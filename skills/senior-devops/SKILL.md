@@ -15,13 +15,13 @@ This skill provides three core capabilities through automated scripts:
 
 ```bash
 # Script 1: Pipeline Generator
-python3 ~/.{TOOL}/skills/senior-devops/scripts/pipeline_generator.py [options]
+python3 ~/.Codex/skills/senior-devops/scripts/pipeline_generator.py [options]
 
 # Script 2: Terraform Scaffolder
-python3 ~/.{TOOL}/skills/senior-devops/scripts/terraform_scaffolder.py [options]
+python3 ~/.Codex/skills/senior-devops/scripts/terraform_scaffolder.py [options]
 
 # Script 3: Deployment Manager
-python3 ~/.{TOOL}/skills/senior-devops/scripts/deployment_manager.py [options]
+python3 ~/.Codex/skills/senior-devops/scripts/deployment_manager.py [options]
 ```
 
 ## Core Capabilities
@@ -38,7 +38,7 @@ Automated tool for pipeline generator tasks.
 
 **Usage:**
 ```bash
-python3 ~/.{TOOL}/skills/senior-devops/scripts/pipeline_generator.py <project-path> [options]
+python3 ~/.Codex/skills/senior-devops/scripts/pipeline_generator.py <project-path> [options]
 ```
 
 ### 2. Terraform Scaffolder
@@ -53,7 +53,7 @@ Comprehensive analysis and optimization tool.
 
 **Usage:**
 ```bash
-python3 ~/.{TOOL}/skills/senior-devops/scripts/terraform_scaffolder.py <target-path> [--verbose]
+python3 ~/.Codex/skills/senior-devops/scripts/terraform_scaffolder.py <target-path> [--verbose]
 ```
 
 ### 3. Deployment Manager
@@ -68,7 +68,7 @@ Advanced tooling for specialized tasks.
 
 **Usage:**
 ```bash
-python3 ~/.{TOOL}/skills/senior-devops/scripts/deployment_manager.py [arguments] [options]
+python3 ~/.Codex/skills/senior-devops/scripts/deployment_manager.py [arguments] [options]
 ```
 
 ## Reference Documentation
@@ -130,7 +130,7 @@ cp .env.example .env
 
 ```bash
 # Use the analyzer script
-python3 ~/.{TOOL}/skills/senior-devops/scripts/terraform_scaffolder.py .
+python3 ~/.Codex/skills/senior-devops/scripts/terraform_scaffolder.py .
 
 # Review recommendations
 # Apply fixes
@@ -179,8 +179,8 @@ npm run test
 npm run lint
 
 # Analysis
-python3 ~/.{TOOL}/skills/senior-devops/scripts/terraform_scaffolder.py .
-python3 ~/.{TOOL}/skills/senior-devops/scripts/deployment_manager.py --analyze
+python3 ~/.Codex/skills/senior-devops/scripts/terraform_scaffolder.py .
+python3 ~/.Codex/skills/senior-devops/scripts/deployment_manager.py --analyze
 
 # Deployment
 docker build -t app:latest .

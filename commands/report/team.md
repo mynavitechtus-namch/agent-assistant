@@ -56,7 +56,7 @@ execution-mode: execute
 
 ## 📬 MAILBOX — Central Communication Hub
 
-**Location**: `./reports/MAILBOX-{date}.md`
+**Location**: `./reports/{topic}/MAILBOX-{date}.md`
 
 All 3 triangle agents READ from and APPEND to this file. Never overwrite — append only.
 
@@ -91,13 +91,14 @@ All 3 triangle agents READ from and APPEND to this file. Never overwrite — app
 
 | Phase / Agent    | Output                                           |
 | ---------------- | ------------------------------------------------ |
-| Phase 1 (Data)   | `./reports/scouts/SCOUT-{topic}.md`              |
-| Phase 1 (Data)   | `./reports/researchers/RESEARCH-{topic}.md`      |
-| Phase 2 (Draft)  | `./reports/general/REPORT-{topic}-{date}.md`     |
-| Phase 3 (Final)  | `./reports/general/REPORT-{topic}-{date}.md` (polished) |
-| ALL Phases       | `./reports/MAILBOX-{date}.md`                    |
+| Phase 1 (Data)   | `./reports/{topic}/scouts/SCOUT-{topic}`              |
+| Phase 1 (Data)   | `./reports/{topic}/researchers/RESEARCH-{topic}`      |
+| Phase 2 (Draft)  | `./reports/{topic}/general/REPORT-{topic}-{date}`     |
+| Phase 3 (Final)  | `./reports/{topic}/general/REPORT-{topic}-{date}` (polished) |
+| ALL Phases       | `./reports/{topic}/MAILBOX-{date}.md`                    |
 
-All files in `./reports/` → English only.
+All files in `./reports/{topic}/` → English only.
+**⚠️ Paths above = base names.** Small (≤ 150 lines) → create as `{name}.md`. Large (> 150 lines or ≥ 4 sections) → create as `{name}/` folder with `00-index.md` + `01-*.md`, `02-*.md` section files.
 
 ---
 
@@ -114,6 +115,8 @@ All files in `./reports/` → English only.
 ---
 
 ## ⛔ INCREMENTAL EXECUTION (MANDATORY)
+
+**Deliverable paths = base names.** Small (≤ 150 lines) → `{name}.md`. Large (> 150 lines or ≥ 4 sections) → `{name}/` folder with `00-index.md` + section files.
 
 One phase at a time. Within each phase:
 
@@ -208,7 +211,7 @@ Format: rules/PHASES.md § Phase output structure + rules/TEAMS.md § Golden Tri
 7. `business-analyst` re-reviews → max 3 rounds → ESCALATION to `reporter` if unresolved
 8. `reporter` synthesizes all approved findings into unified data package
 
-**Deliverable**: `./reports/scouts/SCOUT-{topic}.md` + `./reports/researchers/RESEARCH-{topic}.md`
+**Deliverable**: `./reports/{topic}/scouts/SCOUT-{topic}` + `./reports/{topic}/researchers/RESEARCH-{topic}`
 **Exit Criteria**: All data sources tapped, metrics collected, patterns identified, gaps acknowledged, analysis dimensions defined
 **Consensus**: ✅ CONSENSUS: reporter ✓ | scouter/researcher ✓ | business-analyst ✓
 
@@ -413,7 +416,7 @@ Format: rules/PHASES.md § Phase output structure + rules/TEAMS.md § Golden Tri
    Severity: CRITICAL | Action: "Add evidence or remove claim"
 ```
 
-**Deliverable**: `./reports/general/REPORT-{topic}-{date}.md`
+**Deliverable**: `./reports/{topic}/general/REPORT-{topic}-{date}`
 **Exit Criteria**: All sections drafted, every claim evidence-backed, recommendations actionable, report coherent
 **Consensus**: ✅ CONSENSUS: reporter ✓ | reporter(exec) ✓ | reviewer ✓
 
@@ -465,7 +468,7 @@ Format: rules/PHASES.md § Phase output structure + rules/TEAMS.md § Golden Tri
 - [ ] Appendix contains supporting raw data
 ```
 
-**Deliverable**: `./reports/general/REPORT-{topic}-{date}.md` (final polished version)
+**Deliverable**: `./reports/{topic}/general/REPORT-{topic}-{date}` (final polished version)
 **Exit Criteria**: Report stakeholder-ready, professionally formatted, actionable recommendations, quality gate passed
 **Consensus**: ✅ CONSENSUS: tech-lead ✓ | docs-manager ✓ | business-analyst ✓
 
@@ -492,7 +495,7 @@ Present final report with consensus stamps from ALL phases:
 - Arbitrations needed: {count}
 
 ## Mailbox Reference
-Full debate history: `./reports/MAILBOX-{date}.md`
+Full debate history: `./reports/{topic}/MAILBOX-{date}.md`
 
 ## Next Actions
 1. ✅ **Done** — Report complete (triangle-validated across all phases)

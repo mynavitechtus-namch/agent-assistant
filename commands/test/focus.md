@@ -42,7 +42,7 @@ execution-mode: execute
 ## 📁 PLAN CHECKPOINT VERIFICATION
 
 ```
-IF ./reports/plans/PLAN-{scope}.md exists:
+IF ./reports/{topic}/plans/PLAN-{scope} exists (.md file or folder):
   1. READ plan completely
   2. EXTRACT all checkpoints
   3. FOR EACH checkpoint → Create test

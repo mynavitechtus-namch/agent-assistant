@@ -2,7 +2,6 @@
 name: performance-engineer
 description: Principal Performance Architect — profiling, optimization, load testing
 profile: "performance:validation"
-tools: all
 handoffs: [backend-engineer, frontend-engineer, database-architect, devops-engineer, tech-lead]
 version: "1.0"
 category: validation
@@ -115,7 +114,10 @@ RULE: Optimize biggest bottleneck first
 
 ## 📤 Output Format
 
-**File**: `./reports/performance/PERF-{component}.md`
+**Small** (≤ 150 lines): Single file `./reports/{topic}/performance/PERF-{component}.md`
+**Large** (> 150 lines OR ≥ 4 sections): Folder `./reports/{topic}/performance/{component}/` → create `00-index.md` first, then each section `01-*.md`, `02-*.md` sequentially.
+
+### Single-file template
 
 ```markdown
 ## Performance Analysis: {Component}

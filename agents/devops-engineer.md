@@ -2,7 +2,6 @@
 name: devops-engineer
 description: Principal DevOps Architect — CI/CD, infrastructure as code, deployment automation
 profile: "devops:execution"
-tools: all
 handoffs: [backend-engineer, security-engineer, performance-engineer, database-architect, tech-lead]
 version: "1.0"
 category: execution
@@ -66,7 +65,7 @@ ALWAYS:
    - knowledge-standards.md → Deployment standards
    → FOLLOW existing infra conventions
 
-2. CHECK: ./reports/plans/PLAN-{feature}.md
+2. CHECK: ./reports/{topic}/plans/PLAN-{feature}
    → EXISTS: READ infrastructure sections, follow EXACTLY
    → PRODUCTION: REQUIRE explicit approval + rollback plan
 ```

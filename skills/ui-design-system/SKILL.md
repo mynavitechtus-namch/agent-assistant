@@ -19,7 +19,7 @@ Professional toolkit for creating and maintaining scalable design systems.
 ### design_token_generator.py
 Generates complete design system tokens from brand colors.
 
-**Usage**: `python3 ~/.{TOOL}/skills/ui-design-system/scripts/design_token_generator.py [brand_color] [style] [format]`
+**Usage**: `python3 ~/.Codex/skills/ui-design-system/scripts/design_token_generator.py [brand_color] [style] [format]`
 - Styles: modern, classic, playful
 - Formats: json, css, scss
 

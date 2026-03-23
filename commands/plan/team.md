@@ -56,7 +56,7 @@ execution-mode: execute
 
 ## 📬 MAILBOX — Central Communication Hub
 
-**Location**: `./reports/MAILBOX-{date}.md` — Append only, never overwrite.
+**Location**: `./reports/{topic}/MAILBOX-{date}.md` — Append only, never overwrite.
 
 | Type              | Sender    | Receiver  | Purpose                                        |
 | ----------------- | --------- | --------- | ---------------------------------------------- |
@@ -76,13 +76,14 @@ execution-mode: execute
 
 | Phase / Team     | Output                                          |
 | ---------------- | ----------------------------------------------- |
-| Phase 1 (Disc.)  | `./reports/brainstorms/BRAINSTORM-{task}.md` + `./reports/scouts/SCOUT-{task}.md` |
-| Phase 2 (Arch.)  | `./reports/researchers/RESEARCH-{task}.md` + `./reports/designs/ADR-{task}.md` |
-| Phase 3 (Plan)   | `./reports/plans/PLAN-{task}.md` (or `PLAN-{task}-phase1.md`, …) |
-| Phase 4 (Review) | `./reports/qa/QA-PLAN-{task}.md`                |
-| ALL Phases        | `./reports/MAILBOX-{date}.md`                  |
+| Phase 1 (Disc.)  | `./reports/{topic}/brainstorms/BRAINSTORM-{task}` + `./reports/{topic}/scouts/SCOUT-{task}` |
+| Phase 2 (Arch.)  | `./reports/{topic}/researchers/RESEARCH-{task}` + `./reports/{topic}/designs/ADR-{task}` |
+| Phase 3 (Plan)   | `./reports/{topic}/plans/PLAN-{task}` (or `PLAN-{task}-phase1`, …) |
+| Phase 4 (Review) | `./reports/{topic}/qa/QA-PLAN-{task}`                |
+| ALL Phases        | `./reports/{topic}/MAILBOX-{date}.md`                  |
 
-All files in `./reports/` → English only. If plan has **> 3 phases** or **> 3 days** effort → produce **multiple plan files** (one per phase/milestone), each executable in sequence.
+All files in `./reports/{topic}/` → English only. If plan has **> 3 phases** or **> 3 days** effort → produce **multiple plan files** (one per phase/milestone), each executable in sequence.
+**⚠️ Paths above = base names.** Small (≤ 150 lines) → create as `{name}.md`. Large (> 150 lines or ≥ 4 sections) → create as `{name}/` folder with `00-index.md` + `01-*.md`, `02-*.md` section files.
 
 ---
 
@@ -100,6 +101,8 @@ All files in `./reports/` → English only. If plan has **> 3 phases** or **> 3 
 ---
 
 ## ⛔ INCREMENTAL EXECUTION (MANDATORY)
+
+**Deliverable paths = base names.** Small (≤ 150 lines) → `{name}.md`. Large (> 150 lines or ≥ 4 sections) → `{name}/` folder with `00-index.md` + section files.
 
 One phase at a time. Within each phase follow the Golden Triangle Loop below.
 
@@ -147,7 +150,7 @@ One phase at a time. Within each phase follow the Golden Triangle Loop below.
 5. If FAIL → executors address gaps or defend → RESUBMISSION/DEFENSE → max 3 rounds
 6. `researcher` synthesizes all approved findings into unified artifacts
 
-**Deliverable**: `./reports/brainstorms/BRAINSTORM-{task}.md` + `./reports/scouts/SCOUT-{task}.md`
+**Deliverable**: `./reports/{topic}/brainstorms/BRAINSTORM-{task}` + `./reports/{topic}/scouts/SCOUT-{task}`
 **Exit Criteria**: All requirements captured, codebase mapped, business context validated, assumptions challenged
 **Consensus**: ✅ CONSENSUS: researcher ✓ | scouter+business-analyst ✓ | brainstormer ✓
 
@@ -174,7 +177,7 @@ One phase at a time. Within each phase follow the Golden Triangle Loop below.
 
 **CONSTRAINT INHERITANCE**: Architecture decisions MUST reference Phase 1 ("Based on requirement R1...", "Codebase constraint from SCOUT...", "Business rule from BA...")
 
-**Deliverable**: `./reports/researchers/RESEARCH-{task}.md` + `./reports/designs/ADR-{task}.md`
+**Deliverable**: `./reports/{topic}/researchers/RESEARCH-{task}` + `./reports/{topic}/designs/ADR-{task}`
 **Exit Criteria**: Patterns researched, alternatives documented, ADRs drafted, feasibility validated
 **Consensus**: ✅ CONSENSUS: tech-lead ✓ | researcher ✓ | reviewer ✓
 
@@ -261,7 +264,7 @@ One phase at a time. Within each phase follow the Golden Triangle Loop below.
 4. Deviations from prior phase findings require explicit justification
 ```
 
-**Deliverable**: `./reports/plans/PLAN-{task}.md` (single) or `PLAN-{task}-phase1.md`, … (multi-phase)
+**Deliverable**: `./reports/{topic}/plans/PLAN-{task}` (single) or `PLAN-{task}-phase1`, … (multi-phase)
 **Exit Criteria**: Plan complete, all sections reviewed, security validated, estimates challenged, traceability verified
 **Consensus**: ✅ CONSENSUS: planner ✓ | planner(exec) ✓ | tech-lead+security ✓
 
@@ -295,7 +298,7 @@ FOR EACH requirement in BRAINSTORM-{task}.md:
   → Document: "REQ-{id} → Task: {ref} → AC: {criteria} → ✓/✗"
 ```
 
-**Deliverable**: `./reports/qa/QA-PLAN-{task}.md` — includes: PASS/REVISE verdict, traceability matrix, security summary, business confirmation
+**Deliverable**: `./reports/{topic}/qa/QA-PLAN-{task}` — includes: PASS/REVISE verdict, traceability matrix, security summary, business confirmation
 **Exit Criteria**: Plan validated, technically coherent, security reviewed, business-aligned
 **Consensus**: ✅ CONSENSUS: tech-lead ✓ | reviewer ✓ | business-analyst ✓
 
@@ -325,9 +328,9 @@ FOR EACH requirement in BRAINSTORM-{task}.md:
 - Total submissions: {count} | First-pass: {count} | Debates: {count} | Arbitrations: {count}
 
 ## Deliverables
-1. ✅ **Plan** — `./reports/plans/PLAN-{task}.md` (or multi-phase files)
-2. ✅ **QA** — `./reports/qa/QA-PLAN-{task}.md` confirms PASS
-3. 📬 **Debate** — `./reports/MAILBOX-{date}.md`
+1. ✅ **Plan** — `./reports/{topic}/plans/PLAN-{task}` (or multi-phase files)
+2. ✅ **QA** — `./reports/{topic}/qa/QA-PLAN-{task}` confirms PASS
+3. 📬 **Debate** — `./reports/{topic}/MAILBOX-{date}.md`
 
 ## Next Actions
 1. 🍳 **Implement** → `/cook:team` or `/cook:hard`

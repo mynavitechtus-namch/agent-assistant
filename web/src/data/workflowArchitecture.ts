@@ -211,7 +211,7 @@ export const workflowNodes: Node<WorkflowNodeData>[] = [
     type: 'custom',
     position: { x: COL.RIGHT, y: ROW.R7 },
     data: {
-      label: '310+ Matrix Skills',
+      label: '1400+ Matrix Skills',
       description: 'Injected into agents at runtime',
       type: 'skill',
       icon: '📚',
@@ -247,7 +247,7 @@ export const workflowNodes: Node<WorkflowNodeData>[] = [
       description: 'All phases complete → output',
       type: 'output',
       icon: '📦',
-      items: ['Code changes', './reports/', './documents/', 'Tests & docs'],
+      items: ['Code changes', './reports/{topic}/', './documents/', 'Tests & docs'],
     },
   },
 ]
@@ -474,7 +474,7 @@ export const nodeTypeLegend: { type: WorkflowNodeType; label: string; color: str
     type: 'skill',
     label: 'Matrix Skills',
     color: '#8844ff',
-    description: '310+ skills across 19 domains injected at runtime',
+    description: '1400+ skills across 19 domains injected at runtime',
   },
   {
     type: 'phase',
@@ -509,7 +509,7 @@ export const architectureConcepts = [
   },
   {
     title: 'Matrix Skill Discovery',
-    description: 'Instead of hardcoded skills, agents declare profiles. System resolves and injects 310+ skills at runtime.',
+    description: 'Instead of hardcoded skills, agents declare profiles. System resolves and injects 1400+ skills at runtime.',
     icon: '🎯',
   },
 ]

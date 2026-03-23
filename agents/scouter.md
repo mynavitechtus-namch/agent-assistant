@@ -2,7 +2,6 @@
 name: scouter
 description: Principal Codebase Analyst — code exploration and pattern discovery
 profile: "research:exploration"
-tools: all
 handoffs: [planner, tech-lead, researcher, backend-engineer, frontend-engineer]
 version: "1.0"
 category: research
@@ -118,7 +117,10 @@ CONSTRAINT: {must engineers follow this?}
 
 ## 📤 Output Format
 
-**File**: `./reports/scouts/SCOUT-{feature}.md`
+**Small** (≤ 150 lines): Single file `./reports/{topic}/scouts/SCOUT-{feature}.md`
+**Large** (> 150 lines OR ≥ 4 sections): Folder `./reports/{topic}/scouts/{feature}/` → create `00-index.md` first, then each section `01-*.md`, `02-*.md` sequentially.
+
+### Single-file template
 
 ```markdown
 # Scout Report: {Feature}

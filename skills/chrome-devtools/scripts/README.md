@@ -10,7 +10,7 @@ CLI scripts for browser automation using Puppeteer.
 
 ```bash
 pwd  # Should show current working directory
-cd ~/.{TOOL}/skills/chrome-devtools/scripts
+cd ~/.claude/skills/chrome-devtools/scripts
 ./install.sh  # Auto-checks dependencies and installs
 ```
 

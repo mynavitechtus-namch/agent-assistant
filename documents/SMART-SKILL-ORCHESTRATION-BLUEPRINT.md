@@ -9,7 +9,7 @@
 
 ## Executive Summary
 
-This blueprint addresses the **Scalability Paradox** in AI agent skill management: the tension between maintaining a stable, low-latency static skill library (`matrix-skills/`) and the need for dynamic, on-demand skill discovery via the **find-skills** skill. 
+This blueprint addresses the **Scalability Paradox** in AI agent skill management: the tension between maintaining a stable, low-latency static skill library (`~/.{TOOL}/skills/agent-assistant/matrix-skills/`) and the need for dynamic, on-demand skill discovery via the **find-skills** skill. 
 
 The solution is a **Hybrid Skill Orchestration Layer** (HSOL) that:
 1. Preserves the reliability of matrix-skills as the primary execution tier
@@ -76,7 +76,7 @@ ls "{SKILLS_PATH}/find-skills/SKILL.md"
 
 ### 1.1 Current State Assessment
 
-**Static Layer (`matrix-skills/`):**
+**Static Layer (`~/.{TOOL}/skills/agent-assistant/matrix-skills/`):**
 ```
 Strengths:
 ├── Low latency (< 1ms skill resolution)
@@ -89,7 +89,7 @@ Weaknesses:
 ├── Manual update cycle (labor-intensive)
 ├── Skill obsolescence risk (stale skills)
 ├── Discovery gap (unknown capabilities)
-├── Scaling limit (~310 skills practical ceiling)
+├── Scaling limit (~1400 skills practical ceiling)
 └── No feedback loop for skill quality
 ```
 
@@ -678,7 +678,7 @@ installation_tiers:
     use_case: "Battle-tested, widely useful skills"
     process: |
       1. When promotion criteria met (executions, success_rate, recency), skill is auto-promoted
-      2. System adds skill entry to matrix-skills/{domain}.yaml (no promotion queue, no human review)
+      2. System adds skill entry to ~/.{TOOL}/skills/agent-assistant/matrix-skills/{domain}.yaml (no promotion queue, no human review)
       3. Write target: the GLOBAL tool path the main agent already reads from
          (e.g. ~/.cursor/skills/agent-assistant/matrix-skills/ for Cursor)
       4. Same files the orchestrator loaded at session start — we update those on disk
@@ -1152,7 +1152,7 @@ success_metrics:
 │                                                                              │
 │  ─────────────────────────────────────────────────────────────────────────  │
 │                                                                              │
-│  SKILL-DISCOVERY.md                                                          │
+│  SKILL.md                                                          │
 │  ══════════════════                                                          │
 │  Integration Point: Resolution Algorithm                                     │
 │  Change: Add Step 7 (Dynamic Enhancement Check)                             │
@@ -1202,8 +1202,7 @@ agent-assistant/
 │   └── {domain}.yaml        # Existing domain files
 │
 ├── rules/
-│   ├── SKILL-DISCOVERY.md   # ← Update with HSOL integration
-│   ├── SKILL-ORCHESTRATION.md # ← NEW: HSOL decision logic
+│   ├── SKILL.md   # ← Update with HSOL integration
 │   └── ...
 │
 ├── lib/                     # ← NEW: Shared libraries
@@ -1264,7 +1263,7 @@ migration_strategy:
 | Term | Definition |
 |------|------------|
 | **HSOL** | Hybrid Skill Orchestration Layer — the core system designed in this blueprint |
-| **Matrix Skills** | Pre-curated skills in `matrix-skills/*.yaml` |
+| **Matrix Skills** | Pre-curated skills in `~/.{TOOL}/skills/agent-assistant/matrix-skills/*.yaml` |
 | **Dynamic Skills** | Skills discovered/installed via `find-skills` CLI |
 | **Skill Fitness** | Computed score representing how well a skill matches a request |
 | **Gap Detection** | Identifying when matrix skills cannot satisfy a request |

@@ -34,7 +34,8 @@ execution-mode: execute
 | **TIER 1** | runSubagent EXISTS | Invoke sub-agent (MANDATORY) |
 | **TIER 2** | Tool MISSING       | EMBODY agent file (FALLBACK) |
 
-**Deliverables:** All files in `./reports/` → English only.
+**Deliverables:** All files in `./reports/{topic}/` → English only.
+**⚠️ Paths above = base names.** Small (≤ 150 lines) → create as `{name}.md`. Large (> 150 lines or ≥ 4 sections) → create as `{name}/` folder with `00-index.md` + `01-*.md`, `02-*.md` section files.
 
 ---
 
@@ -58,7 +59,7 @@ One phase at a time, each phase independent: Phase 1 → then Phase 2 → … in
 | Agent  | `planner`                          |
 | ------ | ---------------------------------- |
 | Goal   | Create focused implementation plan |
-| Output | `./reports/plans/PLAN-{task}.md`   |
+| Output | `./reports/{topic}/plans/PLAN-{task}`   |
 | Exit   | Steps defined, approach clear      |
 
 ---
@@ -76,5 +77,5 @@ One phase at a time, each phase independent: Phase 1 → then Phase 2 → … in
 
 Present plan with:
 
-1. ✅ **Plan Ready** — `./reports/plans/PLAN-{task}.md`
+1. ✅ **Plan Ready** — `./reports/{topic}/plans/PLAN-{task}`
 2. 🍳 **Implement** → `/cook:fast`

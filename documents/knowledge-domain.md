@@ -11,7 +11,7 @@ Agent Assistant operates in the domain of **AI-assisted software development orc
 ```
 ┌─────────────────┐     ┌─────────────────┐     ┌─────────────────┐
 │     AGENTS      │────▶│    COMMANDS     │────▶│     SKILLS      │
-│  (21 entities)  │     │  (50+ entities) │     │ (310+ entities)  │
+│  (21 entities)  │     │  (50+ entities) │     │ (1400+ entities) │
 └─────────────────┘     └─────────────────┘     └─────────────────┘
          │                      │                       │
          ▼                      ▼                       ▼
@@ -217,7 +217,7 @@ Rules are Markdown files with structured sections.
 | `EXECUTION-PROTOCOL.md` | Phase execution, output format | CRITICAL |
 | `ADAPTIVE-EXECUTION.md` | Tier 1/2 delegation | CRITICAL |
 | `AGENT-RULES.md` | Agent behavior guidelines | Reference |
-| `SKILL-DISCOVERY.md` | Matrix resolution algorithm | Reference |
+| `SKILL.md` | Matrix resolution algorithm | Reference |
 | `ERROR-RECOVERY.md` | Error handling protocols | Reference |
 | `QUICK-REFERENCE.md` | Lookup tables | Reference |
 
@@ -326,7 +326,7 @@ phase:
     - "Project structure mapped"
     - "Tech stack identified"
     - "Key files located"
-  deliverable: "./reports/scouts/SCOUT-{feature}.md"
+  deliverable: "./reports/{topic}/scouts/SCOUT-{feature}.md"
 ```
 
 ### 3.4 Deliverable Model
@@ -342,11 +342,11 @@ deliverable:
 
 **Standard Deliverable Paths**:
 ```
-./reports/brainstorms/BRAINSTORM-{feature}.md
-./reports/researchers/RESEARCH-{feature}.md
-./reports/scouts/SCOUT-{feature}.md
-./reports/designs/DESIGN-{feature}.md
-./reports/plans/PLAN-{feature}.md
+./reports/{topic}/brainstorms/BRAINSTORM-{feature}.md
+./reports/{topic}/researchers/RESEARCH-{feature}.md
+./reports/{topic}/scouts/SCOUT-{feature}.md
+./reports/{topic}/designs/DESIGN-{feature}.md
+./reports/{topic}/plans/PLAN-{feature}.md
 ./documents/knowledge-*.md
 ./documents/business/business-*.md
 ./documents/audit/audit-*.md

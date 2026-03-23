@@ -19,7 +19,7 @@ Comprehensive toolkit for user-centered research and experience design.
 ### persona_generator.py
 Creates research-backed personas from user data and interviews.
 
-**Usage**: `python3 ~/.{TOOL}/skills/ux-researcher-designer/scripts/persona_generator.py [json]`
+**Usage**: `python3 ~/.Codex/skills/ux-researcher-designer/scripts/persona_generator.py [json]`
 
 **Features**:
 - Analyzes user behavior patterns

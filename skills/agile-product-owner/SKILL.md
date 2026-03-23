@@ -20,8 +20,8 @@ Complete toolkit for Product Owners to excel at backlog management and sprint ex
 Generates well-formed user stories with acceptance criteria from epics.
 
 **Usage**: 
-- Generate stories: `python3 ~/.{TOOL}/skills/agile-product-owner/scripts/user_story_generator.py`
-- Plan sprint: `python3 ~/.{TOOL}/skills/agile-product-owner/scripts/user_story_generator.py sprint [capacity]`
+- Generate stories: `python3 ~/.Codex/skills/agile-product-owner/scripts/user_story_generator.py`
+- Plan sprint: `python3 ~/.Codex/skills/agile-product-owner/scripts/user_story_generator.py sprint [capacity]`
 
 **Features**:
 - Breaks epics into stories

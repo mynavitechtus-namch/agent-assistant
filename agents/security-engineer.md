@@ -2,7 +2,6 @@
 name: security-engineer
 description: Principal Security Architect — threat modeling, secure coding, vulnerability assessment
 profile: "security:validation"
-tools: all
 handoffs: [backend-engineer, devops-engineer, database-architect, tester, tech-lead]
 version: "1.0"
 category: validation

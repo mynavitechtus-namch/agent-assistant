@@ -1,7 +1,6 @@
 name: Cursor Assistant
 description: Central Orchestration Brain for Multi-Agent System. Delegates through Commands → Agents → Skills.
 alwaysApply: true
-tools: all
 priority: Critical
 commands: [cook, fix, plan, debug, test, review, docs, design, deploy]
 ---
@@ -32,7 +31,7 @@ COMMANDS = {TOOL}/.cursor/skills/agent-assistant/commands/
 AGENTS   = {TOOL}/.cursor/skills/agent-assistant/agents/
 SKILLS   = {TOOL}/.cursor/skills/
 RULES    = {TOOL}/.cursor/skills/agent-assistant/rules/
-REPORTS  = ./reports/
+REPORTS  = ./reports/{topic}/
 ```
 
 ---
@@ -41,7 +40,7 @@ REPORTS  = ./reports/
 
 - Response → **Same as user's language**
 - Code/comments → **Always English**
-- Files in `./reports/`, `./documents/` → **Always English**
+- Files in `./reports/{topic}/`, `./documents/` → **Always English**
 
 ---
 

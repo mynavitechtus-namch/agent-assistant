@@ -18,13 +18,13 @@ Execute scripts to handle entire workflow - no manual URL construction needed.
 
 ```bash
 # 1. DETECT query type (topic-specific vs general)
-node ~/.{TOOL}/skills/docs-seeker/scripts/detect-topic.js "<user query>"
+node ~/.Codex/skills/docs-seeker/scripts/detect-topic.js "<user query>"
 
 # 2. FETCH documentation using script output
-node ~/.{TOOL}/skills/docs-seeker/scripts/fetch-docs.js "<user query>"
+node ~/.Codex/skills/docs-seeker/scripts/fetch-docs.js "<user query>"
 
 # 3. ANALYZE results (if multiple URLs returned)
-cat llms.txt | node ~/.{TOOL}/skills/docs-seeker/scripts/analyze-llms-txt.js -
+cat llms.txt | node ~/.Codex/skills/docs-seeker/scripts/analyze-llms-txt.js -
 ```
 
 Scripts handle URL construction, fallback chains, and error handling automatically.
@@ -81,22 +81,22 @@ Scripts handle URL construction, fallback chains, and error handling automatical
 **Topic query:** "How do I use date picker in shadcn?"
 
 ```bash
-node ~/.{TOOL}/skills/docs-seeker/scripts/detect-topic.js "<query>"  # → {topic, library, isTopicSpecific}
-node ~/.{TOOL}/skills/docs-seeker/scripts/fetch-docs.js "<query>"    # → 2-3 URLs
+node ~/.Codex/skills/docs-seeker/scripts/detect-topic.js "<query>"  # → {topic, library, isTopicSpecific}
+node ~/.Codex/skills/docs-seeker/scripts/fetch-docs.js "<query>"    # → 2-3 URLs
 # Read URLs with WebFetch
 ```
 
 **General query:** "Documentation for Next.js"
 
 ```bash
-node ~/.{TOOL}/skills/docs-seeker/scripts/detect-topic.js "<query>"         # → {isTopicSpecific: false}
-node ~/.{TOOL}/skills/docs-seeker/scripts/fetch-docs.js "<query>"           # → 8+ URLs
-cat llms.txt | node ~/.{TOOL}/skills/docs-seeker/scripts/analyze-llms-txt.js -  # → {totalUrls, distribution}
+node ~/.Codex/skills/docs-seeker/scripts/detect-topic.js "<query>"         # → {isTopicSpecific: false}
+node ~/.Codex/skills/docs-seeker/scripts/fetch-docs.js "<query>"           # → 8+ URLs
+cat llms.txt | node ~/.Codex/skills/docs-seeker/scripts/analyze-llms-txt.js -  # → {totalUrls, distribution}
 # Deploy agents per recommendation
 ```
 
 ## Environment
 
-Scripts load `.env`: `process.env` > `~/.{TOOL}/skills/docs-seeker/.env` > `~/.{TOOL}/skills/.env` > `.{TOOL}/.env`
+Scripts load `.env`: `process.env` > `~/.Codex/skills/docs-seeker/.env` > `~/.Codex/skills/.env` > `.Codex/.env`
 
 See `.env.example` for configuration options.

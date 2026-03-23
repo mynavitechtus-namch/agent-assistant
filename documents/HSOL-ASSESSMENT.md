@@ -1,7 +1,7 @@
 # HSOL (Hybrid Skill Orchestration Layer) — Production Readiness Assessment
 
 > **Purpose**: One-time evaluation of HSOL design and docs for production readiness and agent intelligence.
-> **Scope**: SKILL-DISCOVERY.md, SKILL-ORCHESTRATION.md, _index.yaml, _dynamic.yaml, find-skills SKILL, Blueprint.
+> **Scope**: SKILL.md, _index.yaml, _dynamic.yaml, find-skills SKILL, Blueprint.
 > **Project version**: 1.1.0
 
 ---
@@ -66,9 +66,9 @@
 
 ### 3. BOOTSTRAP reference table (discoverability)
 
-**Issue**: BOOTSTRAP lists “Skill resolution (HSOL) → SKILL-ORCHESTRATION.md” but not SKILL-DISCOVERY.md. Implementers need both (algorithm + decision logic).
+**Issue**: BOOTSTRAP lists “Skill resolution (HSOL) → SKILL.md” but not SKILL.md. Implementers need both (algorithm + decision logic).
 
-**Fix**: Add one row for “Matrix resolution algorithm (HSOL)” → SKILL-DISCOVERY.md, or a note that HSOL = SKILL-ORCHESTRATION + SKILL-DISCOVERY. (Doc update below.)
+**Fix**: Add one row for “Matrix resolution algorithm (HSOL)” → SKILL.md, or a note that HSOL = SKILL-ORCHESTRATION + SKILL-DISCOVERY. (Doc update below.)
 
 ### 4. _dynamic.yaml writer (optional clarity)
 
@@ -102,12 +102,12 @@
 
 ## Recommended Doc Updates (Applied)
 
-1. **SKILL-ORCHESTRATION.md**
+1. **SKILL.md**
    - Clarify principle “non_blocking_discovery” so blocking path (fitness < 0.75) is explicit.
    - Add edge case: “find-skills not installed or discovery unavailable → proceed with matrix only, optional message.”
 
 2. **BOOTSTRAP.md**
-   - Add SKILL-DISCOVERY.md to the reference table (or note “HSOL = SKILL-DISCOVERY + SKILL-ORCHESTRATION”) so both files are loaded when implementing HSOL.
+   - Add SKILL.md to the reference table (or note “HSOL = SKILL-DISCOVERY + SKILL-ORCHESTRATION”) so both files are loaded when implementing HSOL.
 
 3. **Optional (not applied)**
    - _dynamic.yaml: one line on who updates it (CLI/post-install).

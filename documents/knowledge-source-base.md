@@ -16,7 +16,7 @@ agent-assistant/                     # Project root
 ├── documents/                       # 📚 Generated documentation
 ├── matrix-skills/                   # 🎯 Skill discovery matrix (19 domains)
 ├── rules/                           # ⚖️ Orchestration rules and protocols
-├── skills/                          # 💡 310 domain skill definitions
+├── skills/                          # 💡 1400 domain skill definitions
 ├── AGENT-TEMPLATE.md                # 📝 Agent file template
 ├── CLAUDE.md                        # 🟣 Claude Code entry point
 ├── CODEX.md                         # 💻 OpenAI Codex entry point
@@ -149,7 +149,7 @@ rules/
 ├── EXECUTION-PROTOCOL.md            # Phase execution, output format
 ├── ORCHESTRATION-LAWS.md            # 10 inviolable laws
 ├── QUICK-REFERENCE.md               # Lookup tables
-└── SKILL-DISCOVERY.md               # Matrix resolution algorithm
+└── SKILL.md               # Matrix resolution algorithm
 ```
 
 **Authority Levels**:
@@ -163,7 +163,7 @@ Contains 19 YAML domain files that define skill-to-agent mappings (plus _index.y
 
 ```
 matrix-skills/
-├── _index.yaml                      # Central registry (310 skills, 21 agents)
+├── _index.yaml                      # Central registry (1400 skills, 21 agents)
 ├── ai-ml.yaml                       # 40 AI/ML skills (+27: agent development, LLM patterns, RAG, voice AI)
 ├── architecture.yaml                # 9 architecture skills
 ├── backend.yaml                     # 32 backend skills (+12: job queues, payments, communications)
@@ -191,7 +191,7 @@ matrix-skills/
 
 ### 2.5 `skills/` — Domain Skill Definitions
 
-Contains 310+ skill folders with SKILL.md definitions.
+Contains 1400+ skill folders with SKILL.md definitions.
 
 ```
 skills/
@@ -392,13 +392,13 @@ node cli/install.js list
 
 ### 4.2 Matrix Skill Discovery (HSOL: `matrix-skills/_index.yaml` + `_dynamic.yaml`)
 
-**Purpose**: Central registry for skill resolution and HSOL (Hybrid Skill Orchestration Layer). Combines static matrix domains with dynamic skills; discovery runs only for `hard`/`focus` variants when matrix fitness &lt; 0.8 (blocking when &lt; 0.75). See `rules/SKILL-DISCOVERY.md` and `rules/SKILL-ORCHESTRATION.md`.
+**Purpose**: Central registry for skill resolution and HSOL (Hybrid Skill Orchestration Layer). Combines static matrix domains with dynamic skills; discovery runs only for `hard`/`focus` variants when matrix fitness &lt; 0.8 (blocking when &lt; 0.75). See `rules/SKILL.md`.
 
 **Key Sections**:
 
 ```yaml
 version: "1.1"
-total_matrix_skills: 310
+total_matrix_skills: 1400
 
 hsol:                            # HSOL config (discovery, thresholds 0.75/0.8, apply_for_variants: [hard, focus])
   enabled: true
@@ -535,7 +535,7 @@ COMMANDS = {TOOL}/.{TOOL}/skills/agent-assistant/commands/
 AGENTS   = {TOOL}/.{TOOL}/skills/agent-assistant/agents/
 SKILLS   = {TOOL}/.{TOOL}/skills/
 RULES    = {TOOL}/.{TOOL}/skills/agent-assistant/rules/
-REPORTS  = ./reports/
+REPORTS  = ./reports/{topic}/
 ```
 
 ### 7.3 Tool-Specific Installation Paths
@@ -557,7 +557,7 @@ REPORTS  = ./reports/
 | Command Files | 50+ | Workflow definitions (routers + variants: fast, hard, focus) |
 | Rule Files | 8 | Orchestration protocols |
 | Matrix Files | 20 | Skill discovery config |
-| Skill Folders | 310+ | Domain skill definitions |
+| Skill Folders | 1400+ | Domain skill definitions |
 | Entry Points | 4 | Tool-specific entry files |
 | Config Files | 5 | package.json, etc. |
 

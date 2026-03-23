@@ -58,7 +58,7 @@ export default function HomePage() {
           {/* Tagline */}
           <p className="mb-8 text-xl text-text-secondary md:text-2xl max-w-3xl mx-auto">
             A collection of <span className="text-text-accent font-semibold">21 Agents</span>,{' '}
-            <span className="text-gradient-orange font-semibold">310+ Skills</span>, and{' '}
+            <span className="text-gradient-orange font-semibold">1400+ Skills</span>, and{' '}
             <span className="text-gradient-purple font-semibold">50+ Workflows</span> that transform 
             your AI assistant into a specialized development team.
           </p>

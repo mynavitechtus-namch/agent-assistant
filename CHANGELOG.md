@@ -5,6 +5,14 @@ All notable changes to this project will be documented in this file.
 The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/),
 and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0.html).
 
+## [1.3.0] - 2026-03-23
+
+### Added
+- **1400+ Domain Skills**: Massive expansion from 310+ to 1400+ skills across 19 domains
+  - Added 1000+ new skill definitions covering broader technology stacks and specialized domains
+  - Updated matrix-skills registries with new skill entries
+  - All existing agents benefit automatically via Matrix Skill Discovery (HSOL)
+
 ## [1.2.2] - 2026-03-12
 
 ### Fixed
@@ -27,7 +35,7 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
   - **17 Domain Teams**: backend, frontend, fullstack, database, research, planning, qa, design, debug, devops, security, game, mobile, performance, docs, project, report
   - **51 Team Agent Files**: Each team has 3 role-specific agents (`techlead.md`, `executor.md`, `reviewer.md`) under `agents/teams/{domain}-team/`
   - **Golden Triangle Protocol**: Structured debate mechanism — Tech Lead decomposes, Executor builds & defends, Reviewer challenges & validates
-  - **Mailbox Communication**: Append-only `./reports/MAILBOX-{date}.md` for traceable inter-agent communication (TASK_ASSIGNMENT, SUBMISSION, REVIEW, DEFENSE, ARBITRATION, DECISION)
+  - **Mailbox Communication**: Append-only `./reports/{topic}/MAILBOX-{date}.md` for traceable inter-agent communication (TASK_ASSIGNMENT, SUBMISSION, REVIEW, DEFENSE, ARBITRATION, DECISION)
   - **Consensus Protocol**: Three resolution paths — Clean Pass, Resolved Pass (after defense/fix), Arbitrated Pass (Tech Lead binding decision after max 3 rounds)
   - **`:team` Command Variants**: 9 team-enabled commands — `/cook:team`, `/fix:team`, `/debug:team`, `/test:team`, `/review:team`, `/plan:team`, `/design:team`, `/report:team`, `/deploy:team`
   - **Rules**: `rules/TEAMS.md` (530 lines) — complete Golden Triangle protocol, team roster, debate mechanism, consensus stamp format

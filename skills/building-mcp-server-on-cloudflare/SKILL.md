@@ -132,7 +132,7 @@ Server accessible at `https://[worker-name].[account].workers.dev/mcp`
 
 ### Step 5: Connect Clients
 
-**Claude Desktop** (`claude_desktop_config.json`):
+**Codex Desktop** (`claude_desktop_config.json`):
 
 ```json
 {
@@ -145,7 +145,7 @@ Server accessible at `https://[worker-name].[account].workers.dev/mcp`
 }
 ```
 
-Restart Claude Desktop after updating config.
+Restart Codex Desktop after updating config.
 
 ## Tool Patterns
 

@@ -8,7 +8,7 @@
 domain: mcp
 name: "MCP & Agents"
 description: "Model Context Protocol, agent frameworks"
-skill_count: 8
+skill_count: 9
 
 skills:
   # --------------------------------------------------------------------------
@@ -80,3 +80,15 @@ skills:
       agents: [backend-engineer]
       profiles: ["backend:execution"]
     description: "Foundry Python SDK"
+
+  # --------------------------------------------------------------------------
+  # NEW SKILLS (Auto-cataloged 1 skills)
+  # --------------------------------------------------------------------------
+  - skill_id: mcp-builder-ms
+    category: community
+    priority_score: 6
+    relevance_mapping:
+      agents: [tech-lead]
+      profiles: ["mcp:*"]
+    description: "Use this skill when building MCP servers to integrate external APIs or services, whether in Python (FastMCP) or Node/..."
+

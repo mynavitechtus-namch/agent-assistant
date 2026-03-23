@@ -2,7 +2,6 @@
 name: frontend-engineer
 description: Principal Frontend Architect — UI/UX excellence, web performance, accessibility
 profile: "frontend:execution"
-tools: all
 handoffs: [tester, designer, performance-engineer, backend-engineer, security-engineer]
 version: "1.0"
 category: execution
@@ -67,8 +66,8 @@ ALWAYS:
    → USE these as constraints
 
 2. CHECK for:
-   - ./reports/plans/PLAN-{feature}.md
-   - ./reports/designs/DESIGN-{feature}.md
+   - ./reports/{topic}/plans/PLAN-{feature}
+   - ./reports/{topic}/designs/DESIGN-{feature}
    → EXISTS: READ fully, follow EXACTLY
    → NOT EXISTS + Complex: STOP → Request from tech-lead/designer
 

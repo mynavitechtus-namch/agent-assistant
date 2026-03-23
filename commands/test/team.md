@@ -48,7 +48,7 @@ execution-mode: execute
 
 ## 📬 MAILBOX — Central Communication Hub
 
-**Location**: `./reports/MAILBOX-{date}.md` — All 3 triangle agents READ + APPEND. Never overwrite.
+**Location**: `./reports/{topic}/MAILBOX-{date}.md` — All 3 triangle agents READ + APPEND. Never overwrite.
 
 **Message Types**: `TASK_ASSIGNMENT` (Lead→Executor) · `SUBMISSION` (Executor→Reviewer) · `REVIEW` (Reviewer→Executor: PASS/FAIL) · `DEFENSE` / `RESUBMISSION` (Executor→Reviewer) · `APPROVAL` (Reviewer→Lead) · `ESCALATION` (Any→Lead) · `ARBITRATION` / `DECISION` (Lead→All)
 
@@ -60,14 +60,15 @@ execution-mode: execute
 
 | Phase / Team     | Output                                          |
 | ---------------- | ----------------------------------------------- |
-| Phase 1          | `./reports/tests/TEST-STRATEGY-{scope}.md`      |
-| Phase 2          | `./reports/tests/TEST-PLAN-{scope}.md`          |
+| Phase 1          | `./reports/{topic}/tests/TEST-STRATEGY-{scope}`      |
+| Phase 2          | `./reports/{topic}/tests/TEST-PLAN-{scope}`          |
 | Phase 3          | Test files written to codebase                  |
-| Phase 4          | `./reports/tests/TEST-RESULTS-{scope}.md`       |
-| Phase 4          | `./reports/qa/QA-{scope}.md`                    |
-| ALL Phases       | `./reports/MAILBOX-{date}.md`                   |
+| Phase 4          | `./reports/{topic}/tests/TEST-RESULTS-{scope}`       |
+| Phase 4          | `./reports/{topic}/qa/QA-{scope}`                    |
+| ALL Phases       | `./reports/{topic}/MAILBOX-{date}.md`                   |
 
-All files in `./reports/` → English only.
+All files in `./reports/{topic}/` → English only.
+**⚠️ Paths above = base names.** Small (≤ 150 lines) → create as `{name}.md`. Large (> 150 lines or ≥ 4 sections) → create as `{name}/` folder with `00-index.md` + `01-*.md`, `02-*.md` section files.
 
 ---
 
@@ -85,6 +86,8 @@ All files in `./reports/` → English only.
 ---
 
 ## ⛔ INCREMENTAL EXECUTION (MANDATORY)
+
+**Deliverable paths = base names.** Small (≤ 150 lines) → `{name}.md`. Large (> 150 lines or ≥ 4 sections) → `{name}/` folder with `00-index.md` + section files.
 
 One phase at a time. Within each phase, follow the **Golden Triangle Loop**:
 
@@ -119,7 +122,7 @@ Format: rules/PHASES.md § Phase output + rules/TEAMS.md § Golden Triangle Phas
 4. Debate loop if FAIL → max 3 rounds → ESCALATION to `tester` if unresolved
 5. `tester` synthesizes approved findings into unified test strategy
 
-**Deliverable**: `./reports/tests/TEST-STRATEGY-{scope}.md`
+**Deliverable**: `./reports/{topic}/tests/TEST-STRATEGY-{scope}`
 **Exit Criteria**: Test pyramid defined, coverage targets set, frameworks chosen, testable units mapped
 **Consensus**: ✅ CONSENSUS: tester ✓ | scouter ✓ | tech-lead ✓
 
@@ -133,7 +136,7 @@ Format: rules/PHASES.md § Phase output + rules/TEAMS.md § Golden Triangle Phas
 | Executor  | `researcher`                         | Execute: research testing patterns, edge cases, boundary conditions |
 | Reviewer  | `security-engineer` (Devil's Advocate) | Challenge: security test cases missing? Edge cases not covered? Injection tests? |
 
-**Prerequisite**: **READ** `./reports/tests/TEST-STRATEGY-{scope}.md` before starting.
+**Prerequisite**: **READ** `./reports/{topic}/tests/TEST-STRATEGY-{scope}` before starting.
 
 **Triangle Loop**:
 1. `tester` reads strategy → decomposes into: unit test cases, integration scenarios, E2E journeys, security cases, perf benchmarks → TASK_ASSIGNMENT to `researcher`
@@ -142,7 +145,7 @@ Format: rules/PHASES.md § Phase output + rules/TEAMS.md § Golden Triangle Phas
 4. Debate loop if FAIL → max 3 rounds → ESCALATION to `tester` if unresolved
 5. `tester` synthesizes approved test cases into final test plan
 
-**Deliverable**: `./reports/tests/TEST-PLAN-{scope}.md`
+**Deliverable**: `./reports/{topic}/tests/TEST-PLAN-{scope}`
 **Exit Criteria**: Every component has specific test cases, edge cases documented, security scenarios covered
 **Consensus**: ✅ CONSENSUS: tester ✓ | researcher ✓ | security-engineer ✓
 
@@ -169,7 +172,7 @@ Self     → Tech Lead: tester | Executor: tester (self) | Reviewer: reviewer + 
 | Executor  | `tester` (self) OR `backend-engineer`/`frontend-engineer`| Follow plan EXACTLY → write tests per spec → submit via Mailbox |
 | Reviewer  | `reviewer` + `performance-engineer` lens                 | Review EVERY submission → check test quality, assertions, mocks, coverage |
 
-**Prerequisite**: **READ and FOLLOW** `./reports/tests/TEST-PLAN-{scope}.md`
+**Prerequisite**: **READ and FOLLOW** `./reports/{topic}/tests/TEST-PLAN-{scope}`
 
 ### GOLDEN TRIANGLE IMPLEMENTATION LOOP (CRITICAL — Step by Step)
 
@@ -265,7 +268,7 @@ Security: injection passed | auth bypass covered | input validation verified
 Performance: no regressions beyond threshold | baselines established
 ```
 
-**Deliverable**: `./reports/tests/TEST-RESULTS-{scope}.md` + `./reports/qa/QA-{scope}.md`
+**Deliverable**: `./reports/{topic}/tests/TEST-RESULTS-{scope}` + `./reports/{topic}/qa/QA-{scope}`
 **Exit Criteria**: All tests run, quality gates evaluated, coverage verified, no brittle/flaky tests, report complete
 **Consensus**: ✅ CONSENSUS: tester ✓ | tester(exec) ✓ | tech-lead ✓
 
@@ -287,7 +290,7 @@ Performance: no regressions beyond threshold | baselines established
 ## Summary
 Submissions: {n} | First-pass: {n} | Debates: {n} | Arbitrations: {n}
 Coverage: {pass/fail} | Health: {pass/fail} | Security: {pass/fail} | Perf: {pass/fail}
-Mailbox: `./reports/MAILBOX-{date}.md`
+Mailbox: `./reports/{topic}/MAILBOX-{date}.md`
 
 ## Next Actions
 1. ✅ **All Pass** → quality gates met (triangle-validated)

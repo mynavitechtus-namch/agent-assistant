@@ -212,13 +212,13 @@ Covers:
 ### shadcn_add.py
 Add shadcn/ui components with dependency handling:
 ```bash
-python3 ~/.{TOOL}/skills/ui-styling/scripts/shadcn_add.py button card dialog
+python3 ~/.Codex/skills/ui-styling/scripts/shadcn_add.py button card dialog
 ```
 
 ### tailwind_config_gen.py
 Generate tailwind.config.js with custom theme:
 ```bash
-python3 ~/.{TOOL}/skills/ui-styling/scripts/tailwind_config_gen.py --colors brand:blue --fonts display:Inter
+python3 ~/.Codex/skills/ui-styling/scripts/tailwind_config_gen.py --colors brand:blue --fonts display:Inter
 ```
 
 ## Best Practices

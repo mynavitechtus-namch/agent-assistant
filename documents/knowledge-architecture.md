@@ -50,7 +50,7 @@ Agent Assistant is a **multi-agent orchestration framework** that transforms a s
                                       │
                                       ▼
 ┌─────────────────────────────────────────────────────────────────────────────┐
-│                    MATRIX SKILL DISCOVERY (310+ Skills)                       │
+│                    MATRIX SKILL DISCOVERY (1400+ Skills)                      │
 │  ┌──────────────────────────────────────────────────────────────────────┐   │
 │  │ _index.yaml → Domain Files (19) → Skill Resolution → Skill Injection │   │
 │  └──────────────────────────────────────────────────────────────────────┘   │
@@ -63,7 +63,7 @@ Agent Assistant is a **multi-agent orchestration framework** that transforms a s
                                       ▼
 ┌─────────────────────────────────────────────────────────────────────────────┐
 │                              DELIVERABLES                                    │
-│  ./reports/  ─────▶  Code, Plans, Designs, Tests, Documentation             │
+│  ./reports/{topic}/  ─────▶  Code, Plans, Designs, Tests, Documentation             │
 │  ./documents/                                                                │
 └─────────────────────────────────────────────────────────────────────────────┘
 ```
@@ -249,7 +249,7 @@ new → evaluating → validated → promoted
 ```
 
 **Key Files:**
-- `rules/SKILL-ORCHESTRATION.md` — Full protocol
+- `rules/SKILL.md` — Full protocol
 - `matrix-skills/_dynamic.yaml` — Dynamic skill manifest
 - `matrix-skills/_index.yaml` — HSOL configuration
 
@@ -262,9 +262,8 @@ Enforces orchestration laws and protocols.
 | `ORCHESTRATION-LAWS.md` | 10 inviolable laws | CRITICAL |
 | `EXECUTION-PROTOCOL.md` | Phase execution details | CRITICAL |
 | `ADAPTIVE-EXECUTION.md` | Tier 1/2 decisions | CRITICAL |
-| `SKILL-ORCHESTRATION.md` | HSOL decision logic | CRITICAL |
 | `AGENT-RULES.md` | Agent behavior guidelines | Reference |
-| `SKILL-DISCOVERY.md` | Matrix resolution algorithm | Reference |
+| `SKILL.md` | Matrix resolution algorithm | Reference |
 | `ERROR-RECOVERY.md` | Error handling protocols | Reference |
 | `QUICK-REFERENCE.md` | Lookup tables | Reference |
 | `BOOTSTRAP.md` | Entry point, paths, routing | Entry |
@@ -331,10 +330,10 @@ Enforces orchestration laws and protocols.
 ### 3.3 Deliverable Flow
 
 ```
-Phase 1: scouter    → ./reports/scouts/SCOUT-{feature}.md
-Phase 2: researcher → ./reports/researchers/RESEARCH-{feature}.md
-Phase 3: planner    → ./reports/plans/PLAN-{feature}.md
-Phase 4: designer   → ./reports/designs/DESIGN-{feature}.md
+Phase 1: scouter    → ./reports/{topic}/scouts/SCOUT-{feature}.md
+Phase 2: researcher → ./reports/{topic}/researchers/RESEARCH-{feature}.md
+Phase 3: planner    → ./reports/{topic}/plans/PLAN-{feature}.md
+Phase 4: designer   → ./reports/{topic}/designs/DESIGN-{feature}.md
 Phase 5: engineer   → Code files (actual implementation)
 Phase 6: tester     → Test files
 Phase 7: reviewer   → Review report

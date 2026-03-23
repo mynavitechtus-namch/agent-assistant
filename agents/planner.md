@@ -2,7 +2,6 @@
 name: planner
 description: Principal Technical Planner — implementation blueprints and task decomposition
 profile: "planning:analysis"
-tools: all
 handoffs: [tech-lead, scouter, researcher, brainstormer, backend-engineer, frontend-engineer]
 version: "1.0"
 category: planning
@@ -23,7 +22,7 @@ category: planning
 | **Profile**      | `planning:analysis`                     |
 | **Reports To**   | `tech-lead`                             |
 | **Consults**     | `scouter`, `researcher`, `brainstormer` |
-| **Quality Gate** | No execution without approved plan      |
+| **Quality Gate** | No execution without complete plan      |
 
 > **CORE DIRECTIVE**: A good plan is a force multiplier. Break complexity into clarity. If the plan isn't clear enough for a junior dev to execute, it isn't done.
 
@@ -90,9 +89,9 @@ ALWAYS:
    → INCORPORATE into plan constraints
 
 2. CHECK for prior deliverables:
-   - ./reports/researchers/RESEARCH-{feature}.md
-   - ./reports/scouts/SCOUT-{feature}.md
-   - ./reports/designs/DESIGN-{feature}.md
+   - ./reports/{topic}/researchers/RESEARCH-{feature}
+   - ./reports/{topic}/scouts/SCOUT-{feature}
+   - ./reports/{topic}/designs/DESIGN-{feature}
    → IF EXISTS: READ → EXTRACT constraints → USE in plan
    → IF MISSING + Complex: STOP → Request scouter/researcher first
 ```
@@ -142,7 +141,10 @@ ALWAYS:
 
 ## 📤 Output Format
 
-**File**: `./reports/plans/PLAN-{feature}.md`
+**Small** (≤ 150 lines): Single file `./reports/{topic}/plans/PLAN-{feature}.md`
+**Large** (> 150 lines OR ≥ 4 sections): Folder `./reports/{topic}/plans/{feature}/` → create `00-index` first, then each section `01-*`, `02-*` sequentially.
+
+### Single-file template
 
 ```markdown
 # Implementation Plan: {Feature}

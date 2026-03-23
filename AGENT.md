@@ -36,7 +36,7 @@ COMMANDS = ~/.{TOOL}/skills/agent-assistant/commands/
 AGENTS   = ~/.{TOOL}/skills/agent-assistant/agents/
 SKILLS   = ~/.{TOOL}/skills/
 RULES    = ~/.{TOOL}/skills/agent-assistant/rules/
-REPORTS  = ./reports/
+REPORTS  = ./reports/{topic}/
 ```
 
 ---
@@ -49,7 +49,7 @@ REPORTS  = ./reports/
 |---------|----------|
 | Response to user | **Same as user's** |
 | Code & comments | **Always English** |
-| Files in `./reports/` | **Always English** |
+| Files in `./reports/{topic}/` | **Always English** |
 
 ---
 
@@ -67,8 +67,11 @@ REPORTS  = ./reports/
 | `/design ...` | Design | `commands/design.md` |
 | `/deploy ...` | Deploy | `commands/deploy.md` |
 | `/report ...` | Reporting | `commands/report.md` |
+| `/brainstorm ...`, `/ask ...`, `/code ...` | Explore/Query/Direct code workflow | `commands/{cmd}.md` |
 
-**Natural language**: "implement" → `/cook` | "fix/bug" → `/fix` | "plan" → `/plan`
+**Natural language**: "implement/build/create" → `/cook` or `/code` | "fix/bug" → `/fix` | "plan" → `/plan`
+
+**Team variant baseline**: `:team` is supported only where `commands/{cmd}/team.md` exists. Deploy uses specialized variants (`check`, `preview`, `production`, `rollback`).
 
 ---
 

@@ -15,26 +15,29 @@
 ## 📂 PATHS
 
 ```
-COMMANDS = {TOOL}/.claude/skills/agent-assistant/commands/
-AGENTS   = {TOOL}/.claude/skills/agent-assistant/agents/
-SKILLS   = {TOOL}/.claude/skills/
-RULES    = {TOOL}/.claude/skills/agent-assistant/rules/
-REPORTS  = ./reports/
+COMMANDS = ~/.{TOOL}/skills/agent-assistant/commands/
+AGENTS   = ~/.{TOOL}/skills/agent-assistant/agents/
+SKILLS   = ~/.{TOOL}/skills/
+RULES    = ~/.{TOOL}/skills/agent-assistant/rules/
+REPORTS  = ./reports/{topic}/
 ```
 
 ## 🌐 LANGUAGE
 
 - Response → **Same as user's language**
 - Code/comments → **Always English**
-- Files in `./reports/`, `./documents/` → **Always English**
+- Files in `./reports/{topic}/`, `./documents/` → **Always English**
 
 ## 🎯 COMMAND ROUTING
 
 | Input | Route |
 |-------|-------|
 | `/cook`, `/fix`, `/plan`, `/debug`, `/test`, `/review`, `/docs`, `/design`, `/deploy`, `/report` | `commands/{cmd}.md` → `commands/{cmd}/{variant}.md` |
+| `/brainstorm`, `/ask`, `/code` | `commands/{cmd}.md` |
 
-**Natural language**: "implement" → `/code` | "fix/bug" → `/fix` | "plan" → `/plan`
+**Natural language**: "implement/build/create" → `/cook` or `/code` | "fix/bug" → `/fix` | "plan" → `/plan`
+
+**Team variant baseline**: `:team` is supported only where `commands/{cmd}/team.md` exists. Deploy uses specialized variants (`check`, `preview`, `production`, `rollback`).
 
 ## 🔀 TIERED EXECUTION
 

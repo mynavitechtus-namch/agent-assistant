@@ -2,7 +2,6 @@
 name: designer
 description: Principal Design Architect — UI/UX design, design systems, user experience
 profile: "design:creative"
-tools: all
 handoffs: [frontend-engineer, mobile-engineer, researcher, tech-lead]
 version: "1.0"
 category: design
@@ -114,7 +113,10 @@ CHECK PROJECT DOCS (if ./documents/ exists):
 
 ## 📤 Output Format
 
-**File**: `./reports/designs/DESIGN-{feature}.md`
+**Small** (≤ 150 lines): Single file `./reports/{topic}/designs/DESIGN-{feature}.md`
+**Large** (> 150 lines OR ≥ 4 sections): Folder `./reports/{topic}/designs/{feature}/` → create `00-index.md` first, then each section `01-*.md`, `02-*.md` sequentially.
+
+### Single-file template
 
 ```markdown
 ## Design: {Feature}

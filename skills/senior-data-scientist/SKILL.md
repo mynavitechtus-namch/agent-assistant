@@ -13,13 +13,13 @@ World-class senior data scientist skill for production-grade AI/ML/Data systems.
 
 ```bash
 # Core Tool 1
-python3 ~/.{TOOL}/skills/senior-data-scientist/scripts/experiment_designer.py --input data/ --output results/
+python3 ~/.Codex/skills/senior-data-scientist/scripts/experiment_designer.py --input data/ --output results/
 
 # Core Tool 2  
-python3 ~/.{TOOL}/skills/senior-data-scientist/scripts/feature_engineering_pipeline.py --target project/ --analyze
+python3 ~/.Codex/skills/senior-data-scientist/scripts/feature_engineering_pipeline.py --target project/ --analyze
 
 # Core Tool 3
-python3 ~/.{TOOL}/skills/senior-data-scientist/scripts/model_evaluation_suite.py --config config.yaml --deploy
+python3 ~/.Codex/skills/senior-data-scientist/scripts/model_evaluation_suite.py --config config.yaml --deploy
 ```
 
 ## Core Expertise
@@ -171,8 +171,8 @@ python -m black src/
 python -m pylint src/
 
 # Training
-python3 ~/.{TOOL}/skills/senior-data-scientist/scripts/train.py --config prod.yaml
-python3 ~/.{TOOL}/skills/senior-data-scientist/scripts/evaluate.py --model best.pth
+python3 ~/.Codex/skills/senior-data-scientist/scripts/train.py --config prod.yaml
+python3 ~/.Codex/skills/senior-data-scientist/scripts/evaluate.py --model best.pth
 
 # Deployment
 docker build -t service:v1 .
@@ -181,7 +181,7 @@ helm upgrade service ./charts/
 
 # Monitoring
 kubectl logs -f deployment/service
-python3 ~/.{TOOL}/skills/senior-data-scientist/scripts/health_check.py
+python3 ~/.Codex/skills/senior-data-scientist/scripts/health_check.py
 ```
 
 ## Resources

@@ -2,7 +2,6 @@
 name: business-analyst
 description: Principal Business Analyst — requirements, stakeholder management, domain modeling
 profile: "planning:business"
-tools: all
 handoffs: [brainstormer, planner, project-manager, tech-lead]
 version: "1.0"
 category: research
@@ -129,7 +128,10 @@ Acceptance Criteria:
 
 ## 📤 Output Format
 
-**File**: `./reports/requirements/REQ-{feature}.md`
+**Small** (≤ 150 lines): Single file `./reports/{topic}/requirements/REQ-{feature}.md`
+**Large** (> 150 lines OR ≥ 4 sections): Folder `./reports/{topic}/requirements/{feature}/` → create `00-index.md` first, then each section `01-*.md`, `02-*.md` sequentially.
+
+### Single-file template
 
 ```markdown
 ## Requirements: {Feature}

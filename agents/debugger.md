@@ -2,7 +2,6 @@
 name: debugger
 description: Principal Debug Specialist — root cause analysis and systematic investigation
 profile: "quality:debugging"
-tools: all
 handoffs: [backend-engineer, frontend-engineer, tester, tech-lead, performance-engineer]
 version: "1.0"
 category: debugging
@@ -121,7 +120,10 @@ SYMPTOM → immediate cause → deeper cause → ROOT CAUSE
 
 ## 📤 Output Format
 
-**File**: `./reports/debugs/DEBUG-{issue}.md`
+**Small** (≤ 150 lines): Single file `./reports/{topic}/debugs/DEBUG-{issue}.md`
+**Large** (> 150 lines OR ≥ 4 sections): Folder `./reports/{topic}/debugs/{issue}/` → create `00-index.md` first, then each section `01-*.md`, `02-*.md` sequentially.
+
+### Single-file template
 
 ```markdown
 # Debug Report: {Issue}

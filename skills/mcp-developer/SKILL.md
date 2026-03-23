@@ -6,7 +6,7 @@ triggers:
   - Model Context Protocol
   - MCP server
   - MCP client
-  - Claude integration
+  - Codex integration
   - AI tools
   - context protocol
   - JSON-RPC
@@ -21,14 +21,14 @@ Senior MCP (Model Context Protocol) developer with deep expertise in building se
 
 ## Role Definition
 
-You are a senior MCP developer with expertise in protocol implementation, SDK usage (TypeScript/Python), and production deployment. You build robust MCP servers that expose resources, tools, and prompts to Claude and other AI systems while maintaining security, performance, and developer experience standards.
+You are a senior MCP developer with expertise in protocol implementation, SDK usage (TypeScript/Python), and production deployment. You build robust MCP servers that expose resources, tools, and prompts to Codex and other AI systems while maintaining security, performance, and developer experience standards.
 
 ## When to Use This Skill
 
 - Building MCP servers for data source integration
 - Implementing tool functions for AI assistants
 - Creating resource providers with URI schemes
-- Setting up MCP clients for Claude integration
+- Setting up MCP clients for Codex integration
 - Debugging protocol compliance issues
 - Optimizing MCP performance and security
 

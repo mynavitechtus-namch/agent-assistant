@@ -21,8 +21,9 @@ Every error MUST lead to:
 | Code | Type | Description | Response |
 |------|------|-------------|----------|
 | E1 | Transient | Timeout, network | Retry 3x with backoff |
+| E1b | Output Overflow | File too large for single creation | Switch to chunked strategy |
 | E2 | Recoverable | Logic error | Log, attempt alternative |
-| E3 | Blocking | Critical failure | Safe point → Options → Await user |
+| E3 | Blocking | Critical failure | Safe point → Best option → Auto-recover |
 | E4 | Cascading | Affects downstream | Stop propagation → Rollback → Report |
 
 ---
@@ -32,13 +33,14 @@ Every error MUST lead to:
 ```yaml
 on_error:
   1. CAPTURE: error type, phase, agent, state
-  2. CLASSIFY: E1/E2/E3/E4
+  2. CLASSIFY: E1/E1b/E2/E3/E4
   3. ATTEMPT recovery:
      E1: Retry (max 3)
+     E1b: Switch to chunked deliverable strategy (see PHASES.md)
      E2: Alternative approach
-     E3: Present options to user
+     E3: Pick best recovery option → auto-recover
      E4: Rollback, report impact
-  4. RESUME or AWAIT user decision
+  4. RESUME immediately
   5. NEVER halt silently
 ```
 

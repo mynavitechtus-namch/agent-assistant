@@ -1,13 +1,13 @@
 ---
 name: best-practices
 description: >-
-  Transforms vague prompts into optimized Claude Code prompts. Adds verification,
+  Transforms vague prompts into optimized Codex prompts. Adds verification,
   specific context, constraints, and proper phasing. Invoke with /best-practices.
 ---
 
 # Best Practices — Prompt Transformer
 
-> Transform prompts by adding what Claude needs to succeed.
+> Transform prompts by adding what Codex needs to succeed.
 
 ## Start Here
 
@@ -90,7 +90,7 @@ Apply these in order of priority:
 
 ### 1. Add Verification (Highest Priority)
 
-**The single highest-leverage improvement.** Claude performs dramatically better when it can verify its own work.
+**The single highest-leverage improvement.** Codex performs dramatically better when it can verify its own work.
 
 | Missing | Add |
 |---------|-----|
@@ -136,16 +136,16 @@ Replace vague references with precise locations and details.
 | **Reference patterns** | "look at HotDogWidget.php and follow that pattern for the calendar widget" |
 | **Describe symptoms** | "users report login fails after session timeout. check src/auth/, especially token refresh" |
 
-**Respect Project CLAUDE.md:**
+**Respect Project AGENTS.md:**
 
-If the project has a CLAUDE.md, the transformed prompt should:
+If the project has a AGENTS.md, the transformed prompt should:
 - Not contradict project conventions
 - Reference project-specific patterns when relevant
 - Note any project constraints that apply
 
 ```
 BEFORE: "add a new API endpoint"
-AFTER:  "add a GET /api/products endpoint. check CLAUDE.md for API conventions
+AFTER:  "add a GET /api/products endpoint. check AGENTS.md for API conventions
          in this project. follow the pattern in routes/users.ts. run the API
          tests after implementing."
 ```
@@ -159,7 +159,7 @@ AFTER:  "users report login fails after session timeout. check the auth flow
 
 ### 3. Add Constraints
 
-Tell Claude what NOT to do. Prevents over-engineering and unwanted changes.
+Tell Codex what NOT to do. Prevents over-engineering and unwanted changes.
 
 | Constraint Type | Examples |
 |-----------------|----------|
@@ -217,14 +217,14 @@ AFTER:  "read src/auth/ and understand current session handling. create a plan
 
 ### 5. Include Rich Content
 
-Provide supporting materials that Claude can use directly.
+Provide supporting materials that Codex can use directly.
 
 | Content Type | How to Provide |
 |--------------|----------------|
 | **Files** | Use `@filename` to reference files |
 | **Images** | Paste screenshots directly |
 | **Errors** | Paste actual error messages, not descriptions |
-| **Logs** | Pipe with `cat error.log \| claude` |
+| **Logs** | Pipe with `cat error.log \| Codex` |
 | **URLs** | Link to relevant documentation |
 
 ```
@@ -381,7 +381,7 @@ Before outputting, verify the improved prompt has:
 - [ ] **Single task** — Not compound (split if needed)
 - [ ] **Phases** — If complex, structured as explore → plan → implement
 - [ ] **Root cause** — For bugs: "address root cause, don't suppress"
-- [ ] **CLAUDE.md** — Respect project conventions if they exist
+- [ ] **AGENTS.md** — Respect project conventions if they exist
 
 ---
 
@@ -407,7 +407,7 @@ Rate the prompt against these dimensions:
 
 If user chose "Transform directly" but the prompt lacks enough context, ask one natural question:
 
-> "What would Claude need to know to do this well?"
+> "What would Codex need to know to do this well?"
 
 Don't interrogate — one question is enough. Transform with what you learn.
 
@@ -434,7 +434,7 @@ A well-transformed prompt passes these checks:
 |-------|------|------|
 | Has success criteria | "run tests", "screenshot matches" | Nothing |
 | Measurable outcome | "response < 500ms" | "make it faster" |
-| Self-verifiable | Claude can check its own work | Requires human judgment |
+| Self-verifiable | Codex can check its own work | Requires human judgment |
 | Root cause enforced | "don't suppress error" | Silent about approach |
 
 ### Principle 2: Specificity ✅
@@ -443,7 +443,7 @@ A well-transformed prompt passes these checks:
 | File locations | `src/auth/login.ts` | "the auth code" |
 | Function/class names | `processPayment()` | "that function" |
 | Line numbers (if relevant) | `:42` | "somewhere in there" |
-| CLAUDE.md respected | "check project conventions" | Ignores project rules |
+| AGENTS.md respected | "check project conventions" | Ignores project rules |
 
 ### Principle 3: Constraints ✅
 | Check | Pass | Fail |
@@ -494,7 +494,7 @@ For more examples and patterns:
 
 ## Sources
 
-- [Best Practices for Claude Code](https://code.claude.com/docs/en/best-practices) — Official documentation
-- [Claude Code Skills](https://code.claude.com/docs/en/skills) — Skill authoring guide
-- [Anthropic Prompt Engineering](https://docs.anthropic.com/en/docs/build-with-claude/prompt-engineering) — General prompting patterns
+- [Best Practices for Codex](https://code.Codex.com/docs/en/best-practices) — Official documentation
+- [Codex Skills](https://code.Codex.com/docs/en/skills) — Skill authoring guide
+- [Anthropic Prompt Engineering](https://docs.anthropic.com/en/docs/build-with-Codex/prompt-engineering) — General prompting patterns
 - [Dicklesworthstone meta_skill](https://github.com/Dicklesworthstone/meta_skill) — "THE EXACT PROMPT" pattern

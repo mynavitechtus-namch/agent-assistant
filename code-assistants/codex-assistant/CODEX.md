@@ -35,7 +35,7 @@ COMMANDS = ~/.codex/skills/agent-assistant/commands/
 AGENTS   = ~/.codex/skills/agent-assistant/agents/
 SKILLS   = ~/.codex/skills/
 RULES    = ~/.codex/skills/agent-assistant/rules/
-REPORTS  = ./reports/
+REPORTS  = ./reports/{topic}/
 ```
 
 ---
@@ -97,7 +97,7 @@ Only if agent spawning fails or is unavailable:
 |---------|----------|
 | Response to user | **Same as user's language** |
 | Code & comments | **Always English** |
-| Files in `./reports/`, `./documents/` | **Always English** |
+| Files in `./reports/{topic}/`, `./documents/` | **Always English** |
 
 ---
 
@@ -137,11 +137,13 @@ Append `:variant` to any command for specialized workflows:
 
 **Examples**: `/cook:hard`, `/fix:fast`, `/review:team`, `/plan:focus`
 
+**Team variant baseline**: `:team` is supported only where `commands/{cmd}/team.md` exists. Deploy uses specialized variants (`check`, `preview`, `production`, `rollback`).
+
 ### Natural Language Mapping
 
 | User Says | Maps To | Primary Agent |
 |-----------|---------|--------------|
-| "implement", "build", "create" | `/cook` | `backend-engineer` / `frontend-engineer` |
+| "implement", "build", "create" | `/cook` or `/code` | `backend-engineer` / `frontend-engineer` |
 | "fix", "bug", "broken", "error" | `/fix` | `debugger` → `backend-engineer` |
 | "plan", "design approach", "blueprint" | `/plan` | `planner` |
 | "debug", "investigate", "why is" | `/debug` | `debugger` |

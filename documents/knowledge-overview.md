@@ -19,7 +19,7 @@
 
 ## 2. Purpose and Mission
 
-Agent Assistant transforms a single AI coding assistant into a **coordinated team of 21 specialist agents** with structured workflows, quality gates, and 310+ domain skills.
+Agent Assistant transforms a single AI coding assistant into a **coordinated team of 21 specialist agents** with structured workflows, quality gates, and 1400+ domain skills.
 
 ### Core Value Proposition
 
@@ -49,7 +49,7 @@ With Agent Assistant:
 | ----------------- | ----- | ---------------------------------------------------------- |
 | Specialist Agents | 21    | Domain experts (backend, frontend, security, tester, reporter, etc.) |
 | Command Workflows | 50+   | Development workflows (/cook, /fix, /plan, /report, /deploy, etc.; variants: fast, hard, focus) |
-| Domain Skills     | 310   | On-demand knowledge (React, APIs, databases, DevOps, AI/ML, Security, etc.) |
+| Domain Skills     | 1400  | On-demand knowledge (React, APIs, databases, DevOps, AI/ML, Security, etc.) |
 | Matrix Domains    | 19    | Skill categories (backend, frontend, security, ai-ml, etc.)       |
 | Quality Gates     | 5     | Compile, lint, test, security, review                      |
 | Rule Files        | 8     | Orchestration protocols                                    |
@@ -226,7 +226,7 @@ Then try development commands:
 | **Deployment**    | `/deploy:check`, `/deploy:preview`, `/deploy:production`, `/deploy:rollback` |
 | **Utility**       | `/ask`, `/auto`                                                              |
 
-### 7.3 310 Domain Skills
+### 7.3 1400 Domain Skills
 
 Skills are organized across 19 domains:
 

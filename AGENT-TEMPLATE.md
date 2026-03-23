@@ -80,7 +80,7 @@ category: {execution|planning|validation|research|debugging|orchestration}
 ```markdown
 ## ⚡ Skills
 
-> **MATRIX DISCOVERY (HSOL)**: Skills auto-injected from `matrix-skills/` (domain files + `_dynamic.yaml`). Profile: `{domain}:{category}` | Domains: `{primary}`, `{secondary}`, `{tertiary}`. Dynamic discovery (find-skills) may add skills for `hard`/`focus` when matrix fitness &lt; 0.8.
+> **MATRIX DISCOVERY (HSOL)**: Skills auto-injected from `~/.{TOOL}/skills/agent-assistant/matrix-skills/` (domain files + `_dynamic.yaml`). Profile: `{domain}:{category}` | Domains: `{primary}`, `{secondary}`, `{tertiary}`. Dynamic discovery (find-skills) may add skills for `hard`/`focus` when matrix fitness &lt; 0.8.
 
 | Domain File | Key Skills |
 |-------------|------------|
@@ -222,7 +222,7 @@ category: execution
 ### Step 0: CONTEXT CHECK (MANDATORY)
 ```
 1. CHECK PROJECT DOCS → Use as constraints
-2. CHECK: ./reports/plans/PLAN-{feature}.md → Follow EXACTLY
+2. CHECK: ./reports/{topic}/plans/PLAN-{feature}.md → Follow EXACTLY
 3. SCOUT codebase → Follow existing patterns
 ```
 

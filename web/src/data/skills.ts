@@ -5,7 +5,7 @@ export interface SkillDomain {
   examples: string[]
 }
 
-// 19 domains from matrix-skills/_index.yaml v1.1 — total 310 skills
+// 19 domains from matrix-skills/_index.yaml v1.1 — total 1400 skills
 export const skillDomains: SkillDomain[] = [
   { name: 'Backend', count: 32, icon: '⚙️', examples: ['fastapi-expert', 'django-expert', 'nodejs-best-practices'] },
   { name: 'Frontend', count: 22, icon: '🎨', examples: ['react-expert', 'vue-expert', 'nextjs-developer'] },
@@ -131,7 +131,7 @@ export const hsolUniqueFeatures: HsolUniqueFeature[] = [
   {
     icon: '♾️',
     title: 'Infinite Ceiling',
-    description: 'Matrix (310+) plus community skills at skills.sh — no cap on capability.',
+    description: 'Matrix (1400+) plus community skills at skills.sh — no cap on capability.',
   },
 ]
 
@@ -165,5 +165,5 @@ export const skillBenefits = [
 
 export const getTotalSkills = () => skillDomains.reduce((acc, d) => acc + d.count, 0)
 // Framework total from matrix-skills/_index.yaml
-export const totalSkills = 310
+export const totalSkills = 1400
 export const totalDomains = 19

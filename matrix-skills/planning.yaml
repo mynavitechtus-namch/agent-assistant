@@ -8,7 +8,7 @@
 domain: planning
 name: "Planning & Analysis"
 description: "Requirements, task breakdown, roadmaps"
-skill_count: 12
+skill_count: 38
 
 skills:
   # --------------------------------------------------------------------------
@@ -115,3 +115,215 @@ skills:
       agents: [planner, tech-lead]
       profiles: ["planning:*", "architecture:*"]
     description: "Continuous improvement guide, Kaizen, Poka-Yoke, Standardized Work, JIT"
+
+  # --------------------------------------------------------------------------
+  # NEW SKILLS (Auto-cataloged 26 skills)
+  # --------------------------------------------------------------------------
+  - skill_id: advogado-especialista
+    category: community
+    priority_score: 6
+    relevance_mapping:
+      agents: [planner, brainstormer]
+      profiles: ["planning:*"]
+    description: "Advogado especialista em todas as areas do Direito brasileiro: familia, criminal, trabalhista, tributario, consumidor..."
+
+  - skill_id: analytics-tracking
+    category: community
+    priority_score: 6
+    relevance_mapping:
+      agents: [planner, brainstormer]
+      profiles: ["planning:*"]
+    description: "Design, audit, and improve analytics tracking systems that produce reliable, decision-ready data."
+
+  - skill_id: cc-skill-strategic-compact
+    category: community
+    priority_score: 6
+    relevance_mapping:
+      agents: [planner, brainstormer]
+      profiles: ["planning:*"]
+    description: "Development skill from everything-claude-code"
+
+  - skill_id: computer-vision-expert
+    category: community
+    priority_score: 6
+    relevance_mapping:
+      agents: [planner, brainstormer]
+      profiles: ["planning:*"]
+    description: "SOTA Computer Vision Expert (2026). Specialized in YOLO26, Segment Anything 3 (SAM 3), Vision Language Models, and re..."
+
+  - skill_id: concise-planning
+    category: community
+    priority_score: 6
+    relevance_mapping:
+      agents: [planner, brainstormer]
+      profiles: ["planning:*"]
+    description: "Use when a user asks for a plan for a coding task, to generate a clear, actionable, and atomic checklist."
+
+  - skill_id: conductor-new-track
+    category: community
+    priority_score: 6
+    relevance_mapping:
+      agents: [planner, brainstormer]
+      profiles: ["planning:*"]
+    description: "Create a new track with specification and phased implementation plan"
+
+  - skill_id: fp-types-ref
+    category: community
+    priority_score: 6
+    relevance_mapping:
+      agents: [planner, brainstormer]
+      profiles: ["planning:*"]
+    description: "Quick reference for fp-ts types. Use when user asks which type to use, needs Option/Either/Task decision help, or wan..."
+
+  - skill_id: inventory-demand-planning
+    category: community
+    priority_score: 6
+    relevance_mapping:
+      agents: [planner, brainstormer]
+      profiles: ["planning:*"]
+    description: "Codified expertise for demand forecasting, safety stock optimisation, replenishment planning, and promotional lift es..."
+
+  - skill_id: kpi-dashboard-design
+    category: community
+    priority_score: 6
+    relevance_mapping:
+      agents: [planner, brainstormer]
+      profiles: ["planning:*"]
+    description: "Comprehensive patterns for designing effective Key Performance Indicator (KPI) dashboards that drive business decisions."
+
+  - skill_id: launch-strategy
+    category: community
+    priority_score: 6
+    relevance_mapping:
+      agents: [planner, brainstormer]
+      profiles: ["planning:*"]
+    description: "You are an expert in SaaS product launches and feature announcements. Your goal is to help users plan launches that b..."
+
+  - skill_id: marketing-psychology
+    category: community
+    priority_score: 6
+    relevance_mapping:
+      agents: [planner, brainstormer]
+      profiles: ["planning:*"]
+    description: "Apply behavioral science and mental models to marketing decisions, prioritized using a psychological leverage and fea..."
+
+  - skill_id: nerdzao-elite
+    category: community
+    priority_score: 6
+    relevance_mapping:
+      agents: [planner, brainstormer]
+      profiles: ["planning:*"]
+    description: "Senior Elite Software Engineer (15+) and Senior Product Designer. Full workflow with planning, architecture, TDD, cle..."
+
+  - skill_id: odoo-manufacturing-advisor
+    category: community
+    priority_score: 6
+    relevance_mapping:
+      agents: [planner, brainstormer]
+      profiles: ["planning:*"]
+    description: "Expert guide for Odoo Manufacturing: Bills of Materials (BoM), Work Centers, routings, MRP planning, and production o..."
+
+  - skill_id: openapi-spec-generation
+    category: community
+    priority_score: 6
+    relevance_mapping:
+      agents: [planner, brainstormer]
+      profiles: ["planning:*"]
+    description: "Generate and maintain OpenAPI 3.1 specifications from code, design-first specs, and validation patterns. Use when cre..."
+
+  - skill_id: progressive-estimation
+    category: community
+    priority_score: 6
+    relevance_mapping:
+      agents: [planner, brainstormer]
+      profiles: ["planning:*"]
+    description: "Estimate AI-assisted and hybrid human+agent development work with research-backed PERT statistics and calibration fee..."
+
+  - skill_id: returns-reverse-logistics
+    category: community
+    priority_score: 6
+    relevance_mapping:
+      agents: [planner, brainstormer]
+      profiles: ["planning:*"]
+    description: "Codified expertise for returns authorisation, receipt and inspection, disposition decisions, refund processing, fraud..."
+
+  - skill_id: saas-mvp-launcher
+    category: community
+    priority_score: 6
+    relevance_mapping:
+      agents: [planner, brainstormer]
+      profiles: ["planning:*"]
+    description: "Use when planning or building a SaaS MVP from scratch. Provides a structured roadmap covering tech stack, architectur..."
+
+  - skill_id: sales-enablement
+    category: community
+    priority_score: 6
+    relevance_mapping:
+      agents: [planner, brainstormer]
+      profiles: ["planning:*"]
+    description: "Create sales collateral such as decks, one-pagers, objection docs, demo scripts, playbooks, and proposal templates. U..."
+
+  - skill_id: search-specialist
+    category: community
+    priority_score: 6
+    relevance_mapping:
+      agents: [planner, brainstormer]
+      profiles: ["planning:*"]
+    description: "Expert web researcher using advanced search techniques and"
+
+  - skill_id: seo-content-planner
+    category: community
+    priority_score: 6
+    relevance_mapping:
+      agents: [planner, brainstormer]
+      profiles: ["planning:*"]
+    description: "Creates comprehensive content outlines and topic clusters for SEO."
+
+  - skill_id: seo-plan
+    category: community
+    priority_score: 6
+    relevance_mapping:
+      agents: [planner, brainstormer]
+      profiles: ["planning:*"]
+    description: "Strategic SEO planning for new or existing websites. Industry-specific templates, competitive analysis, content strat..."
+
+  - skill_id: skill-writer
+    category: community
+    priority_score: 6
+    relevance_mapping:
+      agents: [planner, brainstormer]
+      profiles: ["planning:*"]
+    description: "Create and improve agent skills following the Agent Skills specification. Use when asked to create, write, or update ..."
+
+  - skill_id: speckit-updater
+    category: community
+    priority_score: 6
+    relevance_mapping:
+      agents: [planner, brainstormer]
+      profiles: ["planning:*"]
+    description: "SpecKit Safe Update"
+
+  - skill_id: startup-analyst
+    category: community
+    priority_score: 6
+    relevance_mapping:
+      agents: [planner, brainstormer]
+      profiles: ["planning:*"]
+    description: "Expert startup business analyst specializing in market sizing, financial modeling, competitive analysis, and strategi..."
+
+  - skill_id: startup-financial-modeling
+    category: community
+    priority_score: 6
+    relevance_mapping:
+      agents: [planner, brainstormer]
+      profiles: ["planning:*"]
+    description: "Build comprehensive 3-5 year financial models with revenue projections, cost structures, cash flow analysis, and scen..."
+
+  - skill_id: track-management
+    category: community
+    priority_score: 6
+    relevance_mapping:
+      agents: [planner, brainstormer]
+      profiles: ["planning:*"]
+    description: "Use this skill when creating, managing, or working with Conductor tracks - the logical work units for features, bugs,..."
+

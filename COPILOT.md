@@ -34,7 +34,7 @@ COMMANDS = ~/.copilot/skills/agent-assistant/commands/
 AGENTS   = ~/.copilot/skills/agent-assistant/agents/
 SKILLS   = ~/.copilot/skills/
 RULES    = ~/.copilot/skills/agent-assistant/rules/
-REPORTS  = ./reports/
+REPORTS  = ./reports/{topic}/
 ```
 
 ---
@@ -45,7 +45,7 @@ REPORTS  = ./reports/
 |---------|----------|
 | Response to user | **Same as user's language** |
 | Code & comments | **Always English** |
-| Files in `./reports/`, `./documents/` | **Always English** |
+| Files in `./reports/{topic}/`, `./documents/` | **Always English** |
 
 ---
 
@@ -56,9 +56,9 @@ REPORTS  = ./reports/
 | `/cook`, `/fix`, `/plan`, `/debug`, `/test`, `/review`, `/docs`, `/design`, `/deploy`, `/report` | `commands/{cmd}.md` → `commands/{cmd}/{variant}.md` |
 | `/brainstorm`, `/ask`, `/code` | `commands/{cmd}.md` |
 
-**Natural language**: "implement/build" → `/cook` | "fix/bug" → `/fix` | "plan" → `/plan`
+**Natural language**: "implement/build/create" → `/cook` or `/code` | "fix/bug" → `/fix` | "plan" → `/plan`
 
-**Variant**: `:team` available for all commands — parallel agent team collaboration (e.g., `/cook:team`)
+**Team variant baseline**: `:team` is supported only where `commands/{cmd}/team.md` exists. Deploy uses specialized variants (`check`, `preview`, `production`, `rollback`).
 
 ---
 
